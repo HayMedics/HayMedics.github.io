@@ -3,136 +3,252 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Awwal Abdulrahman, MD, AI Engineer & Full Stack Data Scientist</title>
-<meta name="description" content="Awwal Abdulrahman, MD, Founder of HayMedics Academy. AI Engineer and Full Stack Data Scientist building clinical AI systems (CardioRisk AI, StrokeGuard) and executive Power BI dashboards.">
+<title>HayMedics Academy, Healthcare Data Analytics & Data Science Training</title>
+<meta name="description" content="Become a high-demand Healthcare Data Specialist in 90 days. Master Excel, Power BI, SQL, Python, SPSS & Machine Learning with mentorship, real projects, and career support. 90% OFF, limited cohort.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<!-- Favicon: the orange HayMedics roof + blue pillars -->
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M5 42 Q50 8 50 8 Q50 8 95 42 Q50 28 50 28 Q50 28 5 42 Z' fill='%23F9A825'/%3E%3Crect x='18' y='48' width='14' height='44' fill='%233458A8'/%3E%3Crect x='43' y='48' width='14' height='44' fill='%233458A8'/%3E%3Crect x='68' y='48' width='14' height='44' fill='%233458A8'/%3E%3Crect x='18' y='48' width='64' height='12' fill='%233458A8'/%3E%3C/svg%3E">
 <style>
 :root{
-  --royal:#3458A8;
-  --navy:#1A1464;
-  --orange:#F9A825;
-  --ink:#23274A;
-  --mist:#F5F7FC;
-  --line:#DDE4F2;
-  --white:#FFFFFF;
+  --royal:#3458A8;--navy:#1A1464;--orange:#F9A825;
+  --ink:#23274A;--mist:#F5F7FC;--line:#DDE4F2;--white:#FFFFFF;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--white);line-height:1.65}
-h1,h2,h3{font-family:'Archivo',sans-serif}
+h1,h2,h3,h4{font-family:'Archivo',sans-serif}
 a{color:var(--royal);text-decoration:none}
 
-/* ---------- Roof motif (signature element) ---------- */
 .roof{display:inline-block;width:46px;height:14px;margin-bottom:10px}
 .roof svg{display:block;width:100%;height:100%}
 
-/* ---------- Nav ---------- */
-nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
 .nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:14px 22px}
 .brand{display:flex;align-items:center;gap:10px;font-family:'Archivo';font-weight:800;color:var(--navy);font-size:1.05rem}
 .brand svg{width:34px;height:34px}
 .brand span b{color:var(--royal)}
-.nav-links{display:flex;gap:26px;font-size:.85rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase}
+.nav-links{display:flex;gap:24px;font-size:.85rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase}
 .nav-links a{color:var(--ink)}
 .nav-links a:hover{color:var(--orange)}
-@media(max-width:640px){.nav-links{display:none}}
+.navburger{display:none;background:none;border:2px solid var(--royal);color:var(--royal);border-radius:8px;font-size:1.3rem;font-weight:800;padding:4px 12px;cursor:pointer;font-family:'Archivo'}
+@media(max-width:680px){
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--white);border-bottom:2px solid var(--orange);flex-direction:column;gap:0;padding:8px 0;box-shadow:0 12px 24px rgba(26,20,100,.12)}
+  .nav-links.open{display:flex}
+  .nav-links a{padding:13px 26px;border-bottom:1px solid var(--mist)}
+  .navburger{display:block}
+}
 
-/* ---------- Hero ---------- */
-.hero{background:linear-gradient(180deg,var(--mist) 0%,var(--white) 100%);padding:90px 22px 70px;text-align:center;position:relative;overflow:hidden}
-.hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(var(--line) 1px,transparent 1px);background-size:26px 26px;opacity:.5}
-.hero>*{position:relative}
-.pill{display:inline-block;border:1.5px solid var(--royal);color:var(--royal);font-size:.72rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;padding:7px 18px;border-radius:999px;background:var(--white)}
-.hero h1{font-size:clamp(2.4rem,7vw,4.2rem);font-weight:900;color:var(--navy);line-height:1.05;margin:26px 0 6px}
-.hero h1 em{font-style:normal;color:var(--royal)}
-.hero .tagline{font-size:clamp(1rem,2.6vw,1.25rem);font-weight:700;color:var(--orange);margin-bottom:18px;letter-spacing:.04em}
-.hero p.lede{max-width:580px;margin:0 auto 34px;color:#4A5070}
-.btn-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
-.btn{display:inline-block;padding:13px 28px;border-radius:8px;font-weight:700;font-size:.92rem;transition:transform .15s ease, box-shadow .15s ease}
+.btn{display:inline-block;padding:14px 30px;border-radius:8px;font-weight:700;font-size:.95rem;transition:transform .15s ease, box-shadow .15s ease;cursor:pointer;border:none}
 .btn:hover{transform:translateY(-2px)}
 .btn-primary{background:var(--navy);color:var(--white);box-shadow:0 6px 18px rgba(26,20,100,.25)}
-.btn-ghost{border:2px solid var(--royal);color:var(--royal);background:var(--white)}
-.btn-orange{background:var(--orange);color:var(--navy)}
+.btn-ghost{border:2px solid var(--white);color:var(--white);background:transparent}
+.btn-orange{background:var(--orange);color:var(--navy);box-shadow:0 6px 18px rgba(249,168,37,.35)}
+.btn-lg{padding:17px 40px;font-size:1.05rem}
 
-/* ---------- Sections ---------- */
-section{max-width:1100px;margin:0 auto;padding:80px 22px}
-.eyebrow{font-size:.72rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--royal)}
-h2{font-size:clamp(1.7rem,4vw,2.4rem);font-weight:800;color:var(--navy);margin:6px 0 36px}
+.hero{background:linear-gradient(135deg,var(--navy) 0%,var(--royal) 100%);color:var(--white);padding:80px 22px 70px;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.08) 1px,transparent 1px);background-size:26px 26px}
+.hero>*{position:relative}
+.kicker{display:inline-block;background:var(--orange);color:var(--navy);font-size:.72rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;padding:8px 18px;border-radius:999px;margin-bottom:22px}
+.hero h1{font-size:clamp(2.1rem,6vw,3.6rem);font-weight:900;line-height:1.08;margin-bottom:18px}
+.hero h1 em{font-style:normal;color:var(--orange)}
+.hero p{max-width:640px;margin:0 auto 30px;font-size:1.08rem;color:#DCE3F7}
+.hero .btn-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
 
-/* ---------- About ---------- */
-.about-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:46px;align-items:start}
-@media(max-width:820px){.about-grid{grid-template-columns:1fr}}
-.about-grid p{margin-bottom:16px;color:#4A5070}
-.stats{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.stat{background:var(--mist);border:1px solid var(--line);border-radius:12px;padding:22px;text-align:center}
-.stat .num{font-family:'Archivo';font-size:2rem;font-weight:800;color:var(--royal)}
-.stat .lbl{font-size:.78rem;color:#5A6080;margin-top:4px}
+.urgency{background:var(--orange);color:var(--navy);text-align:center;padding:13px 22px;font-weight:700;font-size:.95rem}
 
-/* ---------- Projects ---------- */
-#projects{background:var(--mist);max-width:none}
-#projects .wrap{max-width:1100px;margin:0 auto;padding:0}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px}
-.card{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:28px;display:flex;flex-direction:column;transition:transform .15s ease, box-shadow .15s ease;border-top:5px solid var(--royal)}
-.card:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(26,20,100,.12)}
-.card.ai{border-top-color:var(--orange)}
-.tags{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:14px}
-.tag{font-size:.68rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--royal);background:rgba(52,88,168,.09);padding:4px 10px;border-radius:999px}
-.card.ai .tag{color:#B57A00;background:rgba(249,168,37,.14)}
-.card h3{font-size:1.15rem;color:var(--navy);margin-bottom:10px}
-.card p{font-size:.92rem;color:#4A5070;flex:1}
-.card .link{margin-top:18px;font-weight:700;font-size:.88rem}
-.card .link::after{content:" →"}
+section{max-width:1100px;margin:0 auto;padding:72px 22px}
+.eyebrow{font-size:.72rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--royal);text-align:center;display:block}
+.sec-title{font-size:clamp(1.7rem,4vw,2.5rem);font-weight:800;color:var(--navy);text-align:center;margin:8px 0 14px}
+.sec-sub{text-align:center;max-width:660px;margin:0 auto 44px;color:#4A5070}
 
-/* ---------- Skills ---------- */
-.skill{margin-bottom:22px}
-.skill .row{display:flex;justify-content:space-between;font-weight:600;font-size:.9rem;margin-bottom:8px}
-.skill .row span:last-child{color:var(--royal)}
-.bar{height:9px;background:var(--mist);border:1px solid var(--line);border-radius:999px;overflow:hidden}
-.fill{height:100%;width:0;background:linear-gradient(90deg,var(--royal),var(--navy));border-radius:999px;transition:width 1.1s cubic-bezier(.2,.7,.3,1)}
-.skills-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 46px}
-@media(max-width:680px){.skills-grid{grid-template-columns:1fr}}
+.demand{background:var(--mist)}
+.demand-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin-top:10px}
+.demand-card{background:var(--white);border:1px solid var(--line);border-left:5px solid var(--orange);border-radius:12px;padding:26px}
+.demand-card h4{color:var(--navy);font-size:1.05rem;margin-bottom:8px}
+.demand-card p{font-size:.92rem;color:#4A5070}
 
-/* ---------- GitHub auto feed ---------- */
-#more{background:var(--navy);max-width:none;color:var(--white)}
-#more .wrap{max-width:1100px;margin:0 auto;padding:0}
-#more .eyebrow{color:var(--orange)}
-#more h2{color:var(--white)}
-#more .sub{color:#B9C2E8;margin:-22px 0 34px;font-size:.92rem}
-.repo-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
-.repo{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:22px;transition:background .15s ease;display:block}
-.repo:hover{background:rgba(255,255,255,.11)}
-.repo h3{font-size:1rem;color:var(--white);margin-bottom:8px;word-break:break-word}
-.repo p{font-size:.85rem;color:#B9C2E8;min-height:42px}
-.repo .meta{display:flex;gap:14px;margin-top:14px;font-size:.75rem;color:var(--orange);font-weight:600;flex-wrap:wrap}
-#repo-status{color:#B9C2E8;font-size:.9rem}
+/* Founder story */
+.founder{background:var(--white)}
+.founder-box{max-width:820px;margin:0 auto;background:var(--mist);border:1px solid var(--line);border-left:5px solid var(--royal);border-radius:16px;padding:40px}
+.founder-box h3{color:var(--navy);font-size:1.4rem;margin-bottom:16px}
+.founder-box p{color:#3A4060;margin-bottom:14px;font-size:1rem}
+.founder-box .sig{font-family:'Archivo';font-weight:800;color:var(--royal);margin-top:8px}
 
-/* ---------- Contact ---------- */
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:46px;align-items:center}
-@media(max-width:760px){.contact-grid{grid-template-columns:1fr}}
-.contact-grid h2{margin-bottom:14px}
-.contact-grid p{color:#4A5070;margin-bottom:26px}
-.clink{display:flex;align-items:center;gap:14px;background:var(--mist);border:1px solid var(--line);border-radius:12px;padding:16px 20px;margin-bottom:12px;font-weight:600;color:var(--ink);word-break:break-word}
-.clink:hover{border-color:var(--royal)}
-.clink .ic{width:38px;height:38px;border-radius:9px;background:var(--royal);color:var(--white);display:flex;align-items:center;justify-content:center;font-family:'Archivo';font-weight:800;flex-shrink:0}
-.clink small{display:block;font-weight:500;color:#6A7090;font-size:.74rem}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.why{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:26px;border-top:4px solid var(--royal)}
+.why .ic{font-size:1.8rem;margin-bottom:10px;display:block}
+.why h4{color:var(--navy);margin-bottom:8px;font-size:1.05rem}
+.why p{font-size:.9rem;color:#4A5070}
+
+/* Requirements strip */
+.reqs{background:var(--mist)}
+.reqs-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:900px;margin:0 auto}
+@media(max-width:680px){.reqs-grid{grid-template-columns:1fr}}
+.req{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:28px}
+.req h4{color:var(--navy);margin-bottom:10px;font-size:1.1rem}
+.req p{font-size:.92rem;color:#4A5070}
+
+.tracks{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+@media(max-width:820px){.tracks{grid-template-columns:1fr}}
+.track{background:var(--white);border:2px solid var(--line);border-radius:18px;padding:34px;display:flex;flex-direction:column;position:relative;transition:transform .18s ease, box-shadow .18s ease}
+.track:hover{transform:translateY(-5px);box-shadow:0 18px 40px rgba(26,20,100,.14)}
+.track.feature{border-color:var(--orange)}
+.badge-top{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--orange);color:var(--navy);font-size:.68rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:6px 16px;border-radius:999px;white-space:nowrap}
+.track h3{color:var(--navy);font-size:1.35rem;margin-bottom:6px}
+.track .tk-tag{font-size:.8rem;color:var(--royal);font-weight:600;margin-bottom:18px}
+.price{display:flex;align-items:baseline;gap:10px;margin-bottom:4px}
+.price .now{font-family:'Archivo';font-size:2.4rem;font-weight:900;color:var(--navy)}
+.price .old{font-size:1.1rem;color:#9AA0BC;text-decoration:line-through}
+.save{display:inline-block;background:rgba(52,88,168,.1);color:var(--royal);font-weight:700;font-size:.78rem;padding:4px 12px;border-radius:999px;margin-bottom:20px}
+.track ul{list-style:none;margin-bottom:24px;flex:1}
+.track ul li{font-size:.92rem;color:#3A4060;padding:8px 0 8px 28px;position:relative;border-bottom:1px solid var(--mist)}
+.track ul li::before{content:"✓";position:absolute;left:0;color:var(--royal);font-weight:800}
+.track .tk-btns{display:flex;flex-direction:column;gap:10px}
+.btn-outline{border:2px solid var(--royal);color:var(--royal);background:var(--white);padding:12px;border-radius:8px;font-weight:700;text-align:center;font-size:.9rem}
+.btn-outline:hover{background:var(--mist)}
+
+.bundle{background:linear-gradient(135deg,var(--navy),var(--royal));color:var(--white);border-radius:18px;padding:44px 30px;text-align:center;margin-top:30px}
+.bundle h3{font-size:1.6rem;margin-bottom:10px}
+.bundle .price .now{color:var(--white)}
+.bundle .price{justify-content:center}
+.bundle .old{color:#B9C2E8}
+.bundle p{color:#DCE3F7;margin-bottom:22px}
+
+.curric{background:var(--mist)}
+.acc{max-width:820px;margin:0 auto}
+.acc-item{background:var(--white);border:1px solid var(--line);border-radius:12px;margin-bottom:12px;overflow:hidden}
+.acc-head{padding:20px 24px;font-family:'Archivo';font-weight:700;color:var(--navy);cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-size:1rem;gap:14px}
+.acc-head:hover{background:var(--mist)}
+.acc-head .arw{color:var(--orange);font-size:1.3rem;transition:transform .2s ease;flex-shrink:0}
+.acc-item.open .arw{transform:rotate(45deg)}
+.acc-body{max-height:0;overflow:hidden;transition:max-height .3s ease}
+.acc-body-inner{padding:0 24px 22px}
+.acc-body-inner p{font-size:.82rem;color:var(--royal);font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin:14px 0 6px}
+.acc-body-inner ul{list-style:none}
+.acc-body-inner ul li{font-size:.9rem;color:#4A5070;padding:5px 0 5px 22px;position:relative}
+.acc-body-inner ul li::before{content:"▸";position:absolute;left:0;color:var(--orange)}
+
+.learn-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px}
+.learn{text-align:center;padding:24px 16px;background:var(--white);border:1px solid var(--line);border-radius:12px}
+.learn .ic{font-size:1.9rem;display:block;margin-bottom:8px}
+.learn h4{font-size:.98rem;color:var(--navy);margin-bottom:4px}
+.learn p{font-size:.82rem;color:#5A6080}
+
+.final{background:linear-gradient(135deg,var(--navy),var(--royal));color:var(--white);text-align:center}
+.final h2{color:var(--white);font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:14px}
+.final p{color:#DCE3F7;max-width:560px;margin:0 auto 30px}
+.final .btn-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
 
 footer{border-top:1px solid var(--line);text-align:center;padding:26px 22px;font-size:.82rem;color:#6A7090}
 footer b{color:var(--navy)}
+.back-link{display:inline-block;margin-top:8px;color:var(--royal);font-weight:600}
 
-@media (prefers-reduced-motion: reduce){
-  *{transition:none!important;animation:none!important}
-}
+
+/* Extra-bold apply button */
+.btn-apply{font-size:1.15rem!important;font-weight:900!important;letter-spacing:.02em;padding:18px 20px!important;text-transform:uppercase;box-shadow:0 8px 22px rgba(249,168,37,.45)!important}
+/* Structured vs YouTube band */
+.vs{background:var(--white)}
+.vs-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;max-width:900px;margin:0 auto}
+@media(max-width:680px){.vs-grid{grid-template-columns:1fr}}
+.vs-col{border-radius:14px;padding:30px}
+.vs-bad{background:var(--mist);border:1px solid var(--line)}
+.vs-good{background:#EEF3FF;border:2px solid var(--royal)}
+.vs-col h4{font-size:1.1rem;margin-bottom:16px;color:var(--navy)}
+.vs-col ul{list-style:none}
+.vs-col ul li{font-size:.92rem;padding:8px 0 8px 30px;position:relative;color:#3A4060}
+.vs-bad ul li::before{content:"✕";position:absolute;left:0;color:#C0392B;font-weight:800}
+.vs-good ul li::before{content:"✓";position:absolute;left:0;color:var(--royal);font-weight:800}
+/* Opportunities grid */
+.opps{background:var(--mist)}
+.opps-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+.opp{background:var(--white);border:1px solid var(--line);border-top:4px solid var(--orange);border-radius:12px;padding:24px}
+.opp .ic{font-size:1.7rem;display:block;margin-bottom:8px}
+.opp h4{color:var(--navy);font-size:1rem;margin-bottom:6px}
+.opp p{font-size:.88rem;color:#4A5070}
+/* Portfolio + chatbot buttons in founder box */
+.founder-btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+.founder-btns a{font-weight:700;font-size:.9rem;padding:11px 22px;border-radius:8px}
+.fb-portfolio{background:var(--royal);color:var(--white)}
+.fb-chatbot{background:var(--white);border:2px solid var(--royal);color:var(--royal)}
+/* Free portfolio offer highlight */
+.offer-strip{max-width:820px;margin:26px auto 0;background:linear-gradient(135deg,#FFF6E6,#FFEFD0);border:2px dashed var(--orange);border-radius:14px;padding:26px;text-align:center}
+.offer-strip h4{color:var(--navy);font-size:1.15rem;margin-bottom:8px}
+.offer-strip p{color:#5A4A20;font-size:.95rem}
+/* Bundle emphasis list */
+.bundle .b-flow{color:#EAF0FF;font-size:1rem;margin:14px 0 6px;font-weight:600}
+/* Coming soon tracks */
+.soon-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;max-width:820px;margin:0 auto}
+.soon{background:var(--white);border:1px dashed var(--royal);border-radius:12px;padding:24px;text-align:center;opacity:.9}
+.soon .tag-soon{display:inline-block;background:var(--navy);color:var(--white);font-size:.66rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:4px 12px;border-radius:999px;margin-bottom:10px}
+.soon h4{color:var(--navy);font-size:1.05rem}
+.nav-portfolio{color:var(--royal)!important;font-weight:700}
+/* Career pathway after graduation */
+.pathway{max-width:1000px;margin:30px auto 0;background:#fff;border:2px solid var(--royal);border-radius:16px;padding:34px 30px}
+.pathway h4{color:var(--navy);font-size:1.3rem;text-align:center;margin-bottom:8px}
+.pathway .lead{text-align:center;color:#4A5070;font-size:.95rem;max-width:640px;margin:0 auto 26px}
+.pw-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:0}
+.pw{position:relative;text-align:center;padding:0 16px}
+.pw .n{width:44px;height:44px;margin:0 auto 12px;border-radius:50%;background:var(--royal);color:#fff;font-family:'Archivo';font-weight:900;font-size:1.05rem;display:flex;align-items:center;justify-content:center}
+.pw.last .n{background:var(--orange);color:var(--navy)}
+.pw h5{font-family:'Archivo';color:var(--navy);font-size:1rem;margin-bottom:6px}
+.pw p{font-size:.86rem;color:#4A5070}
+.pw::after{content:"→";position:absolute;top:10px;right:-10px;color:var(--orange);font-size:1.5rem;font-weight:800}
+.pw:last-child::after{display:none}
+@media(max-width:760px){.pw::after{display:none}.pw{padding:0 0 22px}}
+/* WhatsApp */
+.btn-wa{background:#25D366;color:#0B3B24;box-shadow:0 6px 18px rgba(37,211,102,.4)}
+.wa-float{position:fixed;right:20px;bottom:20px;z-index:99;background:#25D366;color:#fff;width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.7rem;box-shadow:0 6px 20px rgba(0,0,0,.28);transition:transform .15s ease}
+.wa-float:hover{transform:scale(1.08)}
+.foot-links{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin-top:10px}
+.foot-links a{font-weight:600}
+
+
+
+/* ===== AI Assistant Widget ===== */
+.hm-ai-launch{position:fixed;right:20px;bottom:90px;z-index:99;display:flex;align-items:center;gap:10px;background:linear-gradient(135deg,var(--navy),var(--royal));color:#fff;border:2px solid var(--orange);border-radius:999px;padding:10px 18px 10px 12px;font-family:'Archivo';font-weight:800;font-size:.9rem;cursor:pointer;box-shadow:0 8px 24px rgba(26,20,100,.35);transition:transform .15s ease}
+.hm-ai-launch:hover{transform:translateY(-2px)}
+.hm-ai-launch .bot{width:34px;height:34px;border-radius:50%;background:var(--orange);display:flex;align-items:center;justify-content:center;font-size:1.15rem;flex-shrink:0;animation:hmPulse 2.4s ease-in-out infinite}
+@keyframes hmPulse{0%,100%{box-shadow:0 0 0 0 rgba(249,168,37,.55)}50%{box-shadow:0 0 0 9px rgba(249,168,37,0)}}
+.hm-ai-modal{position:fixed;inset:0;z-index:200;display:none;align-items:flex-end;justify-content:flex-end;background:rgba(20,16,60,.45);backdrop-filter:blur(3px);padding:20px}
+.hm-ai-modal.open{display:flex}
+.hm-ai-box{width:min(420px,100%);height:min(640px,90vh);background:#fff;border-radius:18px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 24px 60px rgba(0,0,0,.35);border:1px solid var(--line)}
+.hm-ai-head{background:linear-gradient(135deg,var(--navy),var(--royal));color:#fff;display:flex;align-items:center;gap:12px;padding:14px 16px}
+.hm-ai-head .bot{width:40px;height:40px;border-radius:50%;background:var(--orange);display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0}
+.hm-ai-head .tt{flex:1;line-height:1.2}
+.hm-ai-head .tt b{font-family:'Archivo';font-size:.98rem;display:block}
+.hm-ai-head .tt span{font-size:.72rem;color:#C7D2F5}
+.hm-ai-head a,.hm-ai-head button{background:rgba(255,255,255,.14);border:none;color:#fff;width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:1rem;text-decoration:none}
+.hm-ai-head a:hover,.hm-ai-head button:hover{background:rgba(255,255,255,.26)}
+.hm-ai-frame{flex:1;border:0;width:100%;background:#F5F7FC}
+@media(max-width:560px){.hm-ai-modal{padding:0}.hm-ai-box{width:100%;height:100%;border-radius:0}}
+@media (prefers-reduced-motion: reduce){.hm-ai-launch .bot{animation:none}}
+
+@media (prefers-reduced-motion: reduce){*{transition:none!important}}
 </style>
-<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<meta property="og:type" content="website">
+<meta property="og:title" content="HayMedics Academy: 90% Scholarship, Healthcare Data Analytics & Data Science">
+<meta property="og:description" content="Become a Healthcare Data Specialist in 90 days. Excel, Power BI, SQL, Biostatistics, SPSS, Python & Machine Learning. Taught by a Data & AI Specialist with a medical background. Limited slots.">
+<meta property="og:url" content="https://haymedics.github.io/">
+<meta property="og:image" content="https://haymedics.github.io/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="HayMedics Academy: 90% Scholarship Slots Open">
+<meta name="twitter:description" content="Become a Healthcare Data Specialist in 90 days. Analytics & Data Science tracks. Limited slots.">
+<meta name="twitter:image" content="https://haymedics.github.io/og-image.png">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ItemList","itemListElement":[
+ {"@type":"Course","position":1,"name":"Healthcare Data Analytics","description":"Excel, Power BI, SQL and AI for healthcare data analytics. 90-day mentored program.","provider":{"@type":"Organization","name":"HayMedics Academy","sameAs":"https://haymedics.github.io"}},
+ {"@type":"Course","position":2,"name":"Healthcare Data Science","description":"Biostatistics, SPSS, SQL, Python and Machine Learning for healthcare. 90-day mentored program.","provider":{"@type":"Organization","name":"HayMedics Academy","sameAs":"https://haymedics.github.io"}}
+]}
+</script>
 </head>
 <body>
 
 <nav>
   <div class="nav-inner">
-    <a class="brand" href="#top">
+    <a class="brand" href="portfolio.html">
       <svg viewBox="0 0 100 100" aria-hidden="true">
         <path d="M5 42 Q50 8 50 8 Q50 8 95 42 Q50 28 50 28 Q50 28 5 42 Z" fill="#F9A825"/>
         <rect x="18" y="48" width="14" height="44" fill="#3458A8"/>
@@ -140,257 +256,408 @@ footer b{color:var(--navy)}
         <rect x="68" y="48" width="14" height="44" fill="#3458A8"/>
         <rect x="18" y="48" width="64" height="12" fill="#3458A8"/>
       </svg>
-      <span><b>Hay</b>Medics</span>
+      <span><b>Hay</b>Medics Academy</span>
     </a>
+    <button class="navburger" aria-label="Menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
     <div class="nav-links">
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#more">GitHub</a>
-      <a href="index.html" style="color:var(--orange)">Courses</a>
-      <a href="#contact">Contact</a>
+      <a href="#demand">Why Now</a>
+      <a href="#tracks">Tracks</a>
+      <a href="#curriculum">Curriculum</a>
+      <a href="portfolio.html" class="nav-portfolio">My Portfolio</a>
     </div>
   </div>
 </nav>
 
-<header class="hero" id="top">
-  <span class="pill">AI Engineer · Full Stack Data Scientist · Ilorin, Nigeria</span>
-  <h1>AWWAL<br><em>ABDULRAHMAN</em></h1>
-  <div class="tagline">Data | Research | Innovation</div>
-  <p class="lede">Medical doctor turned AI engineer. I build clinical machine-learning systems and executive analytics dashboards, turning healthcare and business data into decisions that save time, money, and lives.</p>
+<div class="urgency">🔥 90% OFF Launch Cohort · Doors close in <b id="cdown">7 days</b> · Limited seats remaining</div>
+<script>
+/* EDIT THIS ONE LINE to change your enrollment deadline: */
+var HM_DEADLINE = new Date("2026-07-27T23:59:59+01:00");
+(function(){
+  var el = document.getElementById("cdown");
+  function tick(){
+    var ms = HM_DEADLINE - new Date();
+    if(ms <= 0){ el.textContent = "FINAL HOURS"; return; }
+    var d = Math.floor(ms/86400000), h = Math.floor(ms%86400000/3600000), m = Math.floor(ms%3600000/60000);
+    el.textContent = d + "d " + h + "h " + m + "m";
+  }
+  tick(); setInterval(tick, 30000);
+})();
+</script>
+
+<header class="hero">
+  <span class="kicker">HayMedics Academy · Data | Research | Innovation</span>
+  <h1>The Future of Healthcare<br>Is <em>Data.</em> Don't Watch<br>From the Sidelines.</h1>
+  <p>Become a high-demand <b>Healthcare Data Specialist</b> in 90 days. Master the exact tools, Excel, Power BI, SQL, Python, SPSS & Machine Learning, that turn complex health data into decisions hospitals, NGOs, and health-tech companies pay well for.</p>
   <div class="btn-row">
-    <a class="btn btn-primary" href="#projects">View My Work</a>
-    <a class="btn btn-ghost" href="#contact">Let's Work Together</a>
-    <a class="btn btn-orange" href="index.html">🎓 Explore Courses</a>
+    <a class="btn btn-orange btn-lg" href="#tracks">Choose Your Track →</a>
+    <a class="btn btn-ghost btn-lg" href="portfolio.html">👤 View My Portfolio</a>
   </div>
 </header>
 
-<section id="about">
-  <div class="roof"><svg viewBox="0 0 100 30"><path d="M2 28 Q50 0 50 0 Q50 0 98 28 Q50 18 50 18 Q50 18 2 28 Z" fill="#F9A825"/></svg></div>
-  <span class="eyebrow">Who I Am</span>
-  <h2>About Me</h2>
-  <div class="about-grid">
-    <div>
-      <p>I am <b>Awwal Abdulrahman, MD</b>, an AI Engineer, Full Stack Data Scientist, and researcher, and the founder of <b>HayMedics Academy</b>, a hub for data, research and innovation in healthcare.</p>
-      <p>I bridge clinical medicine and data science: from research-grade machine-learning systems built to TRIPOD-AI reporting standards, to executive Power BI dashboards that give decision-makers instant clarity.</p>
-      <p>Whether it's predicting cardiovascular risk, detecting stroke early, or surfacing the story inside business data, my goal is the same: <b>actionable intelligence</b>.</p>
+
+<section class="vs">
+  <span class="eyebrow">Stop Guessing</span>
+  <h2 class="sec-title">Endless YouTube Tutorials vs. A Clear Path</h2>
+  <p class="sec-sub">You could spend months stitching together random free videos, or follow one structured path built by a Medical Doctor and AI Engineer, covering exactly what the healthcare data industry needs. Nothing wasted.</p>
+  <div class="vs-grid">
+    <div class="vs-col vs-bad">
+      <h4>😩 Random YouTube Tutorials</h4>
+      <ul>
+        <li>Scattered, out-of-order, and often outdated</li>
+        <li>No healthcare context or real clinical data</li>
+        <li>You never know what to learn next</li>
+        <li>No mentor when you get stuck</li>
+        <li>No projects, no certificate, no career support</li>
+        <li>Months wasted, still no portfolio</li>
+      </ul>
     </div>
-    <div class="stats">
-      <div class="stat"><div class="num">15+</div><div class="lbl">Projects Completed</div></div>
-      <div class="stat"><div class="num">5</div><div class="lbl">Clinical AI Systems</div></div>
-      <div class="stat"><div class="num">7</div><div class="lbl">Executive Dashboards</div></div>
-      <div class="stat"><div class="num">1</div><div class="lbl">Academy Founded</div></div>
-    </div>
-  </div>
-</section>
-
-<section id="projects">
-  <div class="wrap" style="padding:80px 22px">
-    <div class="roof"><svg viewBox="0 0 100 30"><path d="M2 28 Q50 0 50 0 Q50 0 98 28 Q50 18 50 18 Q50 18 2 28 Z" fill="#F9A825"/></svg></div>
-    <span class="eyebrow">Case Studies</span>
-    <h2>Featured Projects</h2>
-    <div class="cards">
-
-      <article class="card ai">
-        <div class="tags"><span class="tag">Streamlit</span><span class="tag">Python</span><span class="tag">scikit-learn</span><span class="tag">TRIPOD-AI</span></div>
-        <h3>❤️ CardioRisk AI</h3>
-        <p>A research-grade machine learning system for Coronary Artery Disease (CAD) risk classification, built to TRIPOD-AI reporting standards and deployed as an interactive Streamlit app.</p>
-        <a class="link" href="https://github.com/HayMedics/cardiorisk-ai" target="_blank" rel="noopener">View Project</a>
-      </article>
-
-      <article class="card ai">
-        <div class="tags"><span class="tag">Streamlit</span><span class="tag">Python</span><span class="tag">scikit-learn</span><span class="tag">TRIPOD-AI</span></div>
-        <h3>🧠 StrokeGuard AI</h3>
-        <p>An AI-powered system designed for early stroke detection, risk assessment, and monitoring, supporting clinicians with timely, data-driven intervention.</p>
-        <a class="link" href="https://github.com/HayMedics/strokeguard-ai" target="_blank" rel="noopener">View Project</a>
-      </article>
-
-      <article class="card ai">
-        <div class="tags"><span class="tag">Python</span><span class="tag">Streamlit</span><span class="tag">scikit-learn</span><span class="tag">RDKit</span></div>
-        <h3>💊 RxGuard AI: Drug Interaction Intelligence</h3>
-        <p>An AI-powered drug-drug interaction (DDI) checker. Select two or more medications and the app screens every pair, predicts the most likely interaction type, explains why, and produces a downloadable report.</p>
-        <a class="link" href="https://github.com/HayMedics/rxguard-ai" target="_blank" rel="noopener">View Project</a>
-      </article>
-
-      <article class="card ai">
-        <div class="tags"><span class="tag">Python</span><span class="tag">Streamlit</span><span class="tag">Agentic AI</span><span class="tag">SQLite</span></div>
-        <h3>🤖 Dr. Awwal's AI Assistant</h3>
-        <p>An AI-powered personal assistant that answers questions about Dr. Awwal Olalekan Abdulrahman's career, clinical experience, data science projects, and HayMedics Academy.</p>
-        <a class="link" href="https://github.com/HayMedics/AgenticAI" target="_blank" rel="noopener">View Project</a>
-      </article>
-
-      <article class="card ai">
-        <div class="tags"><span class="tag">Python</span><span class="tag">Streamlit</span><span class="tag">AI Agents</span></div>
-        <h3>✉️ HayMedics Outreach Studio</h3>
-        <p>AI agents that research each lead, write a personalised cold email, and prepare it for sending, running entirely on free-tier AI.</p>
-        <a class="link" href="https://github.com/HayMedics/HayMedics-Outreach-Studio" target="_blank" rel="noopener">View Project</a>
-      </article>
-
-      <article class="card">
-        <div class="tags"><span class="tag">Python</span><span class="tag">Streamlit</span><span class="tag">Data Cleaning</span></div>
-        <h3>🧹 HayMedics Data Analyser</h3>
-        <p>Automatic clinical and healthcare data cleaning and transformation, with a receipt of what changed.</p>
-        <a class="link" href="https://github.com/HayMedics/HayMedics-Data-Analyser" target="_blank" rel="noopener">View Project</a>
-      </article>
-
-      <article class="card">
-        <div class="tags"><span class="tag">Ms Excel</span><span class="tag">pandas</span><span class="tag">NumPy</span><span class="tag">Public Health</span></div>
-        <h3>🌍 Africa Health Dashboard</h3>
-        <p>An interactive Excel dashboard exploring public-health outcomes across 53 African countries (2000-2022), built on a clean star-schema dataset with live formulas, four geographic choropleth maps, and a written report and insights pack.</p>
-        <a class="link" href="https://github.com/HayMedics/haymedics-africa-health-dashboard" target="_blank" rel="noopener">View Project</a>
-      </article>
-
-      <article class="card">
-        <div class="tags"><span class="tag">Power BI</span><span class="tag">Python</span><span class="tag">Ms Excel</span></div>
-        <h3>🏥 Patient Emergency Room Dashboard</h3>
-        <p>Transforming healthcare data into actionable insights, an executive ER dashboard analysing 9,216 patient visits: wait times, satisfaction, demographics and department referrals.</p>
-        <a class="link" href="https://github.com/HayMedics/patient-er-powerbi-dashboard" target="_blank" rel="noopener">View Project</a>
-      </article>
-
-      <article class="card">
-        <div class="tags"><span class="tag">Power BI</span><span class="tag">Python</span><span class="tag">Ms Excel</span></div>
-        <h3>🍫 Awesome Chocolates Sales Dashboard</h3>
-        <p>Building an executive sales analytics dashboard in Power BI, star-schema modelling, DAX measures for profitability and LBS tracking, field parameters and bookmark navigation.</p>
-        <a class="link" href="https://github.com/HayMedics/Building-Executive-Sales-Analytics-Dashboard" target="_blank" rel="noopener">View Project</a>
-      </article>
-
-      <article class="card">
-        <div class="tags"><span class="tag">Ms Excel</span><span class="tag">Healthcare Analytics</span></div>
-        <h3>📑 HayMedics Claims Analytics Dashboard</h3>
-        <p>An interactive Excel dashboard analysing 3,000 health-insurance claims across 7 regions and 5 HMOs for the year 2024.</p>
-        <a class="link" href="https://github.com/HayMedics/insurance-claims-dashboard" target="_blank" rel="noopener">View Project</a>
-      </article>
-
-      <article class="card">
-        <div class="tags"><span class="tag">Ms Excel</span><span class="tag">Sales Analytics</span></div>
-        <h3>📊 Sales Analytics Dashboard</h3>
-        <p>An interactive, single-file Excel dashboard that turns 20,000 rows of raw sales data into a clean, navigable analytics report, built entirely with live formulas and charts.</p>
-        <a class="link" href="https://github.com/HayMedics/excel-sales-dashboard" target="_blank" rel="noopener">View Project</a>
-      </article>
-
-      <article class="card">
-        <div class="tags"><span class="tag">Ms Excel</span><span class="tag">Healthcare Operations</span></div>
-        <h3>🏨 Hospital Operations Dashboard (ALOS)</h3>
-        <p>An interactive Excel dashboard that turns 2,400 hospital admission records into a clear operational story: how long patients stay, how full the beds are, why discharges get delayed, and what it costs.</p>
-        <a class="link" href="https://github.com/HayMedics/hospital-alos-dashboard" target="_blank" rel="noopener">View Project</a>
-      </article>
-
-      <article class="card">
-        <div class="tags"><span class="tag">SQL</span><span class="tag">Database Design</span></div>
-        <h3>🛒 Retail Store Database</h3>
-        <p>A beginner-friendly SQL project building a retail store database, tables, relationships and queries that answer real business questions.</p>
-        <a class="link" href="https://github.com/HayMedics/sql-retail-project" target="_blank" rel="noopener">View Project</a>
-      </article>
-
-      <article class="card">
-        <div class="tags"><span class="tag">Ms Excel</span><span class="tag">Python</span><span class="tag">SPSS</span><span class="tag">Research</span></div>
-        <h3>🦟 Health Outreach: KAP Malaria, Madi, Ilorin</h3>
-        <p>A data-driven public-health analysis of a malaria KAP survey conducted during a community health outreach in Madi Community, Ilorin, Nigeria.</p>
-        <a class="link" href="https://github.com/HayMedics/-Malaria-KAP-Survey-Madi-Ilorin" target="_blank" rel="noopener">View Project</a>
-      </article>
-
+    <div class="vs-col vs-good">
+      <h4>🎯 The HayMedics Path</h4>
+      <ul>
+        <li>Structured, step-by-step, and up to date</li>
+        <li>Built entirely around real healthcare data</li>
+        <li>A clear roadmap from beginner to job-ready</li>
+        <li>1-on-1 mentorship and live debugging</li>
+        <li>Real projects, certificate, and career toolkit</li>
+        <li>Job-ready in 90 days with a portfolio to prove it</li>
+      </ul>
     </div>
   </div>
 </section>
 
-<section id="skills">
-  <div class="roof"><svg viewBox="0 0 100 30"><path d="M2 28 Q50 0 50 0 Q50 0 98 28 Q50 18 50 18 Q50 18 2 28 Z" fill="#F9A825"/></svg></div>
-  <span class="eyebrow">Toolbox</span>
-  <h2>Skills &amp; Tools</h2>
-  <div class="skills-grid">
-    <div class="skill"><div class="row"><span>Ms Excel</span><span>92%</span></div><div class="bar"><div class="fill" data-w="92"></div></div></div>
-    <div class="skill"><div class="row"><span>Power BI</span><span>90%</span></div><div class="bar"><div class="fill" data-w="90"></div></div></div>
-    <div class="skill"><div class="row"><span>Python</span><span>85%</span></div><div class="bar"><div class="fill" data-w="85"></div></div></div>
-    <div class="skill"><div class="row"><span>Clinical AI Architecture</span><span>85%</span></div><div class="bar"><div class="fill" data-w="85"></div></div></div>
-    <div class="skill"><div class="row"><span>SPSS</span><span>85%</span></div><div class="bar"><div class="fill" data-w="85"></div></div></div>
-    <div class="skill"><div class="row"><span>SQL</span><span>80%</span></div><div class="bar"><div class="fill" data-w="80"></div></div></div>
-    <div class="skill"><div class="row"><span>MLOps</span><span>75%</span></div><div class="bar"><div class="fill" data-w="75"></div></div></div>
+<section id="demand" class="demand">
+  <span class="eyebrow">The Opportunity</span>
+  <h2 class="sec-title">Thousands of Remote Health-Data Jobs Are Sitting Unclaimed</h2>
+  <p class="sec-sub">Hospitals, health-tech companies, NGOs, and research institutes worldwide are hiring data professionals to turn healthcare data into decisions. The best part? <b>Location doesn't matter, your skills do.</b></p>
+  <div class="demand-grid">
+    <div class="demand-card"><h4>🌍 Work From Anywhere</h4><p>Remote roles in healthcare analytics and data science are booming globally. Your laptop is your office.</p></div>
+    <div class="demand-card"><h4>💰 6-Figure Potential</h4><p>Data-skilled health professionals command premium salaries, because they solve high-stakes problems.</p></div>
+    <div class="demand-card"><h4>🏥 Purpose-Driven</h4><p>Help shape the future of healthcare, improving operations, research, and patient outcomes with data.</p></div>
   </div>
 </section>
 
-<section id="more">
-  <div class="wrap" style="padding:80px 22px">
-    <span class="eyebrow">Always Growing</span>
-    <h2>Latest From My GitHub</h2>
-    <p class="sub">This section updates automatically, every new public repository I publish appears here.</p>
-    <p id="repo-status">Loading repositories…</p>
-    <div class="repo-grid" id="repo-grid"></div>
+<section id="founder" class="founder">
+  <span class="eyebrow">Why HayMedics Academy</span>
+  <h2 class="sec-title">Taught by a Medical Doctor Who Became an AI Engineer</h2>
+  <div class="founder-box">
+    <h3>From Data Handler to Strategic Architect</h3>
+    <p>My path to AI engineering began as a Data Analyst, where I learned that you cannot build intelligent systems until you master the data behind them. I have distilled that journey, from analytics and data science to enterprise-grade AI engineering, into the HayMedics Academy curriculum.</p>
+    <p>This program bridges the gap between raw information and high-impact, production-ready solutions. As a <b>Medical Doctor and AI specialist</b>, I teach the specific healthcare applications of data to give you a competitive edge in research, public health, or data science.</p>
+    <p>Unlike standard bootcamps, HayMedics Academy offers a <b>flexible, career-friendly model</b> designed for your busy schedule. You get unlimited access to all recordings and files, no rigid timelines, no strict attendance policies, so you can learn at your own pace without sacrificing your professional responsibilities, academic work, or study activities.</p>
+    <p>Join us to evolve from a data handler into a strategic architect who builds tools that healthcare professionals actually use. <b>Let's build your career together.</b></p>
+    <div class="sig">- Awwal Abdulrahman, MD · Founder, HayMedics Academy</div>
+    <div class="founder-btns">
+      <a class="fb-portfolio" href="portfolio.html">👤 Show My Work (Portfolio)</a>
+      <a class="fb-chatbot hm-ai-trigger hm-ai-only" href="#" style="display:none">🤖 Chat With My AI Assistant</a>
+    </div>
   </div>
 </section>
 
-<section id="contact">
-  <div class="contact-grid">
-    <div>
-      <div class="roof"><svg viewBox="0 0 100 30"><path d="M2 28 Q50 0 50 0 Q50 0 98 28 Q50 18 50 18 Q50 18 2 28 Z" fill="#F9A825"/></svg></div>
-      <span class="eyebrow">Get In Touch</span>
-      <h2>Let's Work Together</h2>
-      <p>Have data that needs a story, or a healthcare problem AI could help solve? Reach out, I respond quickly.</p>
-      <div class="btn-row" style="justify-content:flex-start">
-        <a class="btn btn-orange" href="mailto:haymedicsacademy@gmail.com">Send Me a Message</a>
-        <button class="btn btn-primary" onclick="Calendly.initPopupWidget({url:'https://calendly.com/haymedicsacademy'});return false;">📅 Book a Session</button>
+<section id="why">
+  <span class="eyebrow">What You Get</span>
+  <h2 class="sec-title">More Than a Course, A Career System</h2>
+  <div class="why-grid">
+    <div class="why"><span class="ic">🧑‍🏫</span><h4>Expert Mentorship</h4><p>Real-time debugging and 1-on-1 guidance. You never get stuck alone.</p></div>
+    <div class="why"><span class="ic">📆</span><h4>Daily Accountability</h4><p>A structured environment that ensures you actually finish what you start.</p></div>
+    <div class="why"><span class="ic">📋</span><h4>Professional Curriculum</h4><p>Practical workflows designed for real-world health systems, not toy examples.</p></div>
+    <div class="why"><span class="ic">🚀</span><h4>Career Catalyst Toolkit</h4><p>Battle-tested resume secrets, cold-email templates, and interview scripts for 6-figure roles.</p></div>
+  </div>
+</section>
+
+<section id="reqs" class="reqs">
+  <span class="eyebrow">Before You Start</span>
+  <h2 class="sec-title">What You Need</h2>
+  <div class="reqs-grid">
+    <div class="req">
+      <h4>💻 A Functioning Laptop</h4>
+      <p>Core i5 or higher is recommended. All software installations will be guided step-by-step on the Community Page after enrollment, you won't be left to figure it out alone.</p>
+    </div>
+    <div class="req">
+      <h4>🙌 Not From a Healthcare Background?</h4>
+      <p>You're welcome too! This course breaks down all technical jargon and is designed to be helpful for everyone, healthcare professionals, students, and data enthusiasts alike.</p>
+    </div>
+  </div>
+</section>
+
+<section id="tracks">
+  <span class="eyebrow">Choose Your Path to Mastery</span>
+  <h2 class="sec-title">Two Tracks. One Definitive Edge.</h2>
+  <p class="sec-sub">Both tracks include a <b>Certificate, Mentorship, GitHub Visibility, and LinkedIn Optimization.</b> Our next cohort is almost full.</p>
+
+  <div class="tracks">
+
+    <div class="track">
+      <h3>Healthcare Data Analytics</h3>
+      <div class="tk-tag">Excel · Power BI · SQL · Python · AI</div>
+      <div class="price"><span class="now">₦30,000</span><span class="old">₦300,000</span></div>
+      <span class="save">Save 90%, Launch Price</span>
+      <ul>
+        <li>Master Excel from beginner to advanced (18 modules)</li>
+        <li>Power BI: scratch to advanced dashboards + DAX</li>
+        <li>SQL for healthcare databases (10 modules)</li>
+        <li>Python for Data Analysis</li>
+        <li>AI for analytics: ChatGPT, Gemini & Claude workflows</li>
+        <li>Real-world projects + capstone</li>
+        <li>Certificate, mentorship & career toolkit</li>
+        <li><b>Internship, job placement & instructor pathway</b></li>
+      </ul>
+      <div class="tk-btns">
+        <a class="btn btn-orange btn-apply" href="https://script.google.com/macros/s/AKfycbxmUHyfTYY6pF2LDmCYQcxRFoPCJ1grsB5a0VtEYPF1eFoexwZRO3zWuxwwpVHj5R0j/exec" target="_blank" rel="noopener">Apply Now</a>
+        <a class="btn-outline" href="https://drive.google.com/file/d/1J2V3knbbNWDZxid9PuJ4GNMUWQ_x7hyp/view?usp=drive_link" target="_blank" rel="noopener">⬇ Download Full Curriculum</a>
       </div>
     </div>
-    <div>
-      <a class="clink" href="mailto:haymedicsacademy@gmail.com"><span class="ic">@</span><span><small>Email</small>haymedicsacademy@gmail.com</span></a>
-      <a class="clink" href="https://github.com/HayMedics" target="_blank" rel="noopener"><span class="ic">&lt;/&gt;</span><span><small>GitHub</small>github.com/HayMedics</span></a>
-      <a class="clink" href="https://wa.me/2348107820971?text=Hi%2C%20I%20came%20across%20your%20contact%20and%20I%E2%80%99m%20interested%20in%20learning%20more%20about%20your%20work" target="_blank" rel="noopener"><span class="ic" style="background:#25D366">✆</span><span><small>WhatsApp</small>+234 810 782 0971</span></a>
-      <div style="margin-top:20px">
-        <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="light" data-type="VERTICAL" data-vanity="awal-abdulrahman-md-a53483219" data-version="v1">
-          <a class="badge-base__link LI-simple-link" href="https://ng.linkedin.com/in/awal-abdulrahman-md-a53483219?trk=profile-badge">Awwal Abdulrahman, MD</a>
-        </div>
-        <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+
+    <div class="track feature">
+      <span class="badge-top">Advanced · Research-Grade</span>
+      <h3>Healthcare Data Science</h3>
+      <div class="tk-tag">Excel · Biostatistics · SPSS · SQL · Python · ML</div>
+      <div class="price"><span class="now">₦30,000</span><span class="old">₦300,000</span></div>
+      <span class="save">Save 90%, Launch Price</span>
+      <ul>
+        <li>Data collection with Google Survey Forms</li>
+        <li>Excel for statistical & mathematical analysis</li>
+        <li>Comprehensive Biostatistics + SPSS (11 modules)</li>
+        <li>SQL for data science (10 modules)</li>
+        <li>Python for Data Science & Machine Learning</li>
+        <li>End-to-end ML pipeline + deployment</li>
+        <li><b>Internship, job placement & instructor pathway</b></li>
+      </ul>
+      <div class="tk-btns">
+        <a class="btn btn-orange btn-apply" href="https://script.google.com/macros/s/AKfycbxmUHyfTYY6pF2LDmCYQcxRFoPCJ1grsB5a0VtEYPF1eFoexwZRO3zWuxwwpVHj5R0j/exec" target="_blank" rel="noopener">Apply Now</a>
+        <a class="btn-outline" href="https://drive.google.com/file/d/1-5r4aZWIxfxXcHnjK1tP_rHtFSmblfVZ/view?usp=sharing" target="_blank" rel="noopener">⬇ Download Full Curriculum</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="bundle">
+    <h3>🎓 Enroll in Both Tracks and Save 90% TODAY</h3>
+    <div class="price"><span class="now">₦60,000</span><span class="old">₦600,000</span></div>
+    <p class="b-flow">Begin with Data Analytics → advance to Data Science → cap it off with Healthcare AI.</p>
+    <p>You'll learn to build real, scalable clinical systems that deliver real-world solutions.</p>
+    <a class="btn btn-orange btn-lg btn-apply" href="https://script.google.com/macros/s/AKfycbxmUHyfTYY6pF2LDmCYQcxRFoPCJ1grsB5a0VtEYPF1eFoexwZRO3zWuxwwpVHj5R0j/exec" target="_blank" rel="noopener">Apply Now</a>
+  </div>
+
+  <div class="offer-strip">
+    <h4>🎁 Bonus for Both-Track Students</h4>
+    <p>Register for both tracks now, build a minimum of <b>5 real projects</b> by the end of the course, and you'll be eligible for a <b>free, beautiful portfolio page</b> just like this one, hosted and branded for you.</p>
+  </div>
+
+  <div class="pathway">
+    <h4>🚀 Your Journey Doesn't End at the Certificate</h4>
+    <p class="lead">Most courses hand you a certificate and disappear. At HayMedics Academy, finishing the cohort is where the real career opportunity begins.</p>
+    <div class="pw-steps">
+      <div class="pw">
+        <div class="n">1</div>
+        <h5>Graduate</h5>
+        <p>Complete your track with real projects and a portfolio that proves your skill.</p>
+      </div>
+      <div class="pw">
+        <div class="n">2</div>
+        <h5>Internship</h5>
+        <p>Graduates are eligible for a further internship with HayMedics Academy, working on live healthcare data projects.</p>
+      </div>
+      <div class="pw">
+        <div class="n">3</div>
+        <h5>Job Placement</h5>
+        <p>We support your transition into paid roles through our placement pipeline and career toolkit.</p>
+      </div>
+      <div class="pw last">
+        <div class="n">4</div>
+        <h5>Teach &amp; Earn</h5>
+        <p>Top performers get first consideration as instructors in subsequent cohorts, with decent pay.</p>
       </div>
     </div>
   </div>
 </section>
 
-<footer>© 2026 <b>Awwal Abdulrahman · HayMedics Academy</b> · Data | Research | Innovation</footer>
+
+<section id="opportunities" class="opps">
+  <span class="eyebrow">Where This Takes You</span>
+  <h2 class="sec-title">One Skill Set, Endless Opportunities</h2>
+  <p class="sec-sub">These skills don't just land you a job, they open doors you can walk through on your own terms.</p>
+  <div class="opps-grid">
+    <div class="opp"><span class="ic">🎓</span><h4>Analyse Your Own Research</h4><p>Undergraduate and postgraduate students can independently analyse their project and thesis data, without paying huge charges to hire a data analyst.</p></div>
+    <div class="opp"><span class="ic">💼</span><h4>Get Hired</h4><p>Qualify for high-demand remote roles in hospitals, health-tech, NGOs, and research institutes worldwide.</p></div>
+    <div class="opp"><span class="ic">🧑‍💻</span><h4>Become Self-Employed</h4><p>Work for yourself. Take on clients and projects on your own schedule and terms.</p></div>
+    <div class="opp"><span class="ic">💰</span><h4>Freelance</h4><p>Offer data analysis, dashboards, and research support to clients globally for premium fees.</p></div>
+    <div class="opp"><span class="ic">📣</span><h4>Organise & Teach Bootcamps</h4><p>Package your knowledge and run structured training programs like this one.</p></div>
+    <div class="opp"><span class="ic">🚀</span><h4>And the List Goes On</h4><p>Consulting, health-data startups, academic collaborations, the opportunities keep growing.</p></div>
+  </div>
+</section>
+
+<section id="learn">
+  <span class="eyebrow">How You'll Learn</span>
+  <h2 class="sec-title">A Complete Learning System</h2>
+  <div class="learn-grid">
+    <div class="learn"><span class="ic">💻</span><h4>Virtual Classes</h4><p>Live, structured sessions</p></div>
+    <div class="learn"><span class="ic">📝</span><h4>Practical Workbooks</h4><p>Walkthroughs + answer keys</p></div>
+    <div class="learn"><span class="ic">🏗️</span><h4>Real-World Projects</h4><p>Build a portfolio that hires</p></div>
+    <div class="learn"><span class="ic">👥</span><h4>Community & Support</h4><p>Never get stuck alone</p></div>
+    <div class="learn"><span class="ic">🎓</span><h4>Certificate</h4><p>Proof of completion</p></div>
+  </div>
+</section>
+
+<section id="curriculum" class="curric">
+  <span class="eyebrow">Inside the Tracks</span>
+  <h2 class="sec-title">The Full Curriculum</h2>
+  <p class="sec-sub">Click any module to expand. Every unit is built around real healthcare data.</p>
+
+  <div class="acc">
+
+    <div class="acc-item">
+      <div class="acc-head">📊 Data Analytics · Microsoft Excel (Beginner → Advanced) <span class="arw">+</span></div>
+      <div class="acc-body"><div class="acc-body-inner">
+        <p>Beginner</p>
+        <ul><li>Getting started with Excel</li><li>Working with healthcare data</li><li>Basic formulas & functions</li><li>Formatting for clarity</li></ul>
+        <p>Intermediate</p>
+        <ul><li>Data validation & quality control</li><li>Logical & lookup functions</li><li>Date & time functions</li><li>Sorting, filtering & unique data</li><li>Charts & PivotTables for reporting</li></ul>
+        <p>Advanced</p>
+        <ul><li>Dynamic arrays & advanced functions</li><li>Advanced lookup & reference</li><li>Statistical & mathematical analysis</li><li>Data analysis tools, macros & automation</li><li>Power Query & data connections</li><li>Capstone project</li></ul>
+      </div></div>
+    </div>
+
+    <div class="acc-item">
+      <div class="acc-head">📈 Data Analytics · Power BI (Scratch → Advanced) <span class="arw">+</span></div>
+      <div class="acc-body"><div class="acc-body-inner">
+        <ul><li>Getting started with Power BI</li><li>Connecting & importing data</li><li>Cleaning & shaping data (Power Query)</li><li>Building a data model</li><li>Calculations with DAX</li><li>Creating visualizations & interactive reports</li><li>Report design & data storytelling</li><li>Publishing & sharing (Power BI Service)</li><li>Capstone project</li></ul>
+      </div></div>
+    </div>
+
+    <div class="acc-item">
+      <div class="acc-head">🗄️ Data Analytics · SQL <span class="arw">+</span></div>
+      <div class="acc-body"><div class="acc-body-inner">
+        <ul><li>Databases & SQL basics</li><li>Reading & summarising data</li><li>Changing data</li><li>Joins, subqueries & CTEs</li><li>Window functions</li><li>Data cleaning & performance</li><li>Stored procedures & security</li><li>Capstone & reference</li></ul>
+      </div></div>
+    </div>
+
+    <div class="acc-item">
+      <div class="acc-head">📋 Data Science · Data Collection with Google Forms <span class="arw">+</span></div>
+      <div class="acc-body"><div class="acc-body-inner">
+        <ul><li>Convert bulky questionnaires into analysis-ready, customized survey forms in 5 minutes</li><li>Collect clean, structured data from the start</li></ul>
+      </div></div>
+    </div>
+
+    <div class="acc-item">
+      <div class="acc-head">🧬 Data Science · Biostatistics & SPSS <span class="arw">+</span></div>
+      <div class="acc-body"><div class="acc-body-inner">
+        <ul><li>Summarizing & visualizing data</li><li>Normal distribution in biostatistics</li><li>Central limit theorem & confidence intervals</li><li>Study designs</li><li>Probability</li><li>Parametric & non-parametric T-testing</li><li>Linear regression & correlation</li><li>Measures of association (RR, OR), logistic regression</li><li>Survival analysis</li><li>Confounding, bias & effect modification</li></ul>
+      </div></div>
+    </div>
+
+    <div class="acc-item">
+      <div class="acc-head">🐍 Data Science · Python & Machine Learning <span class="arw">+</span></div>
+      <div class="acc-body"><div class="acc-body-inner">
+        <ul><li>The big picture: what is AI & ML?</li><li>ML foundations</li><li>Python fundamentals (I–IV)</li><li>Regression models</li><li>Tree-based models</li><li>Neural networks</li><li>Capstone project & deployment</li></ul>
+      </div></div>
+    </div>
+
+    <div class="acc-item">
+      <div class="acc-head">🎁 Bonus (Both Tracks) · AI, LinkedIn, Portfolio & Career <span class="arw">+</span></div>
+      <div class="acc-body"><div class="acc-body-inner">
+        <ul><li>AI for healthcare data: ChatGPT, Gemini & Claude</li><li>Generate dashboards in minutes without losing your thinking skills</li><li>End-to-end deployed ML pipeline, without writing a single line of code</li><li>LinkedIn optimization</li><li>Build a beautiful portfolio page (like this one!)</li><li>GitHub & project visibility</li><li>One-on-one mentorship & daily accountability</li><li>Live debugging, you never get stuck</li><li>The "Career Catalyst" toolkit for 6-figure roles</li></ul>
+      </div></div>
+    </div>
+
+  </div>
+</section>
+
+<section id="other-tracks">
+  <span class="eyebrow">The Journey Continues</span>
+  <h2 class="sec-title">Other Tracks Coming Soon</h2>
+  <p class="sec-sub">HayMedics Academy is growing. Master the fundamentals now, and be first in line for what's next.</p>
+  <div class="soon-grid">
+    <div class="soon"><span class="tag-soon">Coming Soon</span><h4>🩺 AI for Healthcare</h4></div>
+    <div class="soon"><span class="tag-soon">Coming Soon</span><h4>🤖 Agentic AI</h4></div>
+    <div class="soon"><span class="tag-soon">Coming Soon</span><h4>⚙️ AI Automation</h4></div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="roof"><svg viewBox="0 0 100 30"><path d="M2 28 Q50 0 50 0 Q50 0 98 28 Q50 18 50 18 Q50 18 2 28 Z" fill="#F9A825"/></svg></div>
+  <h2>Ready to Level Up?</h2>
+  <p>This is for committed learners, healthcare professionals, allied health staff, students, and data enthusiasts ready to turn data into decisions and lead the future of healthcare. <b>Doors close in 7 days.</b></p>
+  <div class="btn-row">
+    <a class="btn btn-orange btn-lg" href="#tracks">Secure Your Spot, 90% OFF</a>
+    <a class="btn btn-wa btn-lg" href="https://wa.me/2348107820971?text=Hi%2C%20my%20name%20is%20%5BYour%20Name%5D.%20I%E2%80%99m%20interested%20in%20applying%20for%20the%2090%25%20scholarship%20for%20HayMedics.%20I%20understand%20applications%20are%20closing%20in%20a%20few%20days.%20Kindly%20send%20me%20the%20application%20link.%20Thank%20you." target="_blank" rel="noopener">💬 Ask on WhatsApp</a>
+  </div>
+</section>
+
+<footer>
+  © 2026 <b>HayMedics Academy</b> · Data | Research | Innovation
+  <div class="foot-links">
+    <a href="https://wa.me/2348107820971?text=Hi%2C%20my%20name%20is%20%5BYour%20Name%5D.%20I%E2%80%99m%20interested%20in%20applying%20for%20the%2090%25%20scholarship%20for%20HayMedics.%20I%20understand%20applications%20are%20closing%20in%20a%20few%20days.%20Kindly%20send%20me%20the%20application%20link.%20Thank%20you." target="_blank" rel="noopener">💬 WhatsApp</a>
+    <a href="mailto:haymedicsacademy@gmail.com">✉️ Email</a>
+    <a href="portfolio.html">👤 My Portfolio</a>
+  </div>
+</footer>
 
 <script>
-/* ===== Auto-updating GitHub repo feed ===== */
-const GITHUB_USERNAME = "HayMedics";
-
-(async function loadRepos(){
-  const status = document.getElementById('repo-status');
-  const grid = document.getElementById('repo-grid');
-  try{
-    const res = await fetch(`https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated&per_page=9`);
-    if(!res.ok) throw new Error('GitHub API error');
-    const repos = await res.json();
-    if(!repos.length){ status.textContent = 'No public repositories yet, check back soon!'; return; }
-    status.remove();
-    repos.forEach(r=>{
-      const a = document.createElement('a');
-      a.className = 'repo';
-      a.href = r.html_url;
-      a.target = '_blank';
-      a.rel = 'noopener';
-      a.innerHTML = `
-        <h3>${r.name}</h3>
-        <p>${r.description ? r.description : 'No description yet.'}</p>
-        <div class="meta">
-          ${r.language ? `<span>● ${r.language}</span>` : ''}
-          <span>★ ${r.stargazers_count}</span>
-          <span>Updated ${new Date(r.updated_at).toLocaleDateString()}</span>
-        </div>`;
-      grid.appendChild(a);
+document.querySelectorAll('.acc-head').forEach(head=>{
+  head.addEventListener('click',()=>{
+    const item = head.parentElement;
+    const body = head.nextElementSibling;
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.acc-item').forEach(i=>{
+      i.classList.remove('open');
+      i.querySelector('.acc-body').style.maxHeight = null;
     });
-  }catch(e){
-    status.textContent = 'Could not load repositories right now. Visit github.com/HayMedics directly!';
-  }
-})();
-
-/* ===== Animate skill bars on scroll ===== */
-const obs = new IntersectionObserver(entries=>{
-  entries.forEach(en=>{
-    if(en.isIntersecting){
-      en.target.style.width = en.target.dataset.w + '%';
-      obs.unobserve(en.target);
+    if(!isOpen){
+      item.classList.add('open');
+      body.style.maxHeight = body.scrollHeight + 'px';
     }
   });
-},{threshold:.4});
-document.querySelectorAll('.fill').forEach(f=>obs.observe(f));
+});
 </script>
-<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+<a class="wa-float" href="https://wa.me/2348107820971?text=Hi%2C%20my%20name%20is%20%5BYour%20Name%5D.%20I%E2%80%99m%20interested%20in%20applying%20for%20the%2090%25%20scholarship%20for%20HayMedics.%20I%20understand%20applications%20are%20closing%20in%20a%20few%20days.%20Kindly%20send%20me%20the%20application%20link.%20Thank%20you." target="_blank" rel="noopener" aria-label="Chat on WhatsApp" title="Chat on WhatsApp">💬</a>
+
+<!-- ===== AI Assistant Widget ===== -->
+<button class="hm-ai-launch hm-ai-trigger" aria-label="Chat with my AI assistant" style="display:none">
+  <span class="bot">🤖</span><span>Ask my AI about me</span>
+</button>
+<div class="hm-ai-modal" id="hmAiModal" role="dialog" aria-label="AI Assistant chat">
+  <div class="hm-ai-box">
+    <div class="hm-ai-head">
+      <span class="bot">🤖</span>
+      <div class="tt"><b>Dr. Awwal's AI Assistant</b><span>Ask about my projects, career &amp; HayMedics Academy</span></div>
+      <a id="hmAiNewTab" href="#" target="_blank" rel="noopener" title="Open full screen" aria-label="Open in new tab">⤢</a>
+      <button id="hmAiClose" title="Close" aria-label="Close chat">✕</button>
+    </div>
+    <iframe class="hm-ai-frame" id="hmAiFrame" title="Dr. Awwal's AI Assistant" loading="lazy" allow="clipboard-write"></iframe>
+  </div>
+</div>
+<script>
+/* ===================================================================
+   PASTE YOUR STREAMLIT LINK BETWEEN THE QUOTES ON THE NEXT LINE, e.g.
+   var HM_CHATBOT_URL = "https://your-app.streamlit.app";
+   Everything below activates automatically once a link is present.
+   =================================================================== */
+var HM_CHATBOT_URL = "https://dr-awwal-ai-assistant.streamlit.app";
+
+(function(){
+  var ready = /^https?:\/\//.test(HM_CHATBOT_URL);
+  var triggers = document.querySelectorAll('.hm-ai-trigger');
+  var modal = document.getElementById('hmAiModal');
+  var frame = document.getElementById('hmAiFrame');
+  var newtab = document.getElementById('hmAiNewTab');
+  if(!ready){ document.querySelectorAll('.hm-ai-only').forEach(function(el){el.style.display='none';}); return; }
+  var embedUrl = HM_CHATBOT_URL + (HM_CHATBOT_URL.indexOf('?')>-1 ? '&' : '?') + 'embed=true';
+  newtab.href = HM_CHATBOT_URL;
+  triggers.forEach(function(t){
+    t.style.display='';
+    t.addEventListener('click', function(e){
+      e.preventDefault();
+      if(!frame.src) frame.src = embedUrl;   /* lazy-load on first open */
+      modal.classList.add('open');
+      document.body.style.overflow='hidden';
+    });
+  });
+  function close(){ modal.classList.remove('open'); document.body.style.overflow=''; }
+  document.getElementById('hmAiClose').addEventListener('click', close);
+  modal.addEventListener('click', function(e){ if(e.target===modal) close(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') close(); });
+})();
+</script>
+
 </body>
 </html>

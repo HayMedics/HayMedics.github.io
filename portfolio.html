@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Awwal Abdulrahman, MD, AI Engineer & Full Stack Data Scientist</title>
+<meta name="description" content="Awwal Abdulrahman, MD, Founder of HayMedics Academy. AI Engineer and Full Stack Data Scientist building clinical AI systems (CardioRisk AI, StrokeGuard) and executive Power BI dashboards.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<!-- Favicon: the orange HayMedics roof + blue pillars -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M5 42 Q50 8 50 8 Q50 8 95 42 Q50 28 50 28 Q50 28 5 42 Z' fill='%23F9A825'/%3E%3Crect x='18' y='48' width='14' height='44' fill='%233458A8'/%3E%3Crect x='43' y='48' width='14' height='44' fill='%233458A8'/%3E%3Crect x='68' y='48' width='14' height='44' fill='%233458A8'/%3E%3Crect x='18' y='48' width='64' height='12' fill='%233458A8'/%3E%3C/svg%3E">
+<style>
+:root{
+  --royal:#3458A8;
+  --navy:#1A1464;
+  --orange:#F9A825;
+  --ink:#23274A;
+  --mist:#F5F7FC;
+  --line:#DDE4F2;
+  --white:#FFFFFF;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--white);line-height:1.65}
+h1,h2,h3{font-family:'Archivo',sans-serif}
+a{color:var(--royal);text-decoration:none}
+
+/* ---------- Roof motif (signature element) ---------- */
+.roof{display:inline-block;width:46px;height:14px;margin-bottom:10px}
+.roof svg{display:block;width:100%;height:100%}
+
+/* ---------- Nav ---------- */
+nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:14px 22px}
+.brand{display:flex;align-items:center;gap:10px;font-family:'Archivo';font-weight:800;color:var(--navy);font-size:1.05rem}
+.brand svg{width:34px;height:34px}
+.brand span b{color:var(--royal)}
+.nav-links{display:flex;gap:26px;font-size:.85rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase}
+.nav-links a{color:var(--ink)}
+.nav-links a:hover{color:var(--orange)}
+.navburger{display:none;background:none;border:2px solid var(--royal);color:var(--royal);border-radius:8px;font-size:1.3rem;font-weight:800;padding:4px 12px;cursor:pointer;font-family:'Archivo'}
+@media(max-width:640px){
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--white);border-bottom:2px solid var(--orange);flex-direction:column;gap:0;padding:8px 0;box-shadow:0 12px 24px rgba(26,20,100,.12)}
+  .nav-links.open{display:flex}
+  .nav-links a{padding:13px 26px;border-bottom:1px solid var(--mist)}
+  .navburger{display:block}
+}
+
+/* ---------- Hero ---------- */
+.hero{background:linear-gradient(180deg,var(--mist) 0%,var(--white) 100%);padding:90px 22px 70px;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(var(--line) 1px,transparent 1px);background-size:26px 26px;opacity:.5}
+.hero>*{position:relative}
+.pill{display:inline-block;border:1.5px solid var(--royal);color:var(--royal);font-size:.72rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;padding:7px 18px;border-radius:999px;background:var(--white)}
+.hero h1{font-size:clamp(2.4rem,7vw,4.2rem);font-weight:900;color:var(--navy);line-height:1.05;margin:26px 0 6px}
+.hero h1 em{font-style:normal;color:var(--royal)}
+.hero .tagline{font-size:clamp(1rem,2.6vw,1.25rem);font-weight:700;color:var(--orange);margin-bottom:18px;letter-spacing:.04em}
+.hero p.lede{max-width:580px;margin:0 auto 34px;color:#4A5070}
+.btn-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-block;padding:13px 28px;border-radius:8px;font-weight:700;font-size:.92rem;transition:transform .15s ease, box-shadow .15s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--navy);color:var(--white);box-shadow:0 6px 18px rgba(26,20,100,.25)}
+.btn-ghost{border:2px solid var(--royal);color:var(--royal);background:var(--white)}
+.btn-orange{background:var(--orange);color:var(--navy)}
+
+/* ---------- Sections ---------- */
+section{max-width:1100px;margin:0 auto;padding:80px 22px}
+.eyebrow{font-size:.72rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--royal)}
+h2{font-size:clamp(1.7rem,4vw,2.4rem);font-weight:800;color:var(--navy);margin:6px 0 36px}
+
+/* ---------- About ---------- */
+.about-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:46px;align-items:start}
+@media(max-width:820px){.about-grid{grid-template-columns:1fr}}
+.about-grid p{margin-bottom:16px;color:#4A5070}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.stat{background:var(--mist);border:1px solid var(--line);border-radius:12px;padding:22px;text-align:center}
+.stat .num{font-family:'Archivo';font-size:2rem;font-weight:800;color:var(--royal)}
+.stat .lbl{font-size:.78rem;color:#5A6080;margin-top:4px}
+
+/* ---------- Projects ---------- */
+#projects{background:var(--mist);max-width:none}
+#projects .wrap{max-width:1100px;margin:0 auto;padding:0}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px}
+.card{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:28px;display:flex;flex-direction:column;transition:transform .15s ease, box-shadow .15s ease;border-top:5px solid var(--royal)}
+.card:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(26,20,100,.12)}
+.card.ai{border-top-color:var(--orange)}
+.tags{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:14px}
+.tag{font-size:.68rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--royal);background:rgba(52,88,168,.09);padding:4px 10px;border-radius:999px}
+.card.ai .tag{color:#B57A00;background:rgba(249,168,37,.14)}
+.card h3{font-size:1.15rem;color:var(--navy);margin-bottom:10px}
+.card p{font-size:.92rem;color:#4A5070;flex:1}
+.card .link{margin-top:18px;font-weight:700;font-size:.88rem}
+.card .link::after{content:" →"}
+
+/* ---------- Skills ---------- */
+.skill{margin-bottom:22px}
+.skill .row{display:flex;justify-content:space-between;font-weight:600;font-size:.9rem;margin-bottom:8px}
+.skill .row span:last-child{color:var(--royal)}
+.bar{height:9px;background:var(--mist);border:1px solid var(--line);border-radius:999px;overflow:hidden}
+.fill{height:100%;width:0;background:linear-gradient(90deg,var(--royal),var(--navy));border-radius:999px;transition:width 1.1s cubic-bezier(.2,.7,.3,1)}
+.skills-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 46px}
+@media(max-width:680px){.skills-grid{grid-template-columns:1fr}}
+
+/* ---------- GitHub auto feed ---------- */
+#more{background:var(--navy);max-width:none;color:var(--white)}
+#more .wrap{max-width:1100px;margin:0 auto;padding:0}
+#more .eyebrow{color:var(--orange)}
+#more h2{color:var(--white)}
+#more .sub{color:#B9C2E8;margin:-22px 0 34px;font-size:.92rem}
+.repo-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+.repo{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:22px;transition:background .15s ease;display:block}
+.repo:hover{background:rgba(255,255,255,.11)}
+.repo h3{font-size:1rem;color:var(--white);margin-bottom:8px;word-break:break-word}
+.repo p{font-size:.85rem;color:#B9C2E8;min-height:42px}
+.repo .meta{display:flex;gap:14px;margin-top:14px;font-size:.75rem;color:var(--orange);font-weight:600;flex-wrap:wrap}
+#repo-status{color:#B9C2E8;font-size:.9rem}
+
+/* ---------- Contact ---------- */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:46px;align-items:center}
+@media(max-width:760px){.contact-grid{grid-template-columns:1fr}}
+.contact-grid h2{margin-bottom:14px}
+.contact-grid p{color:#4A5070;margin-bottom:26px}
+.clink{display:flex;align-items:center;gap:14px;background:var(--mist);border:1px solid var(--line);border-radius:12px;padding:16px 20px;margin-bottom:12px;font-weight:600;color:var(--ink);word-break:break-word}
+.clink:hover{border-color:var(--royal)}
+.clink .ic{width:38px;height:38px;border-radius:9px;background:var(--royal);color:var(--white);display:flex;align-items:center;justify-content:center;font-family:'Archivo';font-weight:800;flex-shrink:0}
+.clink small{display:block;font-weight:500;color:#6A7090;font-size:.74rem}
+
+footer{border-top:1px solid var(--line);text-align:center;padding:26px 22px;font-size:.82rem;color:#6A7090}
+footer b{color:var(--navy)}
+
+
+/* ===== AI Assistant Widget ===== */
+.hm-ai-launch{position:fixed;right:20px;bottom:90px;z-index:99;display:flex;align-items:center;gap:10px;background:linear-gradient(135deg,var(--navy),var(--royal));color:#fff;border:2px solid var(--orange);border-radius:999px;padding:10px 18px 10px 12px;font-family:'Archivo';font-weight:800;font-size:.9rem;cursor:pointer;box-shadow:0 8px 24px rgba(26,20,100,.35);transition:transform .15s ease}
+.hm-ai-launch:hover{transform:translateY(-2px)}
+.hm-ai-launch .bot{width:34px;height:34px;border-radius:50%;background:var(--orange);display:flex;align-items:center;justify-content:center;font-size:1.15rem;flex-shrink:0;animation:hmPulse 2.4s ease-in-out infinite}
+@keyframes hmPulse{0%,100%{box-shadow:0 0 0 0 rgba(249,168,37,.55)}50%{box-shadow:0 0 0 9px rgba(249,168,37,0)}}
+.hm-ai-modal{position:fixed;inset:0;z-index:200;display:none;align-items:flex-end;justify-content:flex-end;background:rgba(20,16,60,.45);backdrop-filter:blur(3px);padding:20px}
+.hm-ai-modal.open{display:flex}
+.hm-ai-box{width:min(420px,100%);height:min(640px,90vh);background:#fff;border-radius:18px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 24px 60px rgba(0,0,0,.35);border:1px solid var(--line)}
+.hm-ai-head{background:linear-gradient(135deg,var(--navy),var(--royal));color:#fff;display:flex;align-items:center;gap:12px;padding:14px 16px}
+.hm-ai-head .bot{width:40px;height:40px;border-radius:50%;background:var(--orange);display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0}
+.hm-ai-head .tt{flex:1;line-height:1.2}
+.hm-ai-head .tt b{font-family:'Archivo';font-size:.98rem;display:block}
+.hm-ai-head .tt span{font-size:.72rem;color:#C7D2F5}
+.hm-ai-head a,.hm-ai-head button{background:rgba(255,255,255,.14);border:none;color:#fff;width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:1rem;text-decoration:none}
+.hm-ai-head a:hover,.hm-ai-head button:hover{background:rgba(255,255,255,.26)}
+.hm-ai-frame{flex:1;border:0;width:100%;background:#F5F7FC}
+@media(max-width:560px){.hm-ai-modal{padding:0}.hm-ai-box{width:100%;height:100%;border-radius:0}}
+@media (prefers-reduced-motion: reduce){.hm-ai-launch .bot{animation:none}}
+
+@media (prefers-reduced-motion: reduce){*{transition:none!important}}
+</style>
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Awwal Abdulrahman, MD: AI Engineer & Full Stack Data Scientist">
+<meta property="og:description" content="Founder of HayMedics Academy. Clinical AI systems (CardioRisk AI, StrokeGuard, RxGuard AI) and executive dashboards. 15+ projects.">
+<meta property="og:url" content="https://haymedics.github.io/portfolio.html">
+<meta property="og:image" content="https://haymedics.github.io/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Awwal Abdulrahman, MD: AI Engineer & Data Scientist">
+<meta name="twitter:image" content="https://haymedics.github.io/og-image.png">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Awwal Abdulrahman","honorificSuffix":"MD","jobTitle":"AI Engineer & Full Stack Data Scientist","worksFor":{"@type":"Organization","name":"HayMedics Academy"},"url":"https://haymedics.github.io/portfolio.html","sameAs":["https://www.linkedin.com/in/awal-abdulrahman-md-a53483219","https://github.com/HayMedics"],"address":{"@type":"PostalAddress","addressLocality":"Ilorin","addressCountry":"NG"}}
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="brand" href="#top">
+      <svg viewBox="0 0 100 100" aria-hidden="true">
+        <path d="M5 42 Q50 8 50 8 Q50 8 95 42 Q50 28 50 28 Q50 28 5 42 Z" fill="#F9A825"/>
+        <rect x="18" y="48" width="14" height="44" fill="#3458A8"/>
+        <rect x="43" y="48" width="14" height="44" fill="#3458A8"/>
+        <rect x="68" y="48" width="14" height="44" fill="#3458A8"/>
+        <rect x="18" y="48" width="64" height="12" fill="#3458A8"/>
+      </svg>
+      <span><b>Hay</b>Medics</span>
+    </a>
+    <button class="navburger" aria-label="Menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#more">GitHub</a>
+      <a href="index.html" style="color:var(--orange)">Courses</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <span class="pill">AI Engineer · Full Stack Data Scientist · Ilorin, Nigeria</span>
+  <h1>AWWAL<br><em>ABDULRAHMAN</em></h1>
+  <div class="tagline">Data | Research | Innovation</div>
+  <p class="lede">Medical doctor turned AI engineer. I build clinical machine-learning systems and executive analytics dashboards, turning healthcare and business data into decisions that save time, money, and lives.</p>
+  <div class="btn-row">
+    <a class="btn btn-primary" href="#projects">View My Work</a>
+    <a class="btn btn-ghost" href="#contact">Let's Work Together</a>
+    <a class="btn btn-orange" href="index.html">🎓 Explore Courses</a>
+  </div>
+</header>
+
+<section id="about">
+  <div class="roof"><svg viewBox="0 0 100 30"><path d="M2 28 Q50 0 50 0 Q50 0 98 28 Q50 18 50 18 Q50 18 2 28 Z" fill="#F9A825"/></svg></div>
+  <span class="eyebrow">Who I Am</span>
+  <h2>About Me</h2>
+  <div class="about-grid">
+    <div>
+      <p>I am <b>Awwal Abdulrahman, MD</b>, an AI Engineer, Full Stack Data Scientist, and researcher, and the founder of <b>HayMedics Academy</b>, a hub for data, research and innovation in healthcare.</p>
+      <p>I bridge clinical medicine and data science: from research-grade machine-learning systems built to TRIPOD-AI reporting standards, to executive Power BI dashboards that give decision-makers instant clarity.</p>
+      <p>Whether it's predicting cardiovascular risk, detecting stroke early, or surfacing the story inside business data, my goal is the same: <b>actionable intelligence</b>.</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><div class="num">15+</div><div class="lbl">Projects Completed</div></div>
+      <div class="stat"><div class="num">5</div><div class="lbl">Clinical AI Systems</div></div>
+      <div class="stat"><div class="num">7</div><div class="lbl">Executive Dashboards</div></div>
+      <div class="stat"><div class="num">1</div><div class="lbl">Academy Founded</div></div>
+    </div>
+  </div>
+</section>
+
+
+<section id="ai-assistant" class="hm-ai-only">
+  <div style="background:linear-gradient(135deg,var(--navy),var(--royal));border-radius:18px;padding:44px 34px;color:#fff;position:relative;overflow:hidden">
+    <div style="position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.09) 1.4px,transparent 1.4px);background-size:30px 30px"></div>
+    <div style="position:relative;display:grid;grid-template-columns:1.3fr .7fr;gap:34px;align-items:center">
+      <div>
+        <span class="eyebrow" style="color:var(--orange)">Try Something Different</span>
+        <h2 style="color:#fff;margin-bottom:12px">Don't Read About Me. Ask About Me.</h2>
+        <p style="color:#DCE3F7;margin-bottom:22px">I built an AI assistant trained on my career, clinical background, and every project on this page. Ask it anything, it answers in seconds.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:24px">
+          <button class="hm-ai-trigger" style="background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.3);color:#fff;border-radius:999px;padding:9px 16px;font-size:.83rem;cursor:pointer;font-weight:600">"What has he built in clinical AI?"</button>
+          <button class="hm-ai-trigger" style="background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.3);color:#fff;border-radius:999px;padding:9px 16px;font-size:.83rem;cursor:pointer;font-weight:600">"Tell me about HayMedics Academy"</button>
+          <button class="hm-ai-trigger" style="background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.3);color:#fff;border-radius:999px;padding:9px 16px;font-size:.83rem;cursor:pointer;font-weight:600">"Is he available for freelance work?"</button>
+        </div>
+        <button class="btn btn-orange hm-ai-trigger" style="border:none;cursor:pointer;font-size:1rem">🤖 Chat With My AI Assistant</button>
+      </div>
+      <div style="text-align:center">
+        <div style="width:150px;height:150px;margin:0 auto;border-radius:50%;background:var(--orange);display:flex;align-items:center;justify-content:center;font-size:4.2rem;box-shadow:0 0 0 14px rgba(249,168,37,.18), 0 0 0 28px rgba(249,168,37,.08)">🤖</div>
+        <div style="font-family:'Archivo';font-weight:800;margin-top:18px;font-size:1.05rem">Dr. Awwal's AI Assistant</div>
+        <div style="color:#B9C2E8;font-size:.82rem;margin-top:4px">Built with Python · Streamlit · Agentic AI</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap" style="padding:80px 22px">
+    <div class="roof"><svg viewBox="0 0 100 30"><path d="M2 28 Q50 0 50 0 Q50 0 98 28 Q50 18 50 18 Q50 18 2 28 Z" fill="#F9A825"/></svg></div>
+    <span class="eyebrow">Case Studies</span>
+    <h2>Featured Projects</h2>
+    <div class="cards">
+
+      <article class="card ai">
+        <div class="tags"><span class="tag">Streamlit</span><span class="tag">Python</span><span class="tag">scikit-learn</span><span class="tag">TRIPOD-AI</span></div>
+        <h3>❤️ CardioRisk AI</h3>
+        <p>A research-grade machine learning system for Coronary Artery Disease (CAD) risk classification, built to TRIPOD-AI reporting standards and deployed as an interactive Streamlit app.</p>
+        <a class="link" href="https://github.com/HayMedics/cardiorisk-ai" target="_blank" rel="noopener">View Project</a>
+      </article>
+
+      <article class="card ai">
+        <div class="tags"><span class="tag">Streamlit</span><span class="tag">Python</span><span class="tag">scikit-learn</span><span class="tag">TRIPOD-AI</span></div>
+        <h3>🧠 StrokeGuard AI</h3>
+        <p>An AI-powered system designed for early stroke detection, risk assessment, and monitoring, supporting clinicians with timely, data-driven intervention.</p>
+        <a class="link" href="https://github.com/HayMedics/strokeguard-ai" target="_blank" rel="noopener">View Project</a>
+      </article>
+
+      <article class="card ai">
+        <div class="tags"><span class="tag">Python</span><span class="tag">Streamlit</span><span class="tag">scikit-learn</span><span class="tag">RDKit</span></div>
+        <h3>💊 RxGuard AI: Drug Interaction Intelligence</h3>
+        <p>An AI-powered drug-drug interaction (DDI) checker. Select two or more medications and the app screens every pair, predicts the most likely interaction type, explains why, and produces a downloadable report.</p>
+        <a class="link" href="https://github.com/HayMedics/rxguard-ai" target="_blank" rel="noopener">View Project</a>
+      </article>
+
+      <article class="card ai">
+        <div class="tags"><span class="tag">Python</span><span class="tag">Streamlit</span><span class="tag">Agentic AI</span><span class="tag">SQLite</span></div>
+        <h3>🤖 Dr. Awwal's AI Assistant</h3>
+        <p>An AI-powered personal assistant that answers questions about Dr. Awwal Olalekan Abdulrahman's career, clinical experience, data science projects, and HayMedics Academy.</p>
+        <a class="link" href="https://github.com/HayMedics/AgenticAI" target="_blank" rel="noopener">View Project</a>
+      </article>
+
+      <article class="card ai">
+        <div class="tags"><span class="tag">Python</span><span class="tag">Streamlit</span><span class="tag">AI Agents</span></div>
+        <h3>✉️ HayMedics Outreach Studio</h3>
+        <p>AI agents that research each lead, write a personalised cold email, and prepare it for sending, running entirely on free-tier AI.</p>
+        <a class="link" href="https://github.com/HayMedics/HayMedics-Outreach-Studio" target="_blank" rel="noopener">View Project</a>
+      </article>
+
+      <article class="card">
+        <div class="tags"><span class="tag">Python</span><span class="tag">Streamlit</span><span class="tag">Data Cleaning</span></div>
+        <h3>🧹 HayMedics Data Analyser</h3>
+        <p>Automatic clinical and healthcare data cleaning and transformation, with a receipt of what changed.</p>
+        <a class="link" href="https://github.com/HayMedics/HayMedics-Data-Analyser" target="_blank" rel="noopener">View Project</a>
+      </article>
+
+      <article class="card">
+        <div class="tags"><span class="tag">Ms Excel</span><span class="tag">pandas</span><span class="tag">NumPy</span><span class="tag">Public Health</span></div>
+        <h3>🌍 Africa Health Dashboard</h3>
+        <p>An interactive Excel dashboard exploring public-health outcomes across 53 African countries (2000-2022), built on a clean star-schema dataset with live formulas, four geographic choropleth maps, and a written report and insights pack.</p>
+        <a class="link" href="https://github.com/HayMedics/haymedics-africa-health-dashboard" target="_blank" rel="noopener">View Project</a>
+      </article>
+
+      <article class="card">
+        <div class="tags"><span class="tag">Power BI</span><span class="tag">Python</span><span class="tag">Ms Excel</span></div>
+        <h3>🏥 Patient Emergency Room Dashboard</h3>
+        <p>Transforming healthcare data into actionable insights, an executive ER dashboard analysing 9,216 patient visits: wait times, satisfaction, demographics and department referrals.</p>
+        <a class="link" href="https://github.com/HayMedics/patient-er-powerbi-dashboard" target="_blank" rel="noopener">View Project</a>
+      </article>
+
+      <article class="card">
+        <div class="tags"><span class="tag">Power BI</span><span class="tag">Python</span><span class="tag">Ms Excel</span></div>
+        <h3>🍫 Awesome Chocolates Sales Dashboard</h3>
+        <p>Building an executive sales analytics dashboard in Power BI, star-schema modelling, DAX measures for profitability and LBS tracking, field parameters and bookmark navigation.</p>
+        <a class="link" href="https://github.com/HayMedics/Building-Executive-Sales-Analytics-Dashboard" target="_blank" rel="noopener">View Project</a>
+      </article>
+
+      <article class="card">
+        <div class="tags"><span class="tag">Ms Excel</span><span class="tag">Healthcare Analytics</span></div>
+        <h3>📑 HayMedics Claims Analytics Dashboard</h3>
+        <p>An interactive Excel dashboard analysing 3,000 health-insurance claims across 7 regions and 5 HMOs for the year 2024.</p>
+        <a class="link" href="https://github.com/HayMedics/insurance-claims-dashboard" target="_blank" rel="noopener">View Project</a>
+      </article>
+
+      <article class="card">
+        <div class="tags"><span class="tag">Ms Excel</span><span class="tag">Sales Analytics</span></div>
+        <h3>📊 Sales Analytics Dashboard</h3>
+        <p>An interactive, single-file Excel dashboard that turns 20,000 rows of raw sales data into a clean, navigable analytics report, built entirely with live formulas and charts.</p>
+        <a class="link" href="https://github.com/HayMedics/excel-sales-dashboard" target="_blank" rel="noopener">View Project</a>
+      </article>
+
+      <article class="card">
+        <div class="tags"><span class="tag">Ms Excel</span><span class="tag">Healthcare Operations</span></div>
+        <h3>🏨 Hospital Operations Dashboard (ALOS)</h3>
+        <p>An interactive Excel dashboard that turns 2,400 hospital admission records into a clear operational story: how long patients stay, how full the beds are, why discharges get delayed, and what it costs.</p>
+        <a class="link" href="https://github.com/HayMedics/hospital-alos-dashboard" target="_blank" rel="noopener">View Project</a>
+      </article>
+
+      <article class="card">
+        <div class="tags"><span class="tag">SQL</span><span class="tag">Database Design</span></div>
+        <h3>🛒 Retail Store Database</h3>
+        <p>A beginner-friendly SQL project building a retail store database, tables, relationships and queries that answer real business questions.</p>
+        <a class="link" href="https://github.com/HayMedics/sql-retail-project" target="_blank" rel="noopener">View Project</a>
+      </article>
+
+      <article class="card">
+        <div class="tags"><span class="tag">Ms Excel</span><span class="tag">Python</span><span class="tag">SPSS</span><span class="tag">Research</span></div>
+        <h3>🦟 Health Outreach: KAP Malaria, Madi, Ilorin</h3>
+        <p>A data-driven public-health analysis of a malaria KAP survey conducted during a community health outreach in Madi Community, Ilorin, Nigeria.</p>
+        <a class="link" href="https://github.com/HayMedics/-Malaria-KAP-Survey-Madi-Ilorin" target="_blank" rel="noopener">View Project</a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="roof"><svg viewBox="0 0 100 30"><path d="M2 28 Q50 0 50 0 Q50 0 98 28 Q50 18 50 18 Q50 18 2 28 Z" fill="#F9A825"/></svg></div>
+  <span class="eyebrow">Toolbox</span>
+  <h2>Skills &amp; Tools</h2>
+  <div class="skills-grid">
+    <div class="skill"><div class="row"><span>Ms Excel</span><span>92%</span></div><div class="bar"><div class="fill" data-w="92"></div></div></div>
+    <div class="skill"><div class="row"><span>Power BI</span><span>90%</span></div><div class="bar"><div class="fill" data-w="90"></div></div></div>
+    <div class="skill"><div class="row"><span>Python</span><span>85%</span></div><div class="bar"><div class="fill" data-w="85"></div></div></div>
+    <div class="skill"><div class="row"><span>Clinical AI Architecture</span><span>85%</span></div><div class="bar"><div class="fill" data-w="85"></div></div></div>
+    <div class="skill"><div class="row"><span>SPSS</span><span>85%</span></div><div class="bar"><div class="fill" data-w="85"></div></div></div>
+    <div class="skill"><div class="row"><span>SQL</span><span>80%</span></div><div class="bar"><div class="fill" data-w="80"></div></div></div>
+    <div class="skill"><div class="row"><span>MLOps</span><span>75%</span></div><div class="bar"><div class="fill" data-w="75"></div></div></div>
+  </div>
+</section>
+
+<section id="more">
+  <div class="wrap" style="padding:80px 22px">
+    <span class="eyebrow">Always Growing</span>
+    <h2>Latest From My GitHub</h2>
+    <p class="sub">This section updates automatically, every new public repository I publish appears here.</p>
+    <p id="repo-status">Loading repositories…</p>
+    <div class="repo-grid" id="repo-grid"></div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="contact-grid">
+    <div>
+      <div class="roof"><svg viewBox="0 0 100 30"><path d="M2 28 Q50 0 50 0 Q50 0 98 28 Q50 18 50 18 Q50 18 2 28 Z" fill="#F9A825"/></svg></div>
+      <span class="eyebrow">Get In Touch</span>
+      <h2>Let's Work Together</h2>
+      <p>Have data that needs a story, or a healthcare problem AI could help solve? Reach out, I respond quickly.</p>
+      <div class="btn-row" style="justify-content:flex-start">
+        <a class="btn btn-orange" href="mailto:haymedicsacademy@gmail.com">Send Me a Message</a>
+        <button class="btn btn-primary" onclick="Calendly.initPopupWidget({url:'https://calendly.com/haymedicsacademy'});return false;">📅 Book a Session</button>
+      </div>
+    </div>
+    <div>
+      <a class="clink" href="mailto:haymedicsacademy@gmail.com"><span class="ic">@</span><span><small>Email</small>haymedicsacademy@gmail.com</span></a>
+      <a class="clink" href="https://github.com/HayMedics" target="_blank" rel="noopener"><span class="ic">&lt;/&gt;</span><span><small>GitHub</small>github.com/HayMedics</span></a>
+      <a class="clink" href="https://wa.me/2348107820971?text=Hi%2C%20I%20came%20across%20your%20contact%20and%20I%E2%80%99m%20interested%20in%20learning%20more%20about%20your%20work" target="_blank" rel="noopener"><span class="ic" style="background:#25D366">✆</span><span><small>WhatsApp</small>+234 810 782 0971</span></a>
+      <div style="margin-top:20px">
+        <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="light" data-type="VERTICAL" data-vanity="awal-abdulrahman-md-a53483219" data-version="v1">
+          <a class="badge-base__link LI-simple-link" href="https://ng.linkedin.com/in/awal-abdulrahman-md-a53483219?trk=profile-badge">Awwal Abdulrahman, MD</a>
+        </div>
+        <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>© 2026 <b>Awwal Abdulrahman · HayMedics Academy</b> · Data | Research | Innovation</footer>
+
+<script>
+/* ===== Auto-updating GitHub repo feed ===== */
+const GITHUB_USERNAME = "HayMedics";
+
+(async function loadRepos(){
+  const status = document.getElementById('repo-status');
+  const grid = document.getElementById('repo-grid');
+  const CACHE_KEY = 'hm_repos_v1', CACHE_TTL = 3600000; /* 1 hour */
+  function readCache(){
+    try{
+      const raw = localStorage.getItem(CACHE_KEY);
+      if(!raw) return null;
+      const obj = JSON.parse(raw);
+      return obj;
+    }catch(e){ return null; }
+  }
+  try{
+    const cached = readCache();
+    let repos;
+    if(cached && (Date.now() - cached.t) < CACHE_TTL){
+      repos = cached.repos;               /* fresh cache: skip API entirely */
+    } else {
+      const res = await fetch(`https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated&per_page=9`);
+      if(!res.ok) throw new Error('GitHub API error');
+      repos = await res.json();
+      try{ localStorage.setItem(CACHE_KEY, JSON.stringify({t: Date.now(), repos})); }catch(e){}
+    }
+    if(!repos.length){ status.textContent = 'No public repositories yet, check back soon!'; return; }
+    status.remove();
+    repos.forEach(r=>{
+      const a = document.createElement('a');
+      a.className = 'repo';
+      a.href = r.html_url;
+      a.target = '_blank';
+      a.rel = 'noopener';
+      a.innerHTML = `
+        <h3>${r.name}</h3>
+        <p>${r.description ? r.description : 'No description yet.'}</p>
+        <div class="meta">
+          ${r.language ? `<span>● ${r.language}</span>` : ''}
+          <span>★ ${r.stargazers_count}</span>
+          <span>Updated ${new Date(r.updated_at).toLocaleDateString()}</span>
+        </div>`;
+      grid.appendChild(a);
+    });
+  }catch(e){
+    const stale = readCache();
+    if(stale && stale.repos && stale.repos.length){
+      status.remove();
+      stale.repos.forEach(r=>{
+        const a = document.createElement('a');
+        a.className = 'repo'; a.href = r.html_url; a.target = '_blank'; a.rel = 'noopener';
+        a.innerHTML = `<h3>${r.name}</h3><p>${r.description ? r.description : 'No description yet.'}</p>
+          <div class="meta">${r.language ? `<span>● ${r.language}</span>` : ''}<span>★ ${r.stargazers_count}</span></div>`;
+        grid.appendChild(a);
+      });
+    } else {
+      status.innerHTML = 'GitHub is busy right now. <a href="https://github.com/HayMedics" target="_blank" rel="noopener" style="color:#F9A825;font-weight:700">Visit github.com/HayMedics →</a>';
+    }
+  }
+})();
+
+/* ===== Animate skill bars on scroll ===== */
+const obs = new IntersectionObserver(entries=>{
+  entries.forEach(en=>{
+    if(en.isIntersecting){
+      en.target.style.width = en.target.dataset.w + '%';
+      obs.unobserve(en.target);
+    }
+  });
+},{threshold:.4});
+document.querySelectorAll('.fill').forEach(f=>obs.observe(f));
+</script>
+<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+<a href="https://wa.me/2348107820971?text=Hi%2C%20I%20came%20across%20your%20contact%20and%20I%E2%80%99m%20interested%20in%20learning%20more%20about%20your%20work" target="_blank" rel="noopener" aria-label="Chat on WhatsApp" title="Chat on WhatsApp" style="position:fixed;right:20px;bottom:20px;z-index:99;background:#25D366;color:#fff;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.6rem;box-shadow:0 6px 20px rgba(0,0,0,.28)">💬</a>
+
+<!-- ===== AI Assistant Widget ===== -->
+<button class="hm-ai-launch hm-ai-trigger" aria-label="Chat with my AI assistant" style="display:none">
+  <span class="bot">🤖</span><span>Ask my AI about me</span>
+</button>
+<div class="hm-ai-modal" id="hmAiModal" role="dialog" aria-label="AI Assistant chat">
+  <div class="hm-ai-box">
+    <div class="hm-ai-head">
+      <span class="bot">🤖</span>
+      <div class="tt"><b>Dr. Awwal's AI Assistant</b><span>Ask about my projects, career &amp; HayMedics Academy</span></div>
+      <a id="hmAiNewTab" href="#" target="_blank" rel="noopener" title="Open full screen" aria-label="Open in new tab">⤢</a>
+      <button id="hmAiClose" title="Close" aria-label="Close chat">✕</button>
+    </div>
+    <iframe class="hm-ai-frame" id="hmAiFrame" title="Dr. Awwal's AI Assistant" loading="lazy" allow="clipboard-write"></iframe>
+  </div>
+</div>
+<script>
+/* ===================================================================
+   PASTE YOUR STREAMLIT LINK BETWEEN THE QUOTES ON THE NEXT LINE, e.g.
+   var HM_CHATBOT_URL = "https://your-app.streamlit.app";
+   Everything below activates automatically once a link is present.
+   =================================================================== */
+var HM_CHATBOT_URL = "https://dr-awwal-ai-assistant.streamlit.app";
+
+(function(){
+  var ready = /^https?:\/\//.test(HM_CHATBOT_URL);
+  var triggers = document.querySelectorAll('.hm-ai-trigger');
+  var modal = document.getElementById('hmAiModal');
+  var frame = document.getElementById('hmAiFrame');
+  var newtab = document.getElementById('hmAiNewTab');
+  if(!ready){ document.querySelectorAll('.hm-ai-only').forEach(function(el){el.style.display='none';}); return; }
+  var embedUrl = HM_CHATBOT_URL + (HM_CHATBOT_URL.indexOf('?')>-1 ? '&' : '?') + 'embed=true';
+  newtab.href = HM_CHATBOT_URL;
+  triggers.forEach(function(t){
+    t.style.display='';
+    t.addEventListener('click', function(e){
+      e.preventDefault();
+      if(!frame.src) frame.src = embedUrl;   /* lazy-load on first open */
+      modal.classList.add('open');
+      document.body.style.overflow='hidden';
+    });
+  });
+  function close(){ modal.classList.remove('open'); document.body.style.overflow=''; }
+  document.getElementById('hmAiClose').addEventListener('click', close);
+  modal.addEventListener('click', function(e){ if(e.target===modal) close(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') close(); });
+})();
+</script>
+
+</body>
+</html>
