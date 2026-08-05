@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HayMedics Academy — Best Tech & AI Empowerment Program | ₦5,000</title>
-<meta name="description" content="The best Tech & AI Empowerment Program. Learn Data Analytics & AI from scratch. 5 real projects, mentorship, free live classes, community & ₦500k in bonuses. Enroll for just ₦5,000 (98% OFF). No experience needed.">
+<title>HayMedics Academy — Tech & AI Training, Clinic Web Apps & Data Science</title>
+<meta name="description" content="The best Tech & AI Empowerment Program. Learn Data Analytics & AI from scratch. 5 real projects, mentorship, free live classes, community & ₦500k in bonuses. Enroll for just ₦15,000 (95% off). No experience needed.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -225,20 +225,119 @@ footer b{color:var(--navy)}
 @media (prefers-reduced-motion: reduce){.hm-ai-launch .bot{animation:none}}
 
 @media (prefers-reduced-motion: reduce){*{transition:none!important}}
+
+/* ===== Added: Activities, Services, Web Apps ===== */
+.events{background:var(--white)}
+.ev-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+@media(max-width:820px){.ev-grid{grid-template-columns:1fr}}
+.ev-card{position:relative;background:var(--white);border:2px solid var(--line);border-radius:18px;padding:32px 28px;display:flex;flex-direction:column}
+.ev-card.live{border-color:var(--royal)}
+.ev-card.soon{border-color:var(--orange);background:linear-gradient(180deg,#FFFDF7,#fff)}
+.ev-badge{align-self:flex-start;font-size:.68rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:6px 14px;border-radius:999px;margin-bottom:14px}
+.ev-badge.b-live{background:rgba(52,88,168,.12);color:var(--royal)}
+.ev-badge.b-soon{background:var(--orange);color:var(--navy)}
+.ev-card h3{color:var(--navy);font-size:1.28rem;margin-bottom:6px}
+.ev-meta{font-size:.84rem;color:var(--royal);font-weight:600;margin-bottom:14px}
+.ev-card p.lead{color:#4A5070;font-size:.94rem;margin-bottom:14px}
+.ev-feats{list-style:none;margin-bottom:18px}
+.ev-feats li{font-size:.9rem;color:#3A4060;padding:6px 0 6px 24px;position:relative;border-bottom:1px solid var(--mist)}
+.ev-feats li::before{content:"\2713";position:absolute;left:0;color:var(--royal);font-weight:800}
+.ev-note{margin-top:auto;font-weight:700;font-size:.88rem;padding:12px 14px;border-radius:10px;text-align:center}
+.ev-note.closed{background:var(--mist);color:var(--navy);border:1px dashed var(--royal)}
+.ev-note.willsoon{background:#FFF6E6;color:#5A4A20;border:1px dashed var(--orange)}
+.ev-cta{margin-top:14px;text-align:center}
+.svc{background:var(--mist)}
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.svc-card{background:var(--white);border:1px solid var(--line);border-top:4px solid var(--royal);border-radius:14px;padding:28px}
+.svc-card .ic{font-size:2rem;display:block;margin-bottom:10px}
+.svc-card h4{color:var(--navy);font-size:1.12rem;margin-bottom:8px}
+.svc-card ul{list-style:none;margin-top:8px}
+.svc-card ul li{font-size:.88rem;color:#4A5070;padding:5px 0 5px 20px;position:relative}
+.svc-card ul li::before{content:"\25B9";position:absolute;left:0;color:var(--orange);font-weight:800}
+.apps{background:var(--white)}
+.prod-intro{max-width:900px;margin:0 auto 34px;background:linear-gradient(135deg,#EEF3FF,#F7FAFF);border:1px solid var(--line);border-left:5px solid var(--orange);border-radius:16px;padding:28px}
+.prod-intro h3{color:var(--navy);font-size:1.22rem;margin-bottom:10px}
+.prod-intro p{color:#3A4060;font-size:.95rem;margin-bottom:10px}
+.prod-intro .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+.prod-intro .chips span{background:var(--white);border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-size:.8rem;font-weight:600;color:var(--royal)}
+.flagship{background:linear-gradient(135deg,var(--navy),var(--royal));color:#fff;border-radius:20px;padding:36px;display:grid;grid-template-columns:1.05fr .95fr;gap:32px;align-items:center;margin-bottom:44px}
+@media(max-width:820px){.flagship{grid-template-columns:1fr;padding:26px}}
+.fl-badge{display:inline-block;background:var(--orange);color:var(--navy);font-size:.68rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:6px 14px;border-radius:999px;margin-bottom:12px}
+.flagship h3{color:#fff;font-size:1.7rem;margin-bottom:8px}
+.flagship p.sub{color:#DCE3F7;font-size:.95rem;margin-bottom:16px}
+.fl-incl{list-style:none;margin-bottom:22px}
+.fl-incl li{font-size:.92rem;color:#EAF0FF;padding:7px 0 7px 26px;position:relative}
+.fl-incl li::before{content:"\2713";position:absolute;left:0;color:var(--orange);font-weight:800}
+.fl-btns{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.btn-selar{display:inline-block;background:var(--orange);color:var(--navy);font-weight:800;padding:14px 26px;border-radius:10px;box-shadow:0 8px 22px rgba(249,168,37,.4)}
+.btn-selar:hover{transform:translateY(-2px)}
+.fl-note{font-size:.76rem;color:#B9C2E8;margin-top:8px;width:100%}
+.mock{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.3)}
+.mock .bar{background:#0E1E3C;display:flex;gap:6px;padding:10px 12px}
+.mock .bar i{width:11px;height:11px;border-radius:50%;display:block}
+.mock .bar i:nth-child(1){background:#ff5f57}.mock .bar i:nth-child(2){background:#febc2e}.mock .bar i:nth-child(3){background:#28c840}
+.mock .body{display:flex;min-height:210px}
+.mock .side{width:74px;background:linear-gradient(180deg,#1E3E7B,#122A54);padding:12px 8px;flex-shrink:0}
+.mock .side b{display:block;color:#fff;font-size:.62rem;text-align:center;margin-bottom:10px;font-family:'Archivo'}
+.mock .side em{display:block;height:8px;border-radius:4px;background:rgba(255,255,255,.18);margin:7px 4px}
+.mock .main{flex:1;padding:14px;background:#F5F7FC}
+.mock .tiles{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}
+.mock .tile{border-radius:10px;padding:12px;color:#fff}
+.mock .tile b{font-family:'Archivo';font-size:1.25rem;display:block;line-height:1}
+.mock .tile span{font-size:.62rem;opacity:.92}
+.mock .t1{background:#2F6FE0}.mock .t2{background:#34a853}.mock .t3{background:#F9A825;color:#3a2b00}.mock .t4{background:#ea4335}
+.mock .chart{display:flex;align-items:flex-end;gap:7px;height:56px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px}
+.mock .chart em{flex:1;background:linear-gradient(180deg,#2F6FE0,#1E3E7B);border-radius:3px 3px 0 0;display:block}
+.apps-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:20px}
+.app-card{background:var(--white);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;transition:transform .18s ease,box-shadow .18s ease}
+.app-card:hover{transform:translateY(-4px);box-shadow:0 16px 36px rgba(26,20,100,.12)}
+.app-thumb{position:relative;height:118px;background:linear-gradient(135deg,#c9d2e6,#aeb9d4);display:flex;align-items:center;justify-content:center;overflow:hidden}
+.app-thumb .mini{position:absolute;inset:0;filter:grayscale(1) blur(1px);opacity:.5;display:grid;grid-template-columns:1fr 1fr;gap:6px;padding:14px}
+.app-thumb .mini em{border-radius:6px;background:#8f9bbb;display:block}
+.app-thumb .lock{position:relative;z-index:2;text-align:center}
+.app-thumb .lock .ico{font-size:1.7rem}
+.app-thumb .lock b{display:block;font-size:.62rem;font-weight:800;letter-spacing:.05em;text-transform:uppercase;background:rgba(255,255,255,.9);padding:5px 10px;border-radius:999px;margin-top:6px;color:var(--navy)}
+.app-body{padding:20px;display:flex;flex-direction:column;flex:1}
+.app-body h4{color:var(--navy);font-size:1.04rem;margin-bottom:4px}
+.app-body .one{font-size:.82rem;color:var(--royal);font-weight:600;margin-bottom:12px}
+.app-feats{list-style:none;margin-bottom:12px;flex:1}
+.app-feats li{font-size:.85rem;color:#4A5070;padding:5px 0 5px 20px;position:relative}
+.app-feats li::before{content:"\25B8";position:absolute;left:0;color:var(--orange)}
+.app-nocode{font-size:.76rem;color:#5A4A20;background:#FFF6E6;border:1px dashed var(--orange);border-radius:8px;padding:8px 10px;margin-bottom:12px}
+.app-locked{font-size:.75rem;color:#6A7090;text-align:center;font-weight:700;border-top:1px solid var(--mist);padding-top:12px}
+.apps-sub-title{text-align:center;color:var(--navy);font-family:'Archivo';font-size:1.5rem;margin:12px 0 6px}
+
+.avail-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:14px}
+@media(max-width:820px){.avail-grid{grid-template-columns:1fr}}
+.avail-card{background:var(--white);border:2px solid var(--royal);border-radius:18px;overflow:hidden;display:flex;flex-direction:column}
+.avail-thumb{height:118px;background:linear-gradient(135deg,var(--navy),var(--royal));display:flex;align-items:center;justify-content:center;color:#fff;position:relative}
+.avail-thumb .abadge{position:absolute;top:12px;left:12px;background:var(--orange);color:var(--navy);font-size:.6rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:5px 12px;border-radius:999px}
+.avail-thumb .ic{font-size:2.6rem}
+.avail-body{padding:24px;display:flex;flex-direction:column;flex:1}
+.avail-body h4{color:var(--navy);font-size:1.2rem;margin-bottom:4px}
+.avail-body .one{font-size:.84rem;color:var(--royal);font-weight:600;margin-bottom:12px}
+.avail-feats{list-style:none;margin-bottom:14px;flex:1}
+.avail-feats li{font-size:.85rem;color:#3A4060;padding:5px 0 5px 22px;position:relative}
+.avail-feats li::before{content:"\2713";position:absolute;left:0;color:var(--royal);font-weight:800}
+.avail-incl{font-size:.76rem;color:#5A4A20;background:#FFF6E6;border:1px dashed var(--orange);border-radius:8px;padding:8px 10px;margin-bottom:14px}
+.avail-card .btn-selar{width:100%;text-align:center}
+.selar-float{position:fixed;left:20px;bottom:20px;z-index:99;background:var(--orange);color:var(--navy);font-weight:800;padding:12px 18px;border-radius:999px;box-shadow:0 6px 20px rgba(249,168,37,.5);font-family:'Archivo';font-size:.9rem;transition:transform .15s ease}
+.selar-float:hover{transform:translateY(-2px)}
+@media(max-width:560px){.selar-float{padding:10px 14px;font-size:.82rem}}
 </style>
 <meta property="og:type" content="website">
-<meta property="og:title" content="HayMedics Academy — Best Tech & AI Empowerment Program | ₦5,000">
-<meta property="og:description" content="Best Tech & AI Empowerment Program. Data Analytics & AI from scratch. 5 projects, mentorship, live classes & ₦500k in bonuses. Just ₦5,000 (98% OFF).">
+<meta property="og:title" content="HayMedics Academy — Best Tech & AI Empowerment Program | ₦15,000">
+<meta property="og:description" content="Best Tech & AI Empowerment Program. Data Analytics & AI from scratch. 5 projects, mentorship, live classes & ₦500k in bonuses. Just ₦15,000 (95% off).">
 <meta property="og:url" content="https://haymedics.github.io/">
 <meta property="og:image" content="https://haymedics.github.io/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="HayMedics — Best Tech & AI Empowerment Program | ₦5,000">
-<meta name="twitter:description" content="Best Tech & AI Empowerment Program. 5 projects, mentorship, community & ₦500k bonuses. Just ₦5,000. Limited slots.">
+<meta name="twitter:title" content="HayMedics — Best Tech & AI Empowerment Program | ₦15,000">
+<meta name="twitter:description" content="Best Tech & AI Empowerment Program. 5 projects, mentorship, community & ₦500k bonuses. Just ₦15,000. Limited slots.">
 <meta name="twitter:image" content="https://haymedics.github.io/og-image.png">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Course","name":"HayMedics Tech Empowerment Program","description":"Best Tech and AI Empowerment Program. Learn Data Analytics and AI from scratch: Excel, Statistics, AI, 5 capstone projects, digital products, mentorship and community. Beginner-friendly.","provider":{"@type":"Organization","name":"HayMedics Academy","sameAs":"https://haymedics.github.io"},"offers":{"@type":"Offer","price":"5000","priceCurrency":"NGN"}}
+{"@context":"https://schema.org","@type":"Course","name":"HayMedics Tech Empowerment Program","description":"Best Tech and AI Empowerment Program. Learn Data Analytics and AI from scratch: Excel, Statistics, AI, 5 capstone projects, digital products, mentorship and community. Beginner-friendly.","provider":{"@type":"Organization","name":"HayMedics Academy","sameAs":"https://haymedics.github.io"},"offers":{"@type":"Offer","price":"15000","priceCurrency":"NGN"}}
 </script>
 </head>
 <body>
@@ -257,40 +356,84 @@ footer b{color:var(--navy)}
     </a>
     <button class="navburger" aria-label="Menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
     <div class="nav-links">
-      <a href="#demand">Why Now</a>
-      <a href="#tracks">Program</a>
+      <a href="#activities">Programs</a>
+      <a href="#webapps">Web Apps</a>
+      <a href="#services">Services</a>
       <a href="#curriculum">Curriculum</a>
       <a href="portfolio.html" class="nav-portfolio">My Portfolio</a>
     </div>
   </div>
 </nav>
 
-<div class="urgency">🔥 98% OFF — You're saving ₦245,000! · Offer ends in <b id="cdown">…</b> · Limited slots</div>
+<div class="urgency">🔥 <b>Batch B is OPEN</b> — register today for immediate access · Offer ends in <b id="cdown">…</b> · Limited slots</div>
 <script>
-/* EDIT THIS ONE LINE to change your enrollment deadline: */
-var HM_DEADLINE = new Date("2026-08-02T23:59:59+01:00");
 (function(){
+  var DEADLINE = new Date(Date.now() + 3*24*60*60*1000);
   var el = document.getElementById("cdown");
   function tick(){
-    var ms = HM_DEADLINE - new Date();
+    var ms = DEADLINE - new Date();
     if(ms <= 0){ el.textContent = "FINAL HOURS"; return; }
-    var d = Math.floor(ms/86400000), h = Math.floor(ms%86400000/3600000), m = Math.floor(ms%3600000/60000);
-    el.textContent = d + "d " + h + "h " + m + "m";
+    var d=Math.floor(ms/86400000), hh=Math.floor(ms%86400000/3600000), m=Math.floor(ms%3600000/60000), s=Math.floor(ms%60000/1000);
+    el.textContent = d+"d "+hh+"h "+m+"m "+s+"s";
   }
-  tick(); setInterval(tick, 30000);
+  tick(); setInterval(tick,1000);
 })();
 </script>
 
 <header class="hero">
   <span class="kicker">Best Tech & AI Empowerment Program · Path to Financial Freedom</span>
   <h1>Stop Waiting for a 9–5.<br><em>Build the Skill</em> That<br>Pays You for Life.</h1>
-  <p>Learn <b>Data Analytics &amp; AI</b> from scratch, the two most in-demand skills in the world, and turn your laptop into an income machine. No degree. No experience needed. Enroll today for just <b>₦5,000</b> (was ₦250,000). <b>98% OFF — you're saving ₦245,000!</b></p>
+  <p>Learn <b>Data Analytics, No-code Website, Web Apps and AI</b> from scratch — turn your laptop into an income machine. No degree. No experience needed. <b>August 2026 Batch B is now open</b> — register today for immediate access (just <b>₦15,000</b>, was ₦300,000 · 95% off).</p>
   <div class="btn-row">
-    <a class="btn btn-orange btn-lg btn-apply" href="https://script.google.com/macros/s/AKfycbzR_qNb8uiF7Iu_2bd7VTmYFsQ2nWN1jJyWZgh0MuN7374p8RHz9owF541w6h8Zdn_u/exec" target="_blank" rel="noopener">Apply Now — ₦5,000 →</a>
-    <a class="btn btn-wa btn-lg" href="https://chat.whatsapp.com/FK1PEO8CasK97nj1l6tEd3?s=cl&p=a&ilr=4" target="_blank" rel="noopener">💬 Join Our WhatsApp Community</a>
-    <a class="btn btn-ghost btn-lg" href="portfolio.html">👤 View My Portfolio</a>
+    <a class="btn btn-orange btn-lg btn-apply" href="https://selar.com/haymedics_empowerment" target="_blank" rel="noopener">🔔 Register Today — Get Immediate Access →</a>
+    <a class="btn btn-ghost btn-lg" href="#webapps">🚀 Explore Our Web Apps</a>
+    <a class="btn btn-wa btn-lg" href="https://chat.whatsapp.com/FK1PEO8CasK97nj1l6tEd3?s=cl&p=a&ilr=4" target="_blank" rel="noopener">💬 WhatsApp Community</a>
+    <a class="btn btn-ghost btn-lg" href="portfolio.html">👤 My Portfolio</a>
   </div>
 </header>
+
+<section id="activities" class="events">
+  <span class="eyebrow">Happening Now</span>
+  <h2 class="sec-title">Programs &amp; Events at HayMedics Academy</h2>
+  <p class="sec-sub">Live cohorts and programs — here's what's running and what's next.</p>
+  <div class="ev-grid">
+    <div class="ev-card live">
+      <span class="ev-badge b-live">● Batch A Ongoing · Registration Closed</span>
+      <h3>HayMedics August 2026 Tech &amp; AI Empowerment — Batch A</h3>
+      <div class="ev-meta">Data Analytics · No-code Website · Web Apps · AI · 100% online</div>
+      <p class="lead">Our current cohort is running and the reviews so far have been <b>sweet</b>. 🎉 Learn the most in-demand skills in the world and turn your laptop into an income machine.</p>
+      <ul class="ev-feats">
+        <li>Excel (Beginner → Advanced) + Statistics &amp; data analysis</li>
+        <li>AI in data analysis (ChatGPT, Gemini, Claude) &amp; advanced prompting</li>
+        <li>Data collection with Google Forms — clean, analysis-ready</li>
+        <li>5 end-to-end capstone projects (healthcare, business, security)</li>
+        <li>Build no-code websites &amp; web apps + a portfolio that gets you hired</li>
+        <li>Build your brand &amp; sell digital products online</li>
+        <li>Mentorship, free weekly live classes &amp; live debugging</li>
+        <li>Certificate + community + remote-job alerts</li>
+        <li>Bonus: automated data-collection system (worth ₦500,000)</li>
+      </ul>
+      <div class="ev-note closed">Registration for <b>Batch A</b> is closed. Kindly register for <b>Batch B</b> today.</div>
+      <a class="btn btn-primary ev-cta" href="https://selar.com/haymedics_empowerment" target="_blank" rel="noopener">🚀 Register for Batch B — Immediate Access</a>
+    </div>
+    <div class="ev-card soon">
+      <span class="ev-badge b-soon">Coming Soon</span>
+      <h3>Health, Tech &amp; AI Empowerment for Civil Servants &amp; Teachers</h3>
+      <div class="ev-meta">HayMedics Academy · Physical classes at our Ilorin workspace</div>
+      <p class="lead">A monthly program for busy professionals — civil servants, teachers, principals, proprietors, business owners &amp; corporate teams. Core aim: <b>less work, more automation, more funds.</b></p>
+      <ul class="ev-feats">
+        <li><b>AI for Education &amp; Productivity</b> — lesson notes, assessments, analyse student performance, ethical AI in class</li>
+        <li><b>Data Analytics &amp; AI</b> — Excel for Healthcare, project &amp; resource management, statistics, analyse research in 1 hour</li>
+        <li><b>Build &amp; own a no-code management web app</b> on Google Sheets (clients, projects, billing) — no coding, no subscription</li>
+        <li><b>Digital products &amp; presence</b> — no-code website &amp; portfolio in 30 min, video editing, faceless YouTube, selling online</li>
+        <li><b>Career &amp; business tools</b> — 100+ CV/resume toolkits, automated data collection, web-apps-as-a-service side hustle</li>
+        <li><b>Exclusive bonus</b> — free online medical consultation for every participant</li>
+      </ul>
+      <div class="ev-note willsoon">Physical classes at our <b>Ilorin workspace</b> · Fridays &amp; Sundays, 4:30–6:00 PM · ₦10,000/month · certificate + recordings · <b>Laptop needed — but you can manage with your phone if you don't have one.</b></div>
+      <a class="btn btn-orange ev-cta" href="https://wa.me/2348107820971?text=Hi%2C%20I%27m%20interested%20in%20HayMedics%20Health%2C%20tech%20and%20AI%20Empowerment%20holding%20soon%20in%20Ilorin.%20Kindly%20send%20me%20details" target="_blank" rel="noopener">📩 Notify Me When It Opens</a>
+    </div>
+  </div>
+</section>
 
 
 <section class="vs">
@@ -351,6 +494,326 @@ var HM_DEADLINE = new Date("2026-08-02T23:59:59+01:00");
   </div>
 </section>
 
+
+<section id="services" class="svc">
+  <span class="eyebrow">Work With Me</span>
+  <h2 class="sec-title">AI/ML · Data Analysis · Full-Stack Data Science</h2>
+  <p class="sec-sub">Beyond training, HayMedics Academy delivers real, production-grade data &amp; AI solutions — led by a Medical Doctor &amp; AI Engineer.</p>
+  <div class="svc-grid">
+    <div class="svc-card"><span class="ic">🤖</span><h4>AI / Machine Learning</h4>
+      <ul><li>Predictive models &amp; forecasting</li><li>AI chatbots &amp; LLM assistants</li><li>Computer vision &amp; NLP</li><li>Recommendation &amp; automation systems</li></ul></div>
+    <div class="svc-card"><span class="ic">📊</span><h4>Data Analysis</h4>
+      <ul><li>Interactive dashboards &amp; reports</li><li>Excel, Power BI &amp; Python analytics</li><li>Statistical &amp; research data analysis</li><li>Clean, decision-ready insights</li></ul></div>
+    <div class="svc-card"><span class="ic">🧱</span><h4>Full-Stack Data Science</h4>
+      <ul><li>End-to-end data pipelines</li><li>Model training &amp; deployment (MLOps)</li><li>Data apps &amp; web integrations</li><li>From raw data to a live product</li></ul></div>
+  </div>
+  <div style="text-align:center;margin-top:28px">
+    <a class="btn btn-primary btn-lg" href="portfolio.html">👤 See My Portfolio &amp; Projects</a>
+  </div>
+</section>
+
+<section id="webapps" class="apps">
+  <span class="eyebrow">🆕 What's New — How to Build Web Apps</span>
+  <h2 class="sec-title">Build &amp; Own Web Apps — No Code Required</h2>
+  <p class="sec-sub">Fully working systems that run <b>free</b> on your own Google account. Buy once, own it forever.</p>
+
+  <div class="prod-intro">
+    <h3>Adapt it. Rebrand it. Own it — without writing a single line of code.</h3>
+    <p>Every web app is built to be yours. Change the colours, logo, currency and content to suit your taste — <b>no programming needed</b>. Each purchase walks you through exactly how to debug, edit and rebrand with clear <b>walkthrough videos</b>, plus <b>one full month of follow-up support</b> for error checks, troubleshooting and debugging.</p>
+    <div class="chips"><span>✅ Full source code</span><span>🎬 Walkthrough videos</span><span>📘 Complete setup guide</span><span>🛠️ 1-month debugging support</span><span>🌐 No-code business website + portfolio</span></div>
+  </div>
+
+  <div class="flagship">
+    <div>
+      <span class="fl-badge">⭐ Available Now · Flagship</span>
+      <h3>Clinic Management System</h3>
+      <p class="sub">A complete clinic in one app — patients, appointments, prescriptions, billing, pharmacy/POS, payroll, attendance, reports &amp; branded emails. Runs free on Google Sheets + Apps Script.</p>
+      <ul class="fl-incl">
+        <li>Full source code (backend + web app)</li>
+        <li>Complete setup &amp; user guide (PDF)</li>
+        <li>Step-by-step walkthrough videos</li>
+        <li>How to build a no-code website for your business + portfolio page</li>
+        <li>1-month follow-up: error checks, troubleshooting &amp; debugging</li>
+      </ul>
+      <div class="fl-btns">
+        <a class="btn-selar" href="https://selar.com/haymedics_empowerment" target="_blank" rel="noopener">🛒 Get Instant Access (Selar)</a>
+        <a class="btn btn-ghost" href="https://wa.me/2348107820971?text=Hi%2C%20I%27m%20interested%20in%20HayMedics%20web%20apps%20%2F%20programs.%20Kindly%20send%20me%20details." target="_blank" rel="noopener">💬 Ask a Question</a>
+        <div class="fl-note">✅ Instant access on Selar — download the source code, guide &amp; walkthrough videos right after payment.</div>
+      </div>
+    </div>
+    <div class="mock" aria-hidden="true">
+      <div class="bar"><i></i><i></i><i></i></div>
+      <div class="body">
+        <div class="side"><b>HM</b><em></em><em></em><em></em><em></em><em></em><em></em></div>
+        <div class="main">
+          <div class="tiles">
+            <div class="tile t1"><b>128</b><span>Patients</span></div>
+            <div class="tile t2"><b>₦2.4M</b><span>Collected</span></div>
+            <div class="tile t3"><b>36</b><span>Appointments</span></div>
+            <div class="tile t4"><b>7</b><span>Pending Bills</span></div>
+          </div>
+          <div class="chart"><em style="height:40%"></em><em style="height:66%"></em><em style="height:50%"></em><em style="height:82%"></em><em style="height:60%"></em><em style="height:92%"></em><em style="height:72%"></em></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h3 class="apps-sub-title">Also Available Now</h3>
+  <p class="sec-sub" style="margin-bottom:26px">Two more complete systems you can own today — same no-code ownership, walkthrough videos, setup guide and 1-month support.</p>
+  <div class="avail-grid">
+    <div class="avail-card">
+      <div class="avail-thumb"><span class="abadge">Available Now</span><span class="ic">🏫</span></div>
+      <div class="avail-body">
+        <h4>School Management System</h4>
+        <div class="one">Run your whole school from one free Google account.</div>
+        <ul class="avail-feats">
+          <li>Live dashboard — students, fees collected, attendance %</li>
+          <li>Students &amp; admissions, classes, sections, subjects &amp; teachers</li>
+          <li>Attendance (present/absent/late), exams, results &amp; hall tickets</li>
+          <li>Fees, receipts &amp; daily accounts in Naira ₦</li>
+          <li>Timetable, lesson planning &amp; teaching logbook</li>
+          <li>Notices, calendar, complaints, helpdesk, PTM &amp; documents</li>
+          <li>Assets &amp; inventory; staff, roles &amp; role-based security</li>
+        </ul>
+        <div class="avail-incl">Includes: full source code · setup guide · walkthrough videos · no-code website + portfolio · 1-month support</div>
+        <a class="btn-selar" href="https://selar.com/haymedics_empowerment" target="_blank" rel="noopener">🛒 Get Instant Access (Selar)</a>
+      </div>
+    </div>
+    <div class="avail-card">
+      <div class="avail-thumb"><span class="abadge">Available Now</span><span class="ic">📁</span></div>
+      <div class="avail-body">
+        <h4>Project Management System</h4>
+        <div class="one">Track clients, projects, payments &amp; deadlines — free on Google Sheets.</div>
+        <ul class="avail-feats">
+          <li>Secure multi-user login with roles &amp; access levels</li>
+          <li>Live dashboard — projects, revenue, paid &amp; pending (by currency)</li>
+          <li>Projects: add / view / edit / delete, search &amp; filter</li>
+          <li>Customer address book with optional client login</li>
+          <li>Project queue that orders your active work</li>
+          <li>Automatic branded emails (new project, payments, status, completion)</li>
+          <li>Deadline-extension &amp; delay tracking + timestamped action log</li>
+          <li>Naira default + USD/GBP/EUR; sample data pre-loaded</li>
+        </ul>
+        <div class="avail-incl">Includes: full source code · setup guide · walkthrough videos · no-code website + portfolio · 1-month support</div>
+        <a class="btn-selar" href="https://selar.com/haymedics_empowerment" target="_blank" rel="noopener">🛒 Get Instant Access (Selar)</a>
+      </div>
+    </div>
+  </div>
+
+  <h3 class="apps-sub-title">16 More Systems — Dropping Soon</h3>
+  <p class="sec-sub" style="margin-bottom:30px">Same no-code ownership, walkthrough videos, setup guide and 1-month support. Source code &amp; videos unlock soon — each also teaches you how to build a no-code business website + portfolio page.</p>
+  <div class="apps-grid">
+    <div class="app-card">
+      <div class="app-thumb">
+        <div class="mini"><em></em><em></em><em></em><em></em></div>
+        <div class="lock"><div class="ico">🔒</div><b>Check back soon</b></div>
+      </div>
+      <div class="app-body">
+        <h4>Pharmacy Management & POS</h4>
+        <div class="one">Retail dispensing for a pharmacy.</div>
+        <ul class="app-feats"><li>Inventory with batch &amp; expiry tracking</li><li>Barcode point-of-sale + receipts</li><li>Low-stock &amp; near-expiry alerts</li><li>Supplier orders &amp; profit reports</li></ul>
+        <div class="app-nocode">🌐 Includes: how to build a no-code website for your business + portfolio page</div>
+        <div class="app-locked">🔒 Source code &amp; walkthrough videos — check back later</div>
+      </div>
+    </div>
+    <div class="app-card">
+      <div class="app-thumb">
+        <div class="mini"><em></em><em></em><em></em><em></em></div>
+        <div class="lock"><div class="ico">🔒</div><b>Check back soon</b></div>
+      </div>
+      <div class="app-body">
+        <h4>Diagnostic Lab / Pathology</h4>
+        <div class="one">Tests, results &amp; report delivery.</div>
+        <ul class="app-feats"><li>Test catalogue with reference ranges</li><li>Sample-to-result workflow</li><li>Auto high/low flags + PDF reports</li><li>Per-test revenue analytics</li></ul>
+        <div class="app-nocode">🌐 Includes: how to build a no-code website for your business + portfolio page</div>
+        <div class="app-locked">🔒 Source code &amp; walkthrough videos — check back later</div>
+      </div>
+    </div>
+    <div class="app-card">
+      <div class="app-thumb">
+        <div class="mini"><em></em><em></em><em></em><em></em></div>
+        <div class="lock"><div class="ico">🔒</div><b>Check back soon</b></div>
+      </div>
+      <div class="app-body">
+        <h4>Dental Clinic Management</h4>
+        <div class="one">Teeth, procedures &amp; visit plans.</div>
+        <ul class="app-feats"><li>Interactive tooth chart</li><li>Treatment plans &amp; consent forms</li><li>Recall reminders</li><li>Per-procedure billing &amp; instalments</li></ul>
+        <div class="app-nocode">🌐 Includes: how to build a no-code website for your business + portfolio page</div>
+        <div class="app-locked">🔒 Source code &amp; walkthrough videos — check back later</div>
+      </div>
+    </div>
+    <div class="app-card">
+      <div class="app-thumb">
+        <div class="mini"><em></em><em></em><em></em><em></em></div>
+        <div class="lock"><div class="ico">🔒</div><b>Check back soon</b></div>
+      </div>
+      <div class="app-body">
+        <h4>Telemedicine / Online Consult</h4>
+        <div class="one">Remote doctor visits.</div>
+        <ul class="app-feats"><li>Doctor profiles &amp; paid slots</li><li>Video/chat + file sharing</li><li>E-prescriptions &amp; referrals</li><li>Ratings &amp; follow-up reminders</li></ul>
+        <div class="app-nocode">🌐 Includes: how to build a no-code website for your business + portfolio page</div>
+        <div class="app-locked">🔒 Source code &amp; walkthrough videos — check back later</div>
+      </div>
+    </div>
+    <div class="app-card">
+      <div class="app-thumb">
+        <div class="mini"><em></em><em></em><em></em><em></em></div>
+        <div class="lock"><div class="ico">🔒</div><b>Check back soon</b></div>
+      </div>
+      <div class="app-body">
+        <h4>Hospital OPD & Queue</h4>
+        <div class="one">Front-desk outpatient flow.</div>
+        <ul class="app-feats"><li>Multi-doctor calendars</li><li>Token queue &amp; ‘now serving’</li><li>Walk-in vs booked</li><li>Footfall &amp; wait-time dashboards</li></ul>
+        <div class="app-nocode">🌐 Includes: how to build a no-code website for your business + portfolio page</div>
+        <div class="app-locked">🔒 Source code &amp; walkthrough videos — check back later</div>
+      </div>
+    </div>
+    <div class="app-card">
+      <div class="app-thumb">
+        <div class="mini"><em></em><em></em><em></em><em></em></div>
+        <div class="lock"><div class="ico">🔒</div><b>Check back soon</b></div>
+      </div>
+      <div class="app-body">
+        <h4>Electronic Medical Records (EMR)</h4>
+        <div class="one">The clinical chart at the centre.</div>
+        <ul class="app-feats"><li>Allergies, conditions, medications</li><li>SOAP notes &amp; vitals</li><li>Lab/imaging orders &amp; referrals</li><li>Drug-interaction alerts + audit log</li></ul>
+        <div class="app-nocode">🌐 Includes: how to build a no-code website for your business + portfolio page</div>
+        <div class="app-locked">🔒 Source code &amp; walkthrough videos — check back later</div>
+      </div>
+    </div>
+    <div class="app-card">
+      <div class="app-thumb">
+        <div class="mini"><em></em><em></em><em></em><em></em></div>
+        <div class="lock"><div class="ico">🔒</div><b>Check back soon</b></div>
+      </div>
+      <div class="app-body">
+        <h4>Medical Billing & HMO Claims</h4>
+        <div class="one">Money &amp; insurance claims.</div>
+        <ul class="app-feats"><li>Itemised invoices &amp; statements</li><li>HMO pre-auth &amp; claim status</li><li>Part-payments &amp; debtor ageing</li><li>Payer performance reports</li></ul>
+        <div class="app-nocode">🌐 Includes: how to build a no-code website for your business + portfolio page</div>
+        <div class="app-locked">🔒 Source code &amp; walkthrough videos — check back later</div>
+      </div>
+    </div>
+    <div class="app-card">
+      <div class="app-thumb">
+        <div class="mini"><em></em><em></em><em></em><em></em></div>
+        <div class="lock"><div class="ico">🔒</div><b>Check back soon</b></div>
+      </div>
+      <div class="app-body">
+        <h4>Hospital Inventory & Assets</h4>
+        <div class="one">Supplies &amp; equipment.</div>
+        <ul class="app-feats"><li>Ward stock &amp; requisitions</li><li>Equipment &amp; warranty register</li><li>Maintenance &amp; calibration alerts</li><li>Consumption reports</li></ul>
+        <div class="app-nocode">🌐 Includes: how to build a no-code website for your business + portfolio page</div>
+        <div class="app-locked">🔒 Source code &amp; walkthrough videos — check back later</div>
+      </div>
+    </div>
+    <div class="app-card">
+      <div class="app-thumb">
+        <div class="mini"><em></em><em></em><em></em><em></em></div>
+        <div class="lock"><div class="ico">🔒</div><b>Check back soon</b></div>
+      </div>
+      <div class="app-body">
+        <h4>Patient Portal & Engagement</h4>
+        <div class="one">The patient-facing side.</div>
+        <ul class="app-feats"><li>Self-book &amp; cancel visits</li><li>View results &amp; prescriptions</li><li>Visit, medication &amp; vaccine reminders</li><li>Secure messaging &amp; surveys</li></ul>
+        <div class="app-nocode">🌐 Includes: how to build a no-code website for your business + portfolio page</div>
+        <div class="app-locked">🔒 Source code &amp; walkthrough videos — check back later</div>
+      </div>
+    </div>
+    <div class="app-card">
+      <div class="app-thumb">
+        <div class="mini"><em></em><em></em><em></em><em></em></div>
+        <div class="lock"><div class="ico">🔒</div><b>Check back soon</b></div>
+      </div>
+      <div class="app-body">
+        <h4>Community Health & Immunisation</h4>
+        <div class="one">Outreach &amp; public health.</div>
+        <ul class="app-feats"><li>Household enrolment &amp; unique IDs</li><li>Vaccine schedules &amp; defaulters</li><li>Camp screenings &amp; referrals</li><li>Coverage &amp; surveillance reports</li></ul>
+        <div class="app-nocode">🌐 Includes: how to build a no-code website for your business + portfolio page</div>
+        <div class="app-locked">🔒 Source code &amp; walkthrough videos — check back later</div>
+      </div>
+    </div>
+    <div class="app-card">
+      <div class="app-thumb">
+        <div class="mini"><em></em><em></em><em></em><em></em></div>
+        <div class="lock"><div class="ico">🔒</div><b>Check back soon</b></div>
+      </div>
+      <div class="app-body">
+        <h4>Mental Health / Therapy</h4>
+        <div class="one">Counselling &amp; psychiatry practice.</div>
+        <ul class="app-feats"><li>Confidential case files &amp; risk flags</li><li>Session notes &amp; treatment goals</li><li>Assessment scores &amp; trends</li><li>Sliding-scale billing &amp; telehealth</li></ul>
+        <div class="app-nocode">🌐 Includes: how to build a no-code website for your business + portfolio page</div>
+        <div class="app-locked">🔒 Source code &amp; walkthrough videos — check back later</div>
+      </div>
+    </div>
+    <div class="app-card">
+      <div class="app-thumb">
+        <div class="mini"><em></em><em></em><em></em><em></em></div>
+        <div class="lock"><div class="ico">🔒</div><b>Check back soon</b></div>
+      </div>
+      <div class="app-body">
+        <h4>Physiotherapy & Rehab</h4>
+        <div class="one">Movement &amp; recovery care.</div>
+        <ul class="app-feats"><li>ROM &amp; pain assessment</li><li>Exercise library &amp; home plans</li><li>Session packages &amp; counters</li><li>Progress graphs &amp; discharge notes</li></ul>
+        <div class="app-nocode">🌐 Includes: how to build a no-code website for your business + portfolio page</div>
+        <div class="app-locked">🔒 Source code &amp; walkthrough videos — check back later</div>
+      </div>
+    </div>
+    <div class="app-card">
+      <div class="app-thumb">
+        <div class="mini"><em></em><em></em><em></em><em></em></div>
+        <div class="lock"><div class="ico">🔒</div><b>Check back soon</b></div>
+      </div>
+      <div class="app-body">
+        <h4>Maternal & Child Health</h4>
+        <div class="one">Pregnancy to early childhood.</div>
+        <ul class="app-feats"><li>Antenatal schedule &amp; EDD</li><li>Delivery &amp; newborn records</li><li>Growth &amp; immunisation tracking</li><li>Reminders &amp; defaulter lists</li></ul>
+        <div class="app-nocode">🌐 Includes: how to build a no-code website for your business + portfolio page</div>
+        <div class="app-locked">🔒 Source code &amp; walkthrough videos — check back later</div>
+      </div>
+    </div>
+    <div class="app-card">
+      <div class="app-thumb">
+        <div class="mini"><em></em><em></em><em></em><em></em></div>
+        <div class="lock"><div class="ico">🔒</div><b>Check back soon</b></div>
+      </div>
+      <div class="app-body">
+        <h4>Blood Bank Management</h4>
+        <div class="one">Donor-to-recipient tracking.</div>
+        <ul class="app-feats"><li>Donor screening &amp; call-ups</li><li>Units by group/component</li><li>Expiry &amp; cross-match records</li><li>Urgent-need alerts &amp; wastage reports</li></ul>
+        <div class="app-nocode">🌐 Includes: how to build a no-code website for your business + portfolio page</div>
+        <div class="app-locked">🔒 Source code &amp; walkthrough videos — check back later</div>
+      </div>
+    </div>
+    <div class="app-card">
+      <div class="app-thumb">
+        <div class="mini"><em></em><em></em><em></em><em></em></div>
+        <div class="lock"><div class="ico">🔒</div><b>Check back soon</b></div>
+      </div>
+      <div class="app-body">
+        <h4>Optometry / Eye Clinic</h4>
+        <div class="one">Vision care &amp; optical dispensing.</div>
+        <ul class="app-feats"><li>Refraction &amp; eye-exam records</li><li>Spectacle/contact prescriptions</li><li>Optical POS &amp; lab orders</li><li>Recall &amp; warranty tracking</li></ul>
+        <div class="app-nocode">🌐 Includes: how to build a no-code website for your business + portfolio page</div>
+        <div class="app-locked">🔒 Source code &amp; walkthrough videos — check back later</div>
+      </div>
+    </div>
+    <div class="app-card">
+      <div class="app-thumb">
+        <div class="mini"><em></em><em></em><em></em><em></em></div>
+        <div class="lock"><div class="ico">🔒</div><b>Check back soon</b></div>
+      </div>
+      <div class="app-body">
+        <h4>Nursing & Ward Management</h4>
+        <div class="one">Bedside nursing workflow.</div>
+        <ul class="app-feats"><li>Vitals &amp; early-warning flags</li><li>Drug chart (MAR) with due alerts</li><li>Ward/bed &amp; admissions board</li><li>Nursing notes, handover &amp; tasks</li></ul>
+        <div class="app-nocode">🌐 Includes: how to build a no-code website for your business + portfolio page</div>
+        <div class="app-locked">🔒 Source code &amp; walkthrough videos — check back later</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="why">
   <span class="eyebrow">What You Get</span>
   <h2 class="sec-title">More Than a Course, A Complete System</h2>
@@ -378,60 +841,49 @@ var HM_DEADLINE = new Date("2026-08-02T23:59:59+01:00");
 </section>
 
 <section id="tracks">
-  <span class="eyebrow">The Offer</span>
-  <h2 class="sec-title">One Program. Everything You Need.</h2>
-  <p class="sec-sub">A complete guide, from zero to building your own income stream. Enroll once and get full access to everything below.</p>
+  <span class="eyebrow">Enrolment</span>
+  <h2 class="sec-title">August 2026 — Batch A &amp; Batch B</h2>
+  <p class="sec-sub">Batch A is running (registration closed). <b>Batch B is now open</b> — everything in Batch A plus our ready-made Web App Systems. Register today and get immediate access.</p>
 
   <div class="tracks" style="max-width:900px;margin:0 auto 0">
 
-    <!-- ===== BASIC PLAN ===== -->
-    <div class="track feature">
-      <span class="badge-top">Most Popular · 98% OFF</span>
-      <h3>Basic Plan</h3>
-      <div class="tk-tag">Tech &amp; AI Empowerment · Monetisation · Live Classes</div>
-      <div class="price"><span class="now">₦5,000</span><span class="old">₦250,000</span></div>
-      <span class="save">Save 98% — You're saving ₦245,000!</span>
+    <div class="track" style="opacity:.92">
+      <span class="badge-top" style="background:var(--navy);color:#fff">Batch A · Registration Closed</span>
+      <h3>Batch A — Ongoing</h3>
+      <div class="tk-tag">Currently running · sweet reviews so far 🎉</div>
       <ul>
-        <li>Full Tech &amp; AI Empowerment curriculum (Excel, Statistics, AI &amp; more)</li>
-        <li>How to monetise your skill and build your own income stream</li>
-        <li>Free weekly live classes for troubleshooting &amp; brainstorming</li>
-        <li>Mentorship to guide you every step of the way</li>
-        <li>5 end-to-end capstone projects (healthcare, business &amp; security)</li>
-        <li>Professional certificate of completion</li>
-        <li>Access to our growing Data &amp; AI community + remote job alerts</li>
+        <li>Full Tech &amp; AI Empowerment curriculum</li>
+        <li>5 end-to-end capstone projects + portfolio</li>
+        <li>Mentorship, free weekly live classes &amp; community</li>
+        <li>Certificate + remote job alerts</li>
       </ul>
       <div class="tk-btns">
-        <a class="btn btn-orange btn-apply" href="https://script.google.com/macros/s/AKfycbzR_qNb8uiF7Iu_2bd7VTmYFsQ2nWN1jJyWZgh0MuN7374p8RHz9owF541w6h8Zdn_u/exec" target="_blank" rel="noopener">Apply Now — ₦5,000</a>
-        <a class="btn-outline" href="https://selar.com/haymedics_empowerment" target="_blank" rel="noopener">Already Registered? Get Access Here</a>
+        <a class="btn-outline" href="#activities" style="opacity:.75">Registration Closed — See Batch B</a>
+      </div>
+    </div>
+
+    <div class="track feature">
+      <span class="badge-top">Batch B · Now Open · 95% off</span>
+      <h3>Batch B — Now Open</h3>
+      <div class="tk-tag">Everything in Batch A + Web App Systems</div>
+      <div class="price"><span class="now">₦15,000</span><span class="old">₦300,000</span></div>
+      <span class="save">Save 95% — immediate access</span>
+      <ul>
+        <li>Everything in Batch A — full curriculum, 5 projects, mentorship, live classes, certificate &amp; community</li>
+        <li><b>NEW: Web App Systems</b> — Clinic, School &amp; Project Management (source code, no-code, own &amp; rebrand)</li>
+        <li>Walkthrough videos + 1-month debugging support for the web apps</li>
+        <li>How to build a no-code website for your business + portfolio page</li>
+        <li>Bonus: automated data-collection system (worth ₦500,000)</li>
+      </ul>
+      <div class="tk-btns">
+        <a class="btn btn-orange btn-apply" href="https://selar.com/haymedics_empowerment" target="_blank" rel="noopener">Register Today — Get Immediate Access</a>
         <a class="btn btn-wa" href="https://chat.whatsapp.com/FK1PEO8CasK97nj1l6tEd3?s=cl&p=a&ilr=4" target="_blank" rel="noopener">💬 Join Our WhatsApp Community</a>
       </div>
     </div>
 
-    <!-- ===== PREMIUM PACKAGE ===== -->
-    <div class="track" style="border-color:var(--navy)">
-      <span class="badge-top" style="background:var(--navy);color:var(--white)">Premium · Only 20 Slots</span>
-      <h3>Premium Package</h3>
-      <div class="tk-tag">Everything in Basic + 1-on-1 Mentorship + Medical &amp; Business Consultation</div>
-      <div class="price"><span class="now">₦20,000</span><span style="font-size:.92rem;color:#4A5070">/month</span></div>
-      <span class="save" style="background:rgba(26,20,100,.1);color:var(--navy)">Only 20 people · Secure it fast</span>
-      <ul>
-        <li>Everything in the Basic Plan</li>
-        <li>One-on-one mentorship &amp; personalised career guidance</li>
-        <li>Marketing &amp; business consultation to grow your brand</li>
-        <li>Free medical consultation — online &amp; physical (covers you, your spouse, children &amp; parents)</li>
-        <li>Daily updates on health &amp; well-being — health is wealth, don't make wealth only, stay healthy too</li>
-      </ul>
-      <div class="tk-btns">
-        <a class="btn btn-primary btn-apply" href="https://script.google.com/macros/s/AKfycbzR_qNb8uiF7Iu_2bd7VTmYFsQ2nWN1jJyWZgh0MuN7374p8RHz9owF541w6h8Zdn_u/exec" target="_blank" rel="noopener">Apply for Premium — ₦20,000/mo</a>
-        <a class="btn-outline hm-ai-trigger" href="#" style="display:none">🤖 Ask My AI About My Clinical Background</a>
-      </div>
-    </div>
-
-  </div>
-
   <div class="offer-strip">
     <h4>🎁 Exclusive Bonus — Worth ₦500,000</h4>
-    <p>Create <b>customized application forms</b> with instant, automated follow-up emails, and convert bulky questionnaires into beautiful, analysis-ready survey forms with built-in validation. <b>No data cleaning needed, just analyse and go.</b></p>
+    <p><b>Get our ready-made Web App Systems FREE</b> as part of Batch B — the Clinic, School &amp; Project Management systems (full source code, no-code, own &amp; rebrand). <b>Plus</b> a customized automated data-collection system: build application &amp; survey forms with instant follow-up emails and built-in validation — <b>no data cleaning needed, just analyse and go.</b></p>
   </div>
 
   <div class="pathway">
@@ -465,8 +917,9 @@ var HM_DEADLINE = new Date("2026-08-02T23:59:59+01:00");
 <section id="opportunities" class="opps">
   <span class="eyebrow">Where This Takes You</span>
   <h2 class="sec-title">One Skill Set, Endless Opportunities</h2>
-  <p class="sec-sub">These skills don't just land you a job, they open doors you can walk through on your own terms.</p>
+  <p class="sec-sub">These skills don't just land you a job, they open doors you can walk through on your own terms — including building no-code web apps, a brand-new field with very few experts.</p>
   <div class="opps-grid">
+    <div class="opp" style="border-top-color:var(--royal);background:#EEF3FF"><span class="ic">🧩</span><h4>Build &amp; Sell No-Code Web Apps <span style="display:inline-block;background:var(--orange);color:var(--navy);font-size:.6rem;font-weight:800;letter-spacing:.05em;text-transform:uppercase;padding:3px 8px;border-radius:999px;vertical-align:middle">New Field</span></h4><p>Set up branded clinic, school &amp; project management systems for businesses and schools — a <b>brand-new field with very few experts</b>, so demand is high and competition is low. Charge premium setup fees or sell them as a service.</p></div>
     <div class="opp"><span class="ic">🎓</span><h4>Analyse Your Own Research</h4><p>Students and researchers can analyse their own project and thesis data, without paying to hire an analyst.</p></div>
     <div class="opp"><span class="ic">💼</span><h4>Get Hired</h4><p>Qualify for high-demand remote data and analytics roles worldwide.</p></div>
     <div class="opp"><span class="ic">🧑‍💻</span><h4>Become Self-Employed</h4><p>Work for yourself, take on clients and projects on your own schedule.</p></div>
@@ -550,6 +1003,13 @@ var HM_DEADLINE = new Date("2026-08-02T23:59:59+01:00");
     </div>
 
     <div class="acc-item">
+      <div class="acc-head">🚀 Web App Systems (No-Code) <span class="arw">+</span></div>
+      <div class="acc-body"><div class="acc-body-inner">
+        <ul><li>Own &amp; rebrand ready-made web apps — Clinic, School &amp; Project Management</li><li>Runs free on Google Sheets + Apps Script — no servers, no monthly fees</li><li>Change colours, logo, currency &amp; content — no coding needed</li><li>Deploy your own copy for your business, or sell it as a service</li><li>Walkthrough videos for editing, debugging &amp; troubleshooting</li></ul>
+      </div></div>
+    </div>
+
+    <div class="acc-item">
       <div class="acc-head">🎁 Bonus, Mentorship & Community <span class="arw">+</span></div>
       <div class="acc-body"><div class="acc-body-inner">
         <ul><li>Automated, customized data collection system (worth ₦500,000)</li><li>Mentorship &amp; daily accountability</li><li>Free weekly live classes &amp; live debugging</li><li>Access to our growing Data &amp; AI community</li><li>Regular remote-job alerts &amp; tech trends</li></ul>
@@ -573,11 +1033,11 @@ var HM_DEADLINE = new Date("2026-08-02T23:59:59+01:00");
 <section class="final">
   <div class="roof"><svg viewBox="0 0 100 30"><path d="M2 28 Q50 0 50 0 Q50 0 98 28 Q50 18 50 18 Q50 18 2 28 Z" fill="#F9A825"/></svg></div>
   <h2>Ready to Build Your Future?</h2>
-  <p>This is for committed people ready to turn data into income, business owners, students, healthcare workers and complete beginners alike. <b>Apply now for just ₦5,000 (98% OFF). Slots are filling fast!</b></p>
+  <p>This is for committed people ready to turn data into income, business owners, students, healthcare workers and complete beginners alike. <b>Register today for Batch B and get immediate access — just ₦15,000 (95% off). Slots are filling fast!</b></p>
   <div class="btn-row">
-    <a class="btn btn-orange btn-lg btn-apply" href="https://script.google.com/macros/s/AKfycbzR_qNb8uiF7Iu_2bd7VTmYFsQ2nWN1jJyWZgh0MuN7374p8RHz9owF541w6h8Zdn_u/exec" target="_blank" rel="noopener">Apply Now — ₦5,000</a>
+    <a class="btn btn-orange btn-lg btn-apply" href="https://selar.com/haymedics_empowerment" target="_blank" rel="noopener">Register Today — Get Immediate Access</a>
     <a class="btn btn-wa btn-lg" href="https://chat.whatsapp.com/FK1PEO8CasK97nj1l6tEd3?s=cl&p=a&ilr=4" target="_blank" rel="noopener">💬 Join Our WhatsApp Community</a>
-    <a class="btn btn-ghost btn-lg" href="https://wa.me/2348107820971?text=Hi%2C%20my%20name%20is%20%5BYour%20Name%5D.%20I%27m%20interested%20in%20the%20HayMedics%20Tech%20Empowerment%20Program%20%28%E2%82%A612%2C500%29.%20Kindly%20send%20me%20more%20details.%20Thank%20you." target="_blank" rel="noopener">📩 Ask a Question (DM)</a>
+    <a class="btn btn-ghost btn-lg" href="https://wa.me/2348107820971?text=Hi%2C%20my%20name%20is%20%5BYour%20Name%5D.%20I%27m%20interested%20in%20the%20HayMedics%20Tech%20Empowerment%20Program%20%28%E2%82%A615%2C000%29.%20Kindly%20send%20me%20more%20details.%20Thank%20you." target="_blank" rel="noopener">📩 Ask a Question (DM)</a>
   </div>
 </section>
 
@@ -585,7 +1045,7 @@ var HM_DEADLINE = new Date("2026-08-02T23:59:59+01:00");
   © 2026 <b>HayMedics Academy</b> · Data | Research | Innovation
   <div class="foot-links">
     <a href="https://chat.whatsapp.com/FK1PEO8CasK97nj1l6tEd3?s=cl&p=a&ilr=4" target="_blank" rel="noopener">👥 WhatsApp Community</a>
-    <a href="https://wa.me/2348107820971?text=Hi%2C%20my%20name%20is%20%5BYour%20Name%5D.%20I%27m%20interested%20in%20the%20HayMedics%20Tech%20Empowerment%20Program%20%28%E2%82%A612%2C500%29.%20Kindly%20send%20me%20more%20details.%20Thank%20you." target="_blank" rel="noopener">💬 WhatsApp (DM)</a>
+    <a href="https://wa.me/2348107820971?text=Hi%2C%20my%20name%20is%20%5BYour%20Name%5D.%20I%27m%20interested%20in%20the%20HayMedics%20Tech%20Empowerment%20Program%20%28%E2%82%A615%2C000%29.%20Kindly%20send%20me%20more%20details.%20Thank%20you." target="_blank" rel="noopener">💬 WhatsApp (DM)</a>
     <a href="mailto:haymedicsacademy@gmail.com">✉️ Email</a>
     <a href="portfolio.html">👤 My Portfolio</a>
   </div>
@@ -608,7 +1068,8 @@ document.querySelectorAll('.acc-head').forEach(head=>{
   });
 });
 </script>
-<a class="wa-float" href="https://wa.me/2348107820971?text=Hi%2C%20my%20name%20is%20%5BYour%20Name%5D.%20I%27m%20interested%20in%20the%20HayMedics%20Tech%20Empowerment%20Program%20%28%E2%82%A612%2C500%29.%20Kindly%20send%20me%20more%20details.%20Thank%20you." target="_blank" rel="noopener" aria-label="Chat on WhatsApp" title="Chat on WhatsApp">💬</a>
+<a class="selar-float" href="https://selar.com/haymedics_empowerment" target="_blank" rel="noopener" title="Register on Selar">🛒 Register</a>
+<a class="wa-float" href="https://wa.me/2348107820971?text=Hi%2C%20my%20name%20is%20%5BYour%20Name%5D.%20I%27m%20interested%20in%20the%20HayMedics%20Tech%20Empowerment%20Program%20%28%E2%82%A615%2C000%29.%20Kindly%20send%20me%20more%20details.%20Thank%20you." target="_blank" rel="noopener" aria-label="Chat on WhatsApp" title="Chat on WhatsApp">💬</a>
 
 <!-- ===== AI Assistant Widget ===== -->
 <button class="hm-ai-launch hm-ai-trigger" aria-label="Chat with my AI assistant" style="display:none">
@@ -619,7 +1080,7 @@ document.querySelectorAll('.acc-head').forEach(head=>{
     <div class="hm-ai-head">
       <span class="bot">🤖</span>
       <div class="tt"><b>Dr. Awwal's AI Assistant</b><span>Ask about my projects, career &amp; HayMedics Academy</span></div>
-      <a href="https://wa.me/2348107820971?text=Hi%2C%20my%20name%20is%20%5BYour%20Name%5D.%20I%27m%20interested%20in%20the%20HayMedics%20Tech%20Empowerment%20Program%20%28%E2%82%A612%2C500%29.%20Kindly%20send%20me%20more%20details.%20Thank%20you." target="_blank" rel="noopener" title="Chat on WhatsApp" aria-label="Chat on WhatsApp">💬</a>
+      <a href="https://wa.me/2348107820971?text=Hi%2C%20my%20name%20is%20%5BYour%20Name%5D.%20I%27m%20interested%20in%20the%20HayMedics%20Tech%20Empowerment%20Program%20%28%E2%82%A615%2C000%29.%20Kindly%20send%20me%20more%20details.%20Thank%20you." target="_blank" rel="noopener" title="Chat on WhatsApp" aria-label="Chat on WhatsApp">💬</a>
       <a id="hmAiNewTab" href="#" target="_blank" rel="noopener" title="Open full screen" aria-label="Open in new tab">⤢</a>
       <button id="hmAiClose" title="Close" aria-label="Close chat">✕</button>
     </div>
