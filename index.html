@@ -271,6 +271,20 @@ footer b{color:var(--navy)}
 .fl-btns{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
 .btn-selar{display:inline-block;background:var(--orange);color:var(--navy);font-weight:800;padding:14px 26px;border-radius:10px;box-shadow:0 8px 22px rgba(249,168,37,.4)}
 .btn-selar:hover{transform:translateY(-2px)}
+.btn-demo{display:inline-block;background:#1f8f4e;color:#fff;font-weight:800;padding:12px 18px;border-radius:10px;text-align:center;box-shadow:0 6px 18px rgba(31,143,78,.35);transition:transform .15s ease}
+.btn-demo:hover{transform:translateY(-2px);color:#fff}
+.demo-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:18px;margin:0 0 6px}
+.demo-card{background:#fff;border:1px solid #e6e9f2;border-radius:14px;padding:18px;display:flex;flex-direction:column;gap:8px;box-shadow:0 6px 18px rgba(20,40,90,.06)}
+.demo-card .dic{font-size:1.7rem}
+.demo-card h4{margin:0;font-family:'Archivo';color:var(--navy);font-size:1.05rem}
+.demo-card .one{color:#5a6577;font-size:.9rem;line-height:1.45;flex:1}
+.demo-card .dbtns{display:flex;flex-direction:column;gap:8px}
+.demo-card .btn-demo,.demo-card .btn-selar{width:100%;text-align:center;margin:0}
+.demo-card .soon-note{font-size:.82rem;color:#8a6d1a;background:#fff5e0;border:1px solid #f3e2b3;border-radius:8px;padding:8px;text-align:center;font-weight:700}
+
+.avail-card .btn-demo,.app-card .btn-demo{width:100%;margin-bottom:8px}
+.fl-btns .btn-demo{margin-right:10px}
+.app-thumb .lock.demo{background:rgba(31,143,78,.9)}
 .fl-note{font-size:.76rem;color:#B9C2E8;margin-top:8px;width:100%}
 .mock{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.3)}
 .mock .bar{background:#0E1E3C;display:flex;gap:6px;padding:10px 12px}
@@ -368,7 +382,7 @@ footer b{color:var(--navy)}
 <div class="urgency">🔥 <b>Batch B is OPEN</b> — register today for immediate access · Offer ends in <b id="cdown">…</b> · Limited slots</div>
 <script>
 (function(){
-  var DEADLINE = new Date(Date.now() + 3*24*60*60*1000);
+  var DEADLINE = new Date(Date.now() + 5*24*60*60*1000);
   var el = document.getElementById("cdown");
   function tick(){
     var ms = DEADLINE - new Date();
@@ -521,6 +535,19 @@ footer b{color:var(--navy)}
     <h3>Adapt it. Rebrand it. Own it — without writing a single line of code.</h3>
     <p>Every web app is built to be yours. Change the colours, logo, currency and content to suit your taste — <b>no programming needed</b>. Each purchase walks you through exactly how to debug, edit and rebrand with clear <b>walkthrough videos</b>, plus <b>one full month of follow-up support</b> for error checks, troubleshooting and debugging.</p>
     <div class="chips"><span>✅ Full source code</span><span>🎬 Walkthrough videos</span><span>📘 Complete setup guide</span><span>🛠️ 1-month debugging support</span><span>🌐 No-code business website + portfolio</span></div>
+  </div>
+
+  <h3 class="apps-sub-title">▶ Live Demos — Try Any App Now</h3>
+  <p class="sec-sub" style="margin-bottom:22px">Explore the real, working apps right now — no sign-up needed. Available systems can be bought instantly on Selar; the rest are live to try while their source code drops soon.</p>
+  <div class="demo-grid">
+    <div class="demo-card"><div class="dic">🏥</div><h4>Clinic &amp; Management System</h4><div class="one">A complete clinic in one app — patients, billing, pharmacy/POS &amp; reports.</div><div class="dbtns"><a class="btn-demo" href="https://script.google.com/macros/s/AKfycbxcSh58-Scmm2-19FmAZokvHFNdOtF7skYoAxdH4BInUX10ARX-trTARgK0Rr-uXHJp9Q/exec" target="_blank" rel="noopener">▶ Try Live Demo</a><a class="btn-selar" href="https://selar.com/haymedics_empowerment" target="_blank" rel="noopener">🛒 Get on Selar</a></div></div>
+    <div class="demo-card"><div class="dic">🏫</div><h4>School Management System</h4><div class="one">Run a whole school — students, fees, attendance, exams &amp; results.</div><div class="dbtns"><a class="btn-demo" href="https://script.google.com/macros/s/AKfycbx0R2dEpq_884xKuhhqtznTh2dpyGBAp8aojKFIQrvHuw41WOltMP6anOCcWvlPGVBZ/exec" target="_blank" rel="noopener">▶ Try Live Demo</a><a class="btn-selar" href="https://selar.com/haymedics_empowerment" target="_blank" rel="noopener">🛒 Get on Selar</a></div></div>
+    <div class="demo-card"><div class="dic">📁</div><h4>Project Management System</h4><div class="one">Track clients, projects, payments &amp; deadlines with branded emails.</div><div class="dbtns"><a class="btn-demo" href="https://script.google.com/macros/s/AKfycbwxqvI_Q9c9hdyilRHoG7akZ7L_UBx2AcyLGortawDvrWqalD-K7f03MagGFMSFba1xhw/exec" target="_blank" rel="noopener">▶ Try Live Demo</a><a class="btn-selar" href="https://selar.com/haymedics_empowerment" target="_blank" rel="noopener">🛒 Get on Selar</a></div></div>
+    <div class="demo-card"><div class="dic">📋</div><h4>Complete EMR</h4><div class="one">Full electronic medical records — chart, clerking, investigations &amp; timeline.</div><div class="dbtns"><a class="btn-demo" href="https://script.google.com/macros/s/AKfycbwQUPk7PnqMhx6Yax9hJ4NkUMUQZCnopRv4hFVN1ZKjgn118f3skNBRqB-NMebDMm4GWw/exec" target="_blank" rel="noopener">▶ Try Live Demo</a><span class="soon-note">🔒 Source drops soon</span></div></div>
+    <div class="demo-card"><div class="dic">🎥</div><h4>Telemedicine</h4><div class="one">Virtual consults by video/audio/chat, e-prescriptions &amp; payments.</div><div class="dbtns"><a class="btn-demo" href="https://script.google.com/macros/s/AKfycbwpMb2ccMKu-26ze18yaecM1Gdwu2JKfgf2X_5vQrBrUiEwmrBhYfTD_1w-dSwPJNN0/exec" target="_blank" rel="noopener">▶ Try Live Demo</a><span class="soon-note">🔒 Source drops soon</span></div></div>
+    <div class="demo-card"><div class="dic">🛏️</div><h4>Nursing &amp; Ward Management</h4><div class="one">Wards, beds, observations with early-warning score &amp; drug charts.</div><div class="dbtns"><a class="btn-demo" href="https://script.google.com/macros/s/AKfycbykvp_MSqlG8FVjSSySJvBfF0yoobZ0IZ0Rumk8mkt3qZWEIDA6KEhnVsAgH7Fy2UNOnA/exec" target="_blank" rel="noopener">▶ Try Live Demo</a><span class="soon-note">🔒 Source drops soon</span></div></div>
+    <div class="demo-card"><div class="dic">🧪</div><h4>Diagnostic Laboratory</h4><div class="one">Test catalogue, per-type results, verification &amp; branded reports.</div><div class="dbtns"><a class="btn-demo" href="https://script.google.com/macros/s/AKfycbyDueXIDB_lf1xV_AdXoI4vZF3LVh601JTiyWnzpnQCE-lyAGHDgQDR0lDZO_QZs-Xfww/exec" target="_blank" rel="noopener">▶ Try Live Demo</a><span class="soon-note">🔒 Source drops soon</span></div></div>
+    <div class="demo-card"><div class="dic">💊</div><h4>Pharmacy &amp; POS</h4><div class="one">Inventory with batches/expiry, dispensing, POS &amp; profit reports.</div><div class="dbtns"><a class="btn-demo" href="https://script.google.com/macros/s/AKfycbx5Tkq0N0A8uaUhTdZrw7kRwVcynL-E2xv3Ki_Xc0AkAv8Nwy_Km9lHx-Q5_klKClvqOg/exec" target="_blank" rel="noopener">▶ Try Live Demo</a><span class="soon-note">🔒 Source drops soon</span></div></div>
   </div>
 
   <div class="flagship">
