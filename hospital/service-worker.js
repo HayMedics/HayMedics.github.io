@@ -1,17 +1,10 @@
-/* HayMedics Hospital — service worker (enables install + caches the app shell) */
-const CACHE = 'haymedics-hospital-v1';
-const SHELL = [
-  './',
-  './index.html',
-  './manifest.json',
-  './icon-192.png',
-  './icon-512.png',
-  './apple-touch-icon.png',
-  './favicon-32.png'
-];
+/* HayMedics Hospital — service worker (network-first, so updates always show) */
+const CACHE = 'haymedics-hospital-v3';
+const ICONS = ['./icon-192.png', './icon-512.png', './icon-512-maskable.png', './apple-touch-icon.png', './favicon-32.png'];
 
 self.addEventListener('install', function (e) {
-  e.waitUntil(caches.open(CACHE).then(function (c) { return c.addAll(SHELL); }).then(function () { return self.skipWaiting(); }));
+  // pre-cache only the icons; the page + app are always fetched fresh
+  e.waitUntil(caches.open(CACHE).then(function (c) { return c.addAll(ICONS); }).then(function () { return self.skipWaiting(); }));
 });
 
 self.addEventListener('activate', function (e) {
@@ -22,8 +15,13 @@ self.addEventListener('activate', function (e) {
 
 self.addEventListener('fetch', function (e) {
   var url = new URL(e.request.url);
-  // Only serve the wrapper shell from cache. The live app (script.google.com) always loads fresh.
-  if (url.origin === location.origin) {
-    e.respondWith(caches.match(e.request).then(function (r) { return r || fetch(e.request); }));
-  }
+  if (url.origin !== location.origin) return; // the live app (script.google.com) always goes straight to the network
+  // Network-first: always try fresh, fall back to cache only when offline.
+  e.respondWith(
+    fetch(e.request).then(function (r) {
+      var copy = r.clone();
+      caches.open(CACHE).then(function (c) { c.put(e.request, copy); });
+      return r;
+    }).catch(function () { return caches.match(e.request); })
+  );
 });
