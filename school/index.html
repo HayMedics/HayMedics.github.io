@@ -62,7 +62,53 @@
 
     <!-- Embedded Google Apps Script Web App URL -->
     <iframe id="app-frame" src="https://script.google.com/macros/s/AKfycbxhfEXQQ6jWc0iWf54CKJIxgktpKfA2txA0E4QLLor4iD_SHH_swn1fitPxaZqoUa5j/exec" onload="document.getElementById('loader').style.display='none';"></iframe>
+<body>
 
+    <!-- Your existing loader -->
+    <div id="loader">
+        <div class="spinner"></div>
+        <p>Loading HayMedics Dashboard...</p>
+    </div>
+
+    <!-- Your existing iframe -->
+    <iframe id="app-frame" src="https://script.google.com/macros/s/AKfycbxhfEXQQ6jWc0iWf54CKJIxgktpKfA2txA0E4QLLor4iD_SHH_swn1fitPxaZqoUa5j/exec" onload="document.getElementById('loader').style.display='none';"></iframe>
+
+    <!-- ADD THE INSTALL BUTTON HERE -->
+    <button id="install-btn" style="display: none; position: fixed; bottom: 20px; right: 20px; z-index: 9999; background: #1a73e8; color: white; border: none; padding: 12px 20px; border-radius: 8px; font-weight: bold; cursor: pointer; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+        Install HayMedics SMS
+    </button>
+
+    <!-- Your existing script block -->
+    <script>
+        // Register Service Worker
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./service-worker.js');
+            });
+        }
+
+        // Install Prompt Handler
+        let deferredPrompt;
+        const installBtn = document.getElementById('install-btn');
+
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+            installBtn.style.display = 'block';
+        });
+
+        installBtn.addEventListener('click', async () => {
+            if (!deferredPrompt) return;
+            deferredPrompt.prompt();
+            const { outcome } = await deferredPrompt.userChoice;
+            if (outcome === 'accepted') {
+                console.log('User accepted the install prompt');
+            }
+            deferredPrompt = null;
+            installBtn.style.display = 'none';
+        });
+    </script>
+</body>
     <script>
         // Register Service Worker for PWA Offline Caching
         if ('serviceWorker' in navigator) {
@@ -73,5 +119,15 @@
             });
         }
     </script>
+    let deferredPrompt;
+    window.addEventListener('beforeinstallprompt', (e) => {
+        // Prevent Chrome from automatically showing the prompt
+        e.preventDefault();
+        deferredPrompt = e;
+        
+        // Create or show your custom install button here
+        console.log("PWA install criteria met! Ready to prompt.");
+    });
+</script>
 </body>
 </html>
