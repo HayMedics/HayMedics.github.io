@@ -1,6 +1,6 @@
 /* HayMedics SMS — service worker (network-first, so updates always show) */
-const CACHE = 'haymedics-sms-v1';
-const ICONS = ['./icons/icon-192x192.png', './icons/icon-512x512.png'];
+const CACHE = 'haymedics-sms-v2';
+const ICONS = ['./icon-192.png', './icon-512.png'];
 
 self.addEventListener('install', function (e) {
   // pre-cache only the icons; the page + app are always fetched fresh
