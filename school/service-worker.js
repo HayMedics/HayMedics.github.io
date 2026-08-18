@@ -1,47 +1,27 @@
-const CACHE_NAME = 'haymedics-sms-v1';
-const ASSETS_TO_CACHE = [
-  './index.html',
-  './manifest.json',
-  './icons/icon-192x192.png',
-  './icons/icon-512x512.png'
-];
+/* HayMedics SMS — service worker (network-first, so updates always show) */
+const CACHE = 'haymedics-sms-v1';
+const ICONS = ['./icons/icon-192x192.png', './icons/icon-512x512.png'];
 
-// Install Event - Caching App Shell
-self.addEventListener('install', (event) => {
-  event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => {
-      return cache.addAll(ASSETS_TO_CACHE);
-    })
-  );
-  self.skipWaiting();
+self.addEventListener('install', function (e) {
+  // pre-cache only the icons; the page + app are always fetched fresh
+  e.waitUntil(caches.open(CACHE).then(function (c) { return c.addAll(ICONS); }).then(function () { return self.skipWaiting(); }));
 });
 
-// Activate Event - Clean up old caches
-self.addEventListener('activate', (event) => {
-  event.waitUntil(
-    caches.keys().then((keyList) => {
-      return Promise.all(
-        keyList.map((key) => {
-          if (key !== CACHE_NAME) {
-            return caches.delete(key);
-          }
-        })
-      );
-    })
-  );
-  self.clients.claim();
+self.addEventListener('activate', function (e) {
+  e.waitUntil(caches.keys().then(function (keys) {
+    return Promise.all(keys.filter(function (k) { return k !== CACHE; }).map(function (k) { return caches.delete(k); }));
+  }).then(function () { return self.clients.claim(); }));
 });
 
-// Fetch Event - Serve from cache, fallback to network
-self.addEventListener('fetch', (event) => {
-  // Bypass cross-origin Google Apps Script API calls from caching wrapper
-  if (event.request.url.includes('script.google.com')) {
-    return;
-  }
-
-  event.respondWith(
-    caches.match(event.request).then((cachedResponse) => {
-      return cachedResponse || fetch(event.request);
-    })
+self.addEventListener('fetch', function (e) {
+  var url = new URL(e.request.url);
+  if (url.origin !== location.origin) return; // the live app (script.google.com) always goes straight to the network
+  // Network-first: always try fresh, fall back to cache only when offline.
+  e.respondWith(
+    fetch(e.request).then(function (r) {
+      var copy = r.clone();
+      caches.open(CACHE).then(function (c) { c.put(e.request, copy); });
+      return r;
+    }).catch(function () { return caches.match(e.request); })
   );
 });
