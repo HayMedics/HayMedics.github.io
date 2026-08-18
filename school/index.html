@@ -1,9 +1,10 @@
+```html
 <!DOCTYPE html>
 <!--
   HayMedics School Management System — installable app (PWA) wrapper
   ================================================================
-  1) Uses the exact structure and robust PWA installer pattern from your EMR app.
-  2) Automatically handles Android install prompt and iOS Safari instructions.
+  1) Uses the exact structure, splash screen, and robust PWA installer pattern.
+  2) Includes the forced mobile fallback timeout to ensure the install button appears reliably.
 -->
 <html lang="en">
 <head>
@@ -63,7 +64,7 @@
   /* ====== 2) Service worker: installable AND self-updating ====== */
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', function(){
-      navigator.serviceWorker.register('service-worker.js').then(function(reg){
+      navigator.serviceWorker.register('./service-worker.js').then(function(reg){
         reg.update();
         reg.addEventListener('updatefound', function(){
           var sw = reg.installing; if(!sw) return;
@@ -77,11 +78,36 @@
     });
   }
 
-  /* ====== 3) Android install button ====== */
+  /* ====== 3) Android install button (with mobile fallback) ====== */
   var deferred = null;
-  window.addEventListener('beforeinstallprompt', function(e){ e.preventDefault(); deferred = e; document.getElementById('install').style.display = 'inline-flex'; });
-  document.getElementById('install').addEventListener('click', function(){ if(!deferred) return; deferred.prompt(); deferred.userChoice.finally(function(){ deferred = null; document.getElementById('install').style.display='none'; }); });
-  window.addEventListener('appinstalled', function(){ document.getElementById('install').style.display='none'; });
+  var installBtn = document.getElementById('install');
+
+  window.addEventListener('beforeinstallprompt', function(e){ 
+    e.preventDefault(); 
+    deferred = e; 
+    installBtn.style.display = 'inline-flex'; 
+  });
+
+  // Forced mobile fallback to guarantee visibility on mobile subdirectories
+  setTimeout(function() {
+    if (installBtn.style.display === 'none') {
+      installBtn.style.display = 'inline-flex';
+    }
+  }, 3000);
+
+  installBtn.addEventListener('click', function(){ 
+    if (deferred) {
+      deferred.prompt(); 
+      deferred.userChoice.finally(function(){ 
+        deferred = null; 
+        installBtn.style.display='none'; 
+      });
+    } else {
+      alert("To install: Tap your browser's menu (three dots in top right) and select 'Install app' or 'Add to Home screen'.");
+    }
+  });
+
+  window.addEventListener('appinstalled', function(){ installBtn.style.display='none'; });
 
   /* ====== 4) iPhone hint ====== */
   var isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
@@ -90,3 +116,5 @@
 </script>
 </body>
 </html>
+
+```
