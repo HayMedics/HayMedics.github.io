@@ -1,24 +1,27 @@
-```html
 <!DOCTYPE html>
 <!--
-  HayMedics School Management System — installable app (PWA) wrapper
-  ================================================================
-  1) Uses the exact structure, splash screen, and robust PWA installer pattern.
-  2) Includes the forced mobile fallback timeout to ensure the install button appears reliably.
+  HayMedics Hospital — installable app (PWA) wrapper
+  ==================================================
+  1) Paste your CURRENT Apps Script /exec link into the APP_URL line below
+     (it must be the exact link that works when you open it directly).
+  2) Keep index.html, manifest.json, service-worker.js and all icon .png files together.
+  3) Upload the folder to GitHub Pages / your domain, e.g. haymedicsacademy.com/hospital/
+  4) On a phone: Android Chrome shows "Install app"; iPhone Safari: Share > Add to Home Screen.
+  If you re-deploy and the /exec changes, update APP_URL and re-upload this file.
 -->
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
-<title>HayMedics School Management System</title>
-<meta name="description" content="HayMedics School Management System — Comprehensive Academy Dashboard.">
+<title>HayMedics SMS</title>
+<meta name="description" content="HayMedics School Management System">
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#1E3E7B">
-<link rel="icon" href="icons/icon-192x192.png" sizes="192x192">
-<link rel="apple-touch-icon" href="icons/icon-192x192.png">
+<link rel="icon" href="favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="HayMedics SMS">
+<meta name="apple-mobile-web-app-title" content="HayMedics School">
 <style>
   :root{--navy:#1E3E7B;--gold:#F4A522}
   *{margin:0;padding:0;box-sizing:border-box}
@@ -42,19 +45,19 @@
     <span class="logo">
       <svg width="60" height="60" viewBox="0 0 100 100"><rect x="25" y="20" width="50" height="60" rx="6" fill="#1E3E7B"/><rect x="25" y="20" width="50" height="16" rx="6" fill="#122A54"/><rect x="45" y="24" width="10" height="3" rx="1.5" fill="#fff"/><rect x="48.5" y="21.5" width="3" height="8" rx="1.5" fill="#fff"/><rect x="33" y="44" width="26" height="4" rx="2" fill="#D2E0EE"/><rect x="33" y="52" width="20" height="4" rx="2" fill="#D2E0EE"/><path d="M33 66 h8 l4 -8 l5 12 l3 -6 h9" fill="none" stroke="#F4A522" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/></svg>
     </span>
-    <h1>HayMedics SMS</h1>
-    <p>School Management System</p>
+    <h1>HayMedics School</h1>
+    <p>Management System</p>
     <div class="bar"><i></i></div>
   </div>
 
-  <iframe id="app" title="HayMedics School Management System" allow="clipboard-write; camera; microphone" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <iframe id="app" title="HayMedics School" allow="clipboard-write; camera; microphone" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-  <button id="install"><span>⬇️</span> Install app</button>
-  <div id="ios">📱 To install: tap <b>Share</b>, then <b>Add to Home Screen</b>.</div>
+  <button id="install"><span>&#11015;&#65039;</span> Install app</button>
+  <div id="ios">&#128242; To install: tap <b>Share</b>, then <b>Add to Home Screen</b>.</div>
 
 <script>
-  /* ====== 1) YOUR APP LINK ====== */
-  var APP_URL = "https://script.google.com/macros/s/AKfycbxhfEXQQ6jWc0iWf54CKJIxgktpKfA2txA0E4QLLor4iD_SHH_swn1fitPxaZqoUa5j/exec";
+  /* ====== 1) YOUR APP LINK — paste your current Apps Script /exec URL here ====== */
+  var APP_URL = "https://script.google.com/macros/s/AKfycbxhfEXQQ6jWc0iWf54CKJIxgktpKfA2txA0E4QLLor4iD_SHH_swn1fitPxaZqoUa5j/exec"; // <-- REPLACE with the /exec link that works when opened directly
 
   var frame = document.getElementById('app'), splash = document.getElementById('splash');
   frame.src = APP_URL;
@@ -64,7 +67,7 @@
   /* ====== 2) Service worker: installable AND self-updating ====== */
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', function(){
-      navigator.serviceWorker.register('./service-worker.js').then(function(reg){
+      navigator.serviceWorker.register('service-worker.js').then(function(reg){
         reg.update();
         reg.addEventListener('updatefound', function(){
           var sw = reg.installing; if(!sw) return;
@@ -78,36 +81,11 @@
     });
   }
 
-  /* ====== 3) Android install button (with mobile fallback) ====== */
+  /* ====== 3) Android install button ====== */
   var deferred = null;
-  var installBtn = document.getElementById('install');
-
-  window.addEventListener('beforeinstallprompt', function(e){ 
-    e.preventDefault(); 
-    deferred = e; 
-    installBtn.style.display = 'inline-flex'; 
-  });
-
-  // Forced mobile fallback to guarantee visibility on mobile subdirectories
-  setTimeout(function() {
-    if (installBtn.style.display === 'none') {
-      installBtn.style.display = 'inline-flex';
-    }
-  }, 3000);
-
-  installBtn.addEventListener('click', function(){ 
-    if (deferred) {
-      deferred.prompt(); 
-      deferred.userChoice.finally(function(){ 
-        deferred = null; 
-        installBtn.style.display='none'; 
-      });
-    } else {
-      alert("To install: Tap your browser's menu (three dots in top right) and select 'Install app' or 'Add to Home screen'.");
-    }
-  });
-
-  window.addEventListener('appinstalled', function(){ installBtn.style.display='none'; });
+  window.addEventListener('beforeinstallprompt', function(e){ e.preventDefault(); deferred = e; document.getElementById('install').style.display = 'inline-flex'; });
+  document.getElementById('install').addEventListener('click', function(){ if(!deferred) return; deferred.prompt(); deferred.userChoice.finally(function(){ deferred = null; document.getElementById('install').style.display='none'; }); });
+  window.addEventListener('appinstalled', function(){ document.getElementById('install').style.display='none'; });
 
   /* ====== 4) iPhone hint ====== */
   var isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
@@ -116,5 +94,3 @@
 </script>
 </body>
 </html>
-
-```
