@@ -1,6 +1,6 @@
-/* HayMedics SMS — service worker (network-first, so updates always show) */
-const CACHE = 'haymedics-sms-v2';
-const ICONS = ['./icon-192.png', './icon-512.png'];
+/* HayMedics School — service worker (network-first, so updates always show) */
+const CACHE = 'haymedics-school-v1';
+const ICONS = ['./icon-192.png', './icon-512.png', './icon-512-maskable.png', './apple-touch-icon.png', './favicon-32.png'];
 
 self.addEventListener('install', function (e) {
   // pre-cache only the icons; the page + app are always fetched fresh
