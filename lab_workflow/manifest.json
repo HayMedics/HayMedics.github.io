@@ -1,25 +1,16 @@
 {
-  "name": "HayMedics Laboratory Information System",
+  "name": "HayMedics Laboratory Service",
   "short_name": "HayMedics Lab",
-  "description": "Centralized diagnostic laboratory management and reporting platform.",
-  "start_url": "/",
-  "scope": "/",
+  "description": "Laboratory Management System by HayMedics Academy.",
+  "start_url": "./index.html",
+  "scope": "./",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#0284c7",
-  "orientation": "portrait-primary",
+  "orientation": "any",
+  "background_color": "#1E3E7B",
+  "theme_color": "#1E3E7B",
   "icons": [
-    {
-      "src": "/icons/icon-192.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "maskable any"
-    },
-    {
-      "src": "/icons/icon-512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "maskable any"
-    }
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
   ]
 }
