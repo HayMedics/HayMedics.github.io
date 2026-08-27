@@ -1,7 +1,7 @@
 {
-  "name": "HayMedics Hospital",
-  "short_name": "HayMedics",
-  "description": "Hospital EMR + Laboratory system by HayMedics Academy.",
+  "name": "HayMedics Student Portal",
+  "short_name": "HayMedics Portal",
+  "description": "Learning Management System by HayMedics Academy.",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
