@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HayMedics Academy — Tech & AI Training, Clinic Web Apps & Data Science</title>
-<meta name="description" content="The best Tech & AI Empowerment Program. Learn Data Analytics & AI from scratch. 5 real projects, mentorship, free live classes, community & ₦500k in bonuses. Enroll for just ₦15,000 (95% off). No experience needed.">
+<title>HayMedics Academy — Data Science, Research & Clinical AI for Healthcare Professionals</title>
+<meta name="description" content="Practical Data Science, Biostatistics, Research & Clinical AI training built for healthcare professionals. Live cohort masterclasses, mentorship, ready-to-deploy clinical web apps for hospitals, labs, pharmacies and clinics. Taught by a Medical Doctor & Clinical AI Architect.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -335,23 +335,20 @@ footer b{color:var(--navy)}
 .avail-feats li::before{content:"\2713";position:absolute;left:0;color:var(--royal);font-weight:800}
 .avail-incl{font-size:.76rem;color:#5A4A20;background:#FFF6E6;border:1px dashed var(--orange);border-radius:8px;padding:8px 10px;margin-bottom:14px}
 .avail-card .btn-selar{width:100%;text-align:center}
-.selar-float{position:fixed;left:20px;bottom:20px;z-index:99;background:var(--orange);color:var(--navy);font-weight:800;padding:12px 18px;border-radius:999px;box-shadow:0 6px 20px rgba(249,168,37,.5);font-family:'Archivo';font-size:.9rem;transition:transform .15s ease}
-.selar-float:hover{transform:translateY(-2px)}
-@media(max-width:560px){.selar-float{padding:10px 14px;font-size:.82rem}}
 </style>
 <meta property="og:type" content="website">
-<meta property="og:title" content="HayMedics Academy — Best Tech & AI Empowerment Program | ₦15,000">
-<meta property="og:description" content="Best Tech & AI Empowerment Program. Data Analytics & AI from scratch. 5 projects, mentorship, live classes & ₦500k in bonuses. Just ₦15,000 (95% off).">
-<meta property="og:url" content="https://haymedics.github.io/">
+<meta property="og:title" content="HayMedics Academy — Healthcare Data Science, Research & Clinical AI">
+<meta property="og:description" content="Live cohort masterclasses in Biostatistics, Python, Machine Learning, Research & Clinical AI — built for doctors, nurses, pharmacists, lab scientists and researchers. Plus ready-to-deploy clinical web apps.">
+<meta property="og:url" content="https://haymedicsacademy.com/">
 <meta property="og:image" content="https://haymedics.github.io/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="HayMedics — Best Tech & AI Empowerment Program | ₦15,000">
-<meta name="twitter:description" content="Best Tech & AI Empowerment Program. 5 projects, mentorship, community & ₦500k bonuses. Just ₦15,000. Limited slots.">
+<meta name="twitter:title" content="HayMedics Academy — Data Science & Clinical AI for Healthcare">
+<meta name="twitter:description" content="Cohort-based training in Biostatistics, Python, ML & Clinical AI for healthcare professionals — plus clinical web apps you can deploy today.">
 <meta name="twitter:image" content="https://haymedics.github.io/og-image.png">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Course","name":"HayMedics Tech Empowerment Program","description":"Best Tech and AI Empowerment Program. Learn Data Analytics and AI from scratch: Excel, Statistics, AI, 5 capstone projects, digital products, mentorship and community. Beginner-friendly.","provider":{"@type":"Organization","name":"HayMedics Academy","sameAs":"https://haymedics.github.io"},"offers":{"@type":"Offer","price":"15000","priceCurrency":"NGN"}}
+{"@context":"https://schema.org","@type":"Course","name":"Healthcare Data Science & Research Masterclass","description":"A live-interactive, 2-month cohort masterclass for healthcare professionals covering Biostatistics, SPSS, Python for Data Science, Machine Learning, Clinical AI, AI-powered EHR development, and Research methodology. Taught by a Medical Doctor and Clinical AI Architect.","provider":{"@type":"Organization","name":"HayMedics Academy","sameAs":"https://haymedicsacademy.com"},"startDate":"2026-09-05","courseMode":"online","offers":{"@type":"Offer","price":"80000","priceCurrency":"NGN","description":"Early bird — first 10 registrants"}}
 </script>
 </head>
 <body>
@@ -371,22 +368,23 @@ footer b{color:var(--navy)}
     <button class="navburger" aria-label="Menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
     <div class="nav-links">
       <a href="#activities">Programs</a>
-      <a href="#webapps">Web Apps</a>
-      <a href="#services">Services</a>
+      <a href="#masterclass">Masterclass</a>
+      <a href="#webapps">Clinical Apps</a>
       <a href="#curriculum">Curriculum</a>
-      <a href="portfolio.html" class="nav-portfolio">My Portfolio</a>
+      <a href="https://haymedicsacademy.com/studentportal/" target="_blank" rel="noopener" class="nav-portfolio">🎓 Cohort Login</a>
     </div>
   </div>
 </nav>
 
-<div class="urgency">🔥 <b>Batch B is OPEN</b> — register today for immediate access · Offer ends in <b id="cdown">…</b> · Limited slots</div>
+<div class="urgency">🩺 <b>September Healthcare Data Science &amp; Research Masterclass</b> — starts <b>Sept 5</b> · Early bird ₦80,000 for the first 10 · Only <b>20 seats</b> · Closes in <b id="cdown">…</b></div>
 <script>
 (function(){
-  var DEADLINE = new Date(Date.now() + 5*24*60*60*1000);
+  // Countdown to September 5, 2026 (start date)
+  var DEADLINE = new Date("2026-09-05T00:00:00+01:00");
   var el = document.getElementById("cdown");
   function tick(){
     var ms = DEADLINE - new Date();
-    if(ms <= 0){ el.textContent = "FINAL HOURS"; return; }
+    if(ms <= 0){ el.textContent = "COHORT STARTED"; return; }
     var d=Math.floor(ms/86400000), hh=Math.floor(ms%86400000/3600000), m=Math.floor(ms%3600000/60000), s=Math.floor(ms%60000/1000);
     el.textContent = d+"d "+hh+"h "+m+"m "+s+"s";
   }
@@ -395,99 +393,152 @@ footer b{color:var(--navy)}
 </script>
 
 <header class="hero">
-  <span class="kicker">Best Tech & AI Empowerment Program · Path to Financial Freedom</span>
-  <h1>Stop Waiting for a 9–5.<br><em>Build the Skill</em> That<br>Pays You for Life.</h1>
-  <p>Learn <b>Data Analytics, No-code Website, Web Apps and AI</b> from scratch — turn your laptop into an income machine. No degree. No experience needed. <b>August 2026 Batch B is now open</b> — register today for immediate access (just <b>₦15,000</b>, was ₦300,000 · 95% off).</p>
+  <span class="kicker">Data · Research · Innovation · Built for Healthcare Professionals</span>
+  <h1>Master Data Science,<br>Research &amp; <em>Clinical AI.</em><br>Made Practical for Healthcare.</h1>
+  <p>A cohort-based academy for doctors, nurses, pharmacists, lab scientists, researchers and health-tech builders. Learn <b>Research Writing, Biostatistics, SPSS, Python, Machine Learning and Clinical AI</b>, then deploy ready-made <b>Hospital, EHR, Lab, Pharmacy and Telemedicine web apps</b> in your own practice. Taught by a Medical Doctor and Clinical AI Architect.</p>
   <div class="btn-row">
-    <a class="btn btn-orange btn-lg btn-apply" href="https://selar.com/haymedics_empowerment" target="_blank" rel="noopener">🔔 Register Today — Get Immediate Access →</a>
-    <a class="btn btn-ghost btn-lg" href="#webapps">🚀 Explore Our Web Apps</a>
-    <a class="btn btn-wa btn-lg" href="https://chat.whatsapp.com/FK1PEO8CasK97nj1l6tEd3?s=cl&p=a&ilr=4" target="_blank" rel="noopener">💬 WhatsApp Community</a>
-    <a class="btn btn-ghost btn-lg" href="portfolio.html">👤 My Portfolio</a>
+    <a class="btn btn-orange btn-lg btn-apply" href="https://script.google.com/macros/s/AKfycbzGBbTpMj0HAnnTpfFkA7jpM9Fl5dq32uG8NfdBjwVdQHT6ZybFsNGJi_7W9EhUdo6FZA/exec" target="_blank" rel="noopener">🩺 Apply for the September Masterclass →</a>
+    <a class="btn btn-primary btn-lg" href="https://drive.google.com/file/d/1TTdvIw8KVY1X42or_-A8WejNEbpBNmci/view?usp=sharing" target="_blank" rel="noopener">📄 Download Curriculum (PDF)</a>
+    <a class="btn btn-ghost btn-lg" href="https://haymedicsacademy.com/studentportal/" target="_blank" rel="noopener">🎓 Cohort Portal Login</a>
+    <a class="btn btn-ghost btn-lg" href="#webapps">🏥 Explore Clinical Web Apps</a>
+    <a class="btn btn-wa btn-lg" href="https://chat.whatsapp.com/FK1PEO8CasK97nj1l6tEd3?s=cl&p=a&ilr=4" target="_blank" rel="noopener">💬 Join WhatsApp Community</a>
   </div>
 </header>
 
 <section id="activities" class="events">
-  <span class="eyebrow">Happening Now</span>
-  <h2 class="sec-title">Programs &amp; Events at HayMedics Academy</h2>
-  <p class="sec-sub">Live cohorts and programs — here's what's running and what's next.</p>
-  <div class="ev-grid">
-    <div class="ev-card live">
-      <span class="ev-badge b-live">● Batch A Ongoing · Registration Closed</span>
-      <h3>HayMedics August 2026 Tech &amp; AI Empowerment — Batch A</h3>
-      <div class="ev-meta">Data Analytics · No-code Website · Web Apps · AI · 100% online</div>
-      <p class="lead">Our current cohort is running and the reviews so far have been <b>sweet</b>. 🎉 Learn the most in-demand skills in the world and turn your laptop into an income machine.</p>
-      <ul class="ev-feats">
-        <li>Excel (Beginner → Advanced) + Statistics &amp; data analysis</li>
-        <li>AI in data analysis (ChatGPT, Gemini, Claude) &amp; advanced prompting</li>
-        <li>Data collection with Google Forms — clean, analysis-ready</li>
-        <li>5 end-to-end capstone projects (healthcare, business, security)</li>
-        <li>Build no-code websites &amp; web apps + a portfolio that gets you hired</li>
-        <li>Build your brand &amp; sell digital products online</li>
-        <li>Mentorship, free weekly live classes &amp; live debugging</li>
-        <li>Certificate + community + remote-job alerts</li>
-        <li>Bonus: automated data-collection system (worth ₦500,000)</li>
-      </ul>
-      <div class="ev-note closed">Registration for <b>Batch A</b> is closed. Kindly register for <b>Batch B</b> today.</div>
-      <a class="btn btn-primary ev-cta" href="https://selar.com/haymedics_empowerment" target="_blank" rel="noopener">🚀 Register for Batch B — Immediate Access</a>
+  <span class="eyebrow">September 2026 Cohort</span>
+  <h2 class="sec-title">The Programme at HayMedics Academy</h2>
+  <p class="sec-sub">Our September flagship cohort is a live-interactive masterclass for healthcare professionals who want to master data science, biostatistics, research and clinical AI — with a small, focused seat count and hands-on mentorship.</p>
+
+  <!-- ============ FLAGSHIP: MASTERCLASS ============ -->
+  <div id="masterclass" class="ev-card live" style="border-color:var(--royal);border-width:3px;background:linear-gradient(180deg,#F7FAFF,#fff);margin-bottom:26px">
+    <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:6px">
+      <span class="ev-badge b-live" style="background:var(--royal);color:#fff">🩺 Flagship · September Cohort</span>
+      <span class="ev-badge" style="background:var(--orange);color:var(--navy)">Early Bird — First 10 Only</span>
     </div>
+    <h3 style="font-size:1.5rem">September Healthcare Data Science &amp; Research Masterclass</h3>
+    <div class="ev-meta">Live-interactive online cohort · 2 months + 3-month mentorship · Start date: <b>5th September 2026</b></div>
+    <p class="lead">A comprehensive, hands-on program for <b>doctors, nurses, pharmacists, lab scientists, allied health professionals and researchers</b> who want to master Data Science, Biostatistics, and Clinical AI — and use those skills in real practice and research.</p>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px 22px;margin:14px 0 18px">
+      <ul class="ev-feats" style="margin-bottom:0">
+        <li>Comprehensive Biostatistics &amp; SPSS (Beginner → Advanced)</li>
+        <li>Python for Data Science</li>
+        <li>Machine Learning — build AI-powered Clinical Prediction Systems</li>
+        <li>MS Excel for Healthcare (Beginner → Advanced)</li>
+        <li>AI for Data Analysis</li>
+        <li>Basics of Research</li>
+      </ul>
+      <ul class="ev-feats" style="margin-bottom:0">
+        <li>Ethical use of AI in Research</li>
+        <li>Automated data collection with Google Apps Script</li>
+        <li>Build an AI-powered EHR for clinics, labs &amp; pharmacies</li>
+        <li>Build a robust portfolio website on GitHub</li>
+        <li>Weekly assessments &amp; hands-on practicals</li>
+        <li>Final assessment → certificate on completion</li>
+      </ul>
+    </div>
+
+    <div style="background:#F5F7FC;border-radius:12px;padding:16px 18px;margin-bottom:14px;display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px">
+      <div><div style="font-size:.7rem;font-weight:800;color:var(--royal);letter-spacing:.1em;text-transform:uppercase">Tutor</div><div style="font-weight:800;color:var(--navy);font-size:.95rem">Awwal Abdulrahman, MBBS</div><div style="font-size:.78rem;color:#4A5070">Full-stack Data Scientist &amp; Clinical AI Architect</div></div>
+      <div><div style="font-size:.7rem;font-weight:800;color:var(--royal);letter-spacing:.1em;text-transform:uppercase">Duration</div><div style="font-weight:800;color:var(--navy);font-size:.95rem">2 months + 3-mo mentorship</div><div style="font-size:.78rem;color:#4A5070">Class days chosen by participants · Recordings included</div></div>
+      <div><div style="font-size:.7rem;font-weight:800;color:var(--royal);letter-spacing:.1em;text-transform:uppercase">Cohort Size</div><div style="font-weight:800;color:var(--navy);font-size:.95rem">Only 20 seats</div><div style="font-size:.78rem;color:#4A5070">Small, focused, high-touch mentorship</div></div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px">
+      <div style="border:2px dashed var(--orange);background:#FFF8E8;border-radius:12px;padding:14px 16px">
+        <div style="font-size:.7rem;font-weight:800;color:#7A4B0F;letter-spacing:.1em;text-transform:uppercase">Early Bird · First 10</div>
+        <div style="font-family:'Archivo';font-weight:900;color:var(--navy);font-size:1.6rem;line-height:1">₦80,000 <span style="font-size:.9rem;color:#4A5070;font-weight:600">/ $70</span></div>
+      </div>
+      <div style="border:2px solid var(--line);background:#fff;border-radius:12px;padding:14px 16px">
+        <div style="font-size:.7rem;font-weight:800;color:var(--royal);letter-spacing:.1em;text-transform:uppercase">Regular Tuition</div>
+        <div style="font-family:'Archivo';font-weight:900;color:var(--navy);font-size:1.6rem;line-height:1">₦120,000 <span style="font-size:.9rem;color:#4A5070;font-weight:600">/ $90</span></div>
+      </div>
+    </div>
+
+    <div style="display:flex;flex-wrap:wrap;gap:10px">
+      <a class="btn btn-orange btn-apply" href="https://script.google.com/macros/s/AKfycbzGBbTpMj0HAnnTpfFkA7jpM9Fl5dq32uG8NfdBjwVdQHT6ZybFsNGJi_7W9EhUdo6FZA/exec" target="_blank" rel="noopener">🩺 Apply Now — Masterclass Application</a>
+      <a class="btn btn-primary" href="https://drive.google.com/file/d/1TTdvIw8KVY1X42or_-A8WejNEbpBNmci/view?usp=sharing" target="_blank" rel="noopener">📄 Download Full Curriculum</a>
+      <a class="btn btn-primary" href="https://haymedicsacademy.com/studentportal/" target="_blank" rel="noopener">🎓 Cohort Portal Login</a>
+      <a class="btn btn-wa" href="https://wa.me/2348107820971?text=Hi%2C%20I%27d%20like%20details%20on%20the%20September%20Healthcare%20Data%20Science%20%26%20Research%20Masterclass." target="_blank" rel="noopener">💬 Ask a Question</a>
+    </div>
+    <div style="font-size:.78rem;color:#5A6080;margin-top:12px">✅ After submitting the application, you'll receive next steps by email. Payment link is shared once your application is reviewed.</div>
+  </div>
+
+  <!-- ============ SECONDARY: IN-PERSON (Ilorin) ============ -->
+  <div class="ev-grid" style="grid-template-columns:1fr;max-width:820px;margin:0 auto">
+
     <div class="ev-card soon">
-      <span class="ev-badge b-soon">Coming Soon</span>
-      <h3>Health, Tech &amp; AI Empowerment for Civil Servants &amp; Teachers</h3>
-      <div class="ev-meta">HayMedics Academy · Physical classes at our Ilorin workspace</div>
-      <p class="lead">A monthly program for busy professionals — civil servants, teachers, principals, proprietors, business owners &amp; corporate teams. Core aim: <b>less work, more automation, more funds.</b></p>
+      <span class="ev-badge b-soon">Coming Soon · In-Person</span>
+      <h3>Health, Tech &amp; AI Empowerment — Ilorin</h3>
+      <div class="ev-meta">Physical classes at our Ilorin workspace · For busy professionals</div>
+      <p class="lead">A monthly program for clinicians in service, teachers, principals, proprietors, and small-business owners. Core aim: <b>less admin work, more automation, better decisions.</b></p>
       <ul class="ev-feats">
-        <li><b>AI for Education &amp; Productivity</b> — lesson notes, assessments, analyse student performance, ethical AI in class</li>
-        <li><b>Data Analytics &amp; AI</b> — Excel for Healthcare, project &amp; resource management, statistics, analyse research in 1 hour</li>
-        <li><b>Build &amp; own a no-code management web app</b> on Google Sheets (clients, projects, billing) — no coding, no subscription</li>
-        <li><b>Digital products &amp; presence</b> — no-code website &amp; portfolio in 30 min, video editing, faceless YouTube, selling online</li>
-        <li><b>Career &amp; business tools</b> — 100+ CV/resume toolkits, automated data collection, web-apps-as-a-service side hustle</li>
+        <li><b>AI for productivity</b> — case summaries, lesson notes, quick research review</li>
+        <li><b>Excel &amp; analytics for healthcare</b> — project, roster &amp; resource management</li>
+        <li><b>Build a no-code management web app</b> on Google Sheets — clients, projects, billing</li>
+        <li><b>Personal digital presence</b> — no-code website + portfolio in 30 minutes</li>
+        <li><b>Career &amp; practice tools</b> — CV toolkits, automated data collection, service side-lines</li>
         <li><b>Exclusive bonus</b> — free online medical consultation for every participant</li>
       </ul>
-      <div class="ev-note willsoon">Physical classes at our <b>Ilorin workspace</b> · Fridays &amp; Sundays, 4:30–6:00 PM · ₦10,000/month · certificate + recordings · <b>Laptop needed — but you can manage with your phone if you don't have one.</b></div>
-      <a class="btn btn-orange ev-cta" href="https://wa.me/2348107820971?text=Hi%2C%20I%27m%20interested%20in%20HayMedics%20Health%2C%20tech%20and%20AI%20Empowerment%20holding%20soon%20in%20Ilorin.%20Kindly%20send%20me%20details" target="_blank" rel="noopener">📩 Notify Me When It Opens</a>
+      <div class="ev-note willsoon"><b>Ilorin workspace</b> · Fridays &amp; Sundays, 4:30–6:00 PM · ₦10,000/month · certificate + recordings · Laptop preferred, phone-friendly for the fundamentals.</div>
+      <a class="btn btn-orange ev-cta" href="https://wa.me/2348107820971?text=Hi%2C%20I%27m%20interested%20in%20the%20Ilorin%20Health%2C%20Tech%20%26%20AI%20Empowerment%20program.%20Kindly%20send%20me%20details" target="_blank" rel="noopener">📩 Notify Me When It Opens</a>
     </div>
+
+  </div>
+
+  <!-- ============ BATCH B CLOSED — BRIEF NOTE ============ -->
+  <div style="margin-top:22px;background:var(--mist);border:1px dashed var(--royal);border-radius:14px;padding:18px 22px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;justify-content:space-between">
+    <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+      <span style="display:inline-block;background:var(--navy);color:#fff;font-size:.68rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:6px 14px;border-radius:999px">Closed</span>
+      <div>
+        <div style="font-family:'Archivo';font-weight:800;color:var(--navy);font-size:1rem">August Batch B — Registration Closed</div>
+        <div style="font-size:.85rem;color:#4A5070">Batch A wrapped and Batch B is now in session. Next intake is via the September cohorts above.</div>
+      </div>
+    </div>
+    <a class="btn btn-outline" href="#masterclass" style="text-decoration:none">View September Cohorts →</a>
   </div>
 </section>
 
 
 <section class="vs">
-  <span class="eyebrow">Stop Guessing</span>
-  <h2 class="sec-title">Random "Make Money Online" Advice vs. A Real Skill</h2>
-  <p class="sec-sub">You could keep chasing scattered tips and quick-money promises, or follow one structured path, built by a Medical Doctor and AI Engineer, that gives you a real, income-producing skill in Data &amp; AI. Nothing wasted.</p>
+  <span class="eyebrow">Why a Cohort Program</span>
+  <h2 class="sec-title">Random YouTube Tutorials vs. A Structured Clinical Path</h2>
+  <p class="sec-sub">You could piece together tutorials for years and still not know how to run a proper regression on your research data, or you can follow one structured path — designed by a Medical Doctor and Clinical AI Architect — that takes you from confused to confident.</p>
   <div class="vs-grid">
     <div class="vs-col vs-bad">
-      <h4>😩 Chasing Random Hustles</h4>
+      <h4>😩 The Self-Taught Struggle</h4>
       <ul>
-        <li>Scattered tips, quick-money traps, no real skill</li>
-        <li>Nothing you can put on a CV or portfolio</li>
-        <li>You never know what to learn next</li>
-        <li>No mentor when you get stuck</li>
-        <li>No projects, no certificate, no community</li>
-        <li>Months pass, still nothing to show</li>
+        <li>Scattered tutorials with no clinical context</li>
+        <li>Statistics you can't confidently defend to a reviewer</li>
+        <li>Nothing to show your department or supervisor</li>
+        <li>No mentor when your model or SPSS output doesn't add up</li>
+        <li>Notes but no projects, no certificate, no community</li>
+        <li>Months pass, dissertation still stuck at "Methods"</li>
       </ul>
     </div>
     <div class="vs-col vs-good">
       <h4>🎯 The HayMedics Path</h4>
       <ul>
-        <li>A structured, step-by-step Data &amp; AI skill</li>
-        <li>5 real projects and a portfolio that proves it</li>
-        <li>A clear roadmap from beginner to income-ready</li>
-        <li>Mentorship and free weekly live classes</li>
-        <li>Certificate, community, and remote job alerts</li>
-        <li>An income stream you build and own</li>
+        <li>A structured, clinician-friendly curriculum</li>
+        <li>Real practicals on healthcare datasets, not toy data</li>
+        <li>A clear roadmap from beginner to research-ready</li>
+        <li>Mentorship, weekly live classes &amp; daily accountability</li>
+        <li>Certificate, tight-knit cohort &amp; 3 months of follow-up</li>
+        <li>Portfolio, publications and deployable clinical tools</li>
       </ul>
     </div>
   </div>
 </section>
 
 <section id="demand" class="demand">
-  <span class="eyebrow">The Opportunity</span>
-  <h2 class="sec-title">The Market Is Exploding, And It's Waiting for You</h2>
-  <p class="sec-sub">Over <b>4 billion people</b> are on WhatsApp and Telegram right now, and Nigeria is fast becoming one of the most populous nations on earth. That's a massive, growing market, hungry for products, services and solutions. <b>The only question is whether you'll build for it, or watch others get rich from it.</b></p>
+  <span class="eyebrow">Where Healthcare Is Heading</span>
+  <h2 class="sec-title">The Clinicians Who Understand Data Will Lead the Next Decade</h2>
+  <p class="sec-sub">From AI triage in emergency departments to genomics-guided prescribing, every specialty is being reshaped by data. Health-tech investment is now measured in <b>hundreds of billions of dollars</b> — and the professionals writing the future are the ones who understand both medicine and code.</p>
   <div class="demand-grid">
-    <div class="demand-card"><h4>🌍 Work From Anywhere</h4><p>Remote roles in data and AI are booming globally. Your laptop is your office, location doesn't matter, your skills do.</p></div>
-    <div class="demand-card"><h4>💰 Real Income Potential</h4><p>Data-skilled people and digital-product builders command premium pay. Learn how to earn from skills people actually need.</p></div>
-    <div class="demand-card"><h4>🚀 Be Your Own Boss</h4><p>Don't just wait for remote jobs, build your own products and let clients come looking for you.</p></div>
+    <div class="demand-card"><h4>🩺 Better Clinical Decisions</h4><p>Use models and dashboards to spot patterns you'd miss on paper — earlier diagnoses, safer prescribing, cleaner audits.</p></div>
+    <div class="demand-card"><h4>📚 Own Your Research</h4><p>Analyse your own project, thesis and audit data with confidence, in SPSS or Python — without paying an outside analyst.</p></div>
+    <div class="demand-card"><h4>🌍 Global Career Options</h4><p>Clinical data science, health-informatics and AI product roles are in demand globally — from academic centres to health-tech startups.</p></div>
   </div>
 </section>
 
@@ -495,14 +546,14 @@ footer b{color:var(--navy)}
   <span class="eyebrow">Why HayMedics Academy</span>
   <h2 class="sec-title">Taught by a Medical Doctor Who Became an AI Engineer</h2>
   <div class="founder-box">
-    <h3>From Data Handler to Strategic Architect</h3>
-    <p>My path to AI engineering began as a Data Analyst, where I learned that you cannot build intelligent systems until you master the data behind them. I have distilled that journey, from analytics and data science to enterprise-grade AI engineering, into the HayMedics Academy curriculum.</p>
-    <p>This program bridges the gap between raw information and high-impact, real-world solutions, whether you work in business, research, healthcare, or you're starting from zero. As a <b>Medical Doctor and AI specialist</b>, I teach you not just how to analyse data, but how to turn that skill into real income.</p>
-    <p>Unlike standard bootcamps, HayMedics Academy offers a <b>flexible, career-friendly model</b> designed for your busy schedule. You get unlimited access to all recordings and files, no rigid timelines and no strict attendance policies, so you can learn at your own pace without sacrificing your work, studies or other responsibilities.</p>
-    <p>Join us to evolve from a data handler into a strategic architect who builds tools people actually use, and pay for. <b>Let's build your future together.</b></p>
-    <div class="sig">- Awwal Abdulrahman, MD · Founder, HayMedics Academy</div>
+    <h3>From Clinician to Clinical AI Architect</h3>
+    <p>My path started at the bedside, then moved into data analysis, and now into building production-grade Clinical AI. Along the way, I learned that the best clinical tools aren't built by engineers who've never seen a patient — they're built by clinicians who understand both the workflow and the math.</p>
+    <p>That belief is the whole of HayMedics Academy. Every module in the Masterclass, every one of our clinical web apps — is built for and taught by people who know what <b>morning ward rounds, an overflowing clinic, or a stalled research proposal</b> actually feel like.</p>
+    <p>The academy runs on a <b>flexible, career-friendly model</b> designed for busy schedules. You get lifetime access to recordings, weekly assessments to keep you accountable, and <b>3 months of post-cohort mentorship</b> so what you learn actually lands in your practice or research.</p>
+    <p>Whether you're a house officer, consultant, nurse, pharmacist, lab scientist, researcher, or student — <b>join us to become the healthcare professional who leads with data.</b></p>
+    <div class="sig">— Awwal Abdulrahman, MBBS · Full-stack Data Scientist &amp; Clinical AI Architect · Founder, HayMedics Academy</div>
     <div class="founder-btns">
-      <a class="fb-portfolio" href="portfolio.html">👤 Show My Work (Portfolio)</a>
+      <a class="fb-portfolio" href="portfolio.html">👤 See My Portfolio</a>
       <a class="fb-chatbot hm-ai-trigger hm-ai-only" href="#" style="display:none">🤖 Chat With My AI Assistant</a>
     </div>
   </div>
@@ -510,64 +561,70 @@ footer b{color:var(--navy)}
 
 
 <section id="services" class="svc">
-  <span class="eyebrow">Work With Me</span>
-  <h2 class="sec-title">AI/ML · Data Analysis · Full-Stack Data Science</h2>
-  <p class="sec-sub">Beyond training, HayMedics Academy delivers real, production-grade data &amp; AI solutions — led by a Medical Doctor &amp; AI Engineer.</p>
+  <span class="eyebrow">Consulting Services</span>
+  <h2 class="sec-title">Beyond Training — Clinical AI, Research Analysis &amp; Web App Deployments</h2>
+  <p class="sec-sub">If you'd rather have us build it for you, HayMedics Academy also delivers production-grade data &amp; AI solutions for clinics, laboratories, research groups and health-tech startups.</p>
   <div class="svc-grid">
-    <div class="svc-card"><span class="ic">🤖</span><h4>AI / Machine Learning</h4>
-      <ul><li>Predictive models &amp; forecasting</li><li>AI chatbots &amp; LLM assistants</li><li>Computer vision &amp; NLP</li><li>Recommendation &amp; automation systems</li></ul></div>
-    <div class="svc-card"><span class="ic">📊</span><h4>Data Analysis</h4>
-      <ul><li>Interactive dashboards &amp; reports</li><li>Excel, Power BI &amp; Python analytics</li><li>Statistical &amp; research data analysis</li><li>Clean, decision-ready insights</li></ul></div>
-    <div class="svc-card"><span class="ic">🧱</span><h4>Full-Stack Data Science</h4>
-      <ul><li>End-to-end data pipelines</li><li>Model training &amp; deployment (MLOps)</li><li>Data apps &amp; web integrations</li><li>From raw data to a live product</li></ul></div>
+    <div class="svc-card"><span class="ic">🤖</span><h4>Clinical AI &amp; Machine Learning</h4>
+      <ul><li>Clinical prediction models (risk, readmission, deterioration)</li><li>AI clinical assistants &amp; note-writing copilots</li><li>Medical imaging pipelines (computer vision)</li><li>Automation for triage, follow-up &amp; reporting</li></ul></div>
+    <div class="svc-card"><span class="ic">📊</span><h4>Research Data Analysis</h4>
+      <ul><li>SPSS, Excel &amp; Python analyses — reviewer-ready</li><li>Interactive dashboards for audits &amp; departments</li><li>Publication-quality figures, tables &amp; supplements</li><li>Methods write-up support for your paper or thesis</li></ul></div>
+    <div class="svc-card"><span class="ic">🏥</span><h4>Clinical Web App Deployments</h4>
+      <ul><li>Deploy Hospital, EHR, Lab, Pharmacy &amp; Telemedicine apps</li><li>Custom branding &amp; workflow tailoring</li><li>Staff training &amp; 1-month debugging support</li><li>Own the source code — no subscription, no vendor lock-in</li></ul></div>
   </div>
   <div style="text-align:center;margin-top:28px">
-    <a class="btn btn-primary btn-lg" href="portfolio.html">👤 See My Portfolio &amp; Projects</a>
+    <a class="btn btn-primary btn-lg" href="https://wa.me/2348107820971?text=Hi%2C%20I%27d%20like%20to%20discuss%20a%20clinical%20AI%20%2F%20research%20analysis%20%2F%20web%20app%20project%20with%20HayMedics%20Academy." target="_blank" rel="noopener">💬 Discuss a Project</a>
+    <a class="btn btn-outline" href="portfolio.html" style="margin-left:8px">👤 See Portfolio</a>
   </div>
 </section>
 
 <section id="webapps" class="apps">
-  <span class="eyebrow">🆕 What's New — How to Build Web Apps</span>
-  <h2 class="sec-title">Build &amp; Own Web Apps — No Code Required</h2>
-  <p class="sec-sub">Fully working systems that run <b>free</b> on your own Google account. Buy once, own it forever.</p>
+  <span class="eyebrow">🏥 Clinical Web Apps</span>
+  <h2 class="sec-title">Ready-to-Deploy Web Apps for Every Corner of Practice</h2>
+  <p class="sec-sub">Fully working clinical systems that run <b>free</b> on your own Google account. Try them live, deploy in your clinic today, or learn to build your own in the Masterclass.</p>
 
   <div class="prod-intro">
-    <h3>Adapt it. Rebrand it. Own it — without writing a single line of code.</h3>
-    <p>Every web app is built to be yours. Change the colours, logo, currency and content to suit your taste — <b>no programming needed</b>. Each purchase walks you through exactly how to debug, edit and rebrand with clear <b>walkthrough videos</b>, plus <b>one full month of follow-up support</b> for error checks, troubleshooting and debugging.</p>
-    <div class="chips"><span>✅ Full source code</span><span>🎬 Walkthrough videos</span><span>📘 Complete setup guide</span><span>🛠️ 1-month debugging support</span><span>🌐 No-code business website + portfolio</span></div>
+    <h3>Try any app in one click. See how it fits your ward, lab or pharmacy.</h3>
+    <p>Every web app is a real, deployable clinical tool built on Google Sheets + Apps Script — <b>free to run</b>, no server bills, and no vendor lock-in. Click into any demo below to explore the full workflow. In the <b>September Masterclass</b> you'll learn to build, customise and deploy your own version for your practice.</p>
+    <div class="chips"><span>🩺 Real clinical workflows</span><span>☁️ Runs free on Google</span><span>🧩 Fully customisable</span><span>🎓 Learn to build them in the Masterclass</span><span>📄 <a href="https://drive.google.com/file/d/1TTdvIw8KVY1X42or_-A8WejNEbpBNmci/view?usp=sharing" target="_blank" rel="noopener" style="color:var(--royal)">See the full curriculum</a></span></div>
   </div>
 
-  <h3 class="apps-sub-title">▶ Live Demos — Try Any App Now</h3>
-  <p class="sec-sub" style="margin-bottom:22px">Explore the real, working apps right now — no sign-up needed. Available systems can be bought instantly on Selar; the rest are live to try while their source code drops soon.</p>
+  <h3 class="apps-sub-title">▶ Try Any App Now — Live Deployments</h3>
+  <p class="sec-sub" style="margin-bottom:22px">These are the same apps our academy participants deploy in real clinics, labs and pharmacies — open in a new tab, click through, and see how you'd use it in your own workflow.</p>
   <div class="demo-grid">
-    <div class="demo-card"><div class="dic">💼</div><h4>MedLink Rep <span style="font-size:.6rem;background:#1f8f4e;color:#fff;padding:2px 8px;border-radius:999px;vertical-align:middle;letter-spacing:.04em">🆕 NEW</span></h4><div class="one">For medical reps — track your drugs from doctor → pharmacy → patient. See prescriptions <b>sent vs actually dispensed</b>, per doctor &amp; facility, and spot pharmacies running low before they substitute a competitor.</div><div class="dbtns"><a class="btn-demo" href="https://script.google.com/macros/s/AKfycbwGsPaet-NsH2oY0V5QDAmv70lWaYbs2x6mvrbHNSP74lOjILMSMX5YLJUkxXBjGa0/exec" target="_blank" rel="noopener">▶ Try Live Demo</a><span class="soon-note" style="background:#e7f6ec;border-color:#bfe6cd;color:#1f7a44">🆕 Just released</span></div></div>
-    <div class="demo-card"><div class="dic">🔬</div><h4>Lab Referral System</h4><div class="one">Doctors &amp; patients refer to your lab in seconds — the lab is alerted by <b>in-app signal + one-tap WhatsApp</b>, records typed results with reference ranges &amp; auto-flags, then sends a <b>branded PDF report</b> to the patient. Includes radiology templates, doctor rebates &amp; a live dashboard.</div><div class="dbtns"><a class="btn-demo" href="https://script.google.com/macros/s/AKfycbzxYrZfGKNNYbAFjFvsz00DsUtQ8bLVoFqcRC3teP8JuZfmOXfjUKb6E7w2kenIaeJe/exec" target="_blank" rel="noopener">▶ Try Live Demo</a><span class="soon-note">🔒 Source drops soon</span></div></div>
-    <div class="demo-card"><div class="dic">🏥</div><h4>Clinic &amp; Management System</h4><div class="one">A complete clinic in one app — patients, billing, pharmacy/POS &amp; reports.</div><div class="dbtns"><a class="btn-demo" href="https://script.google.com/macros/s/AKfycbxcSh58-Scmm2-19FmAZokvHFNdOtF7skYoAxdH4BInUX10ARX-trTARgK0Rr-uXHJp9Q/exec" target="_blank" rel="noopener">▶ Try Live Demo</a><a class="btn-selar" href="https://selar.com/haymedics_empowerment" target="_blank" rel="noopener">🛒 Get on Selar</a></div></div>
-    <div class="demo-card"><div class="dic">🏫</div><h4>School Management System</h4><div class="one">Run a whole school — students, fees, attendance, exams &amp; results.</div><div class="dbtns"><a class="btn-demo" href="https://script.google.com/macros/s/AKfycbx0R2dEpq_884xKuhhqtznTh2dpyGBAp8aojKFIQrvHuw41WOltMP6anOCcWvlPGVBZ/exec" target="_blank" rel="noopener">▶ Try Live Demo</a><a class="btn-selar" href="https://selar.com/haymedics_empowerment" target="_blank" rel="noopener">🛒 Get on Selar</a></div></div>
-    <div class="demo-card"><div class="dic">📁</div><h4>Project Management System</h4><div class="one">Track clients, projects, payments &amp; deadlines with branded emails.</div><div class="dbtns"><a class="btn-demo" href="https://script.google.com/macros/s/AKfycbwxqvI_Q9c9hdyilRHoG7akZ7L_UBx2AcyLGortawDvrWqalD-K7f03MagGFMSFba1xhw/exec" target="_blank" rel="noopener">▶ Try Live Demo</a><a class="btn-selar" href="https://selar.com/haymedics_empowerment" target="_blank" rel="noopener">🛒 Get on Selar</a></div></div>
-    <div class="demo-card"><div class="dic">📋</div><h4>Complete EMR</h4><div class="one">Full electronic medical records — chart, clerking, investigations &amp; timeline.</div><div class="dbtns"><a class="btn-demo" href="https://script.google.com/macros/s/AKfycbxF1YYZjz-gSMlcaZ-7-HKZAhIRHjxlp6chh9FvnCflLrYWgnqozXXjjuLWdys6ukv3gw/exec" target="_blank" rel="noopener">▶ Try Live Demo</a><span class="soon-note">🔒 Source drops soon</span></div></div>
-    <div class="demo-card"><div class="dic">🎥</div><h4>Telemedicine</h4><div class="one">Virtual consults by video/audio/chat, e-prescriptions &amp; payments.</div><div class="dbtns"><a class="btn-demo" href="https://script.google.com/macros/s/AKfycbwpMb2ccMKu-26ze18yaecM1Gdwu2JKfgf2X_5vQrBrUiEwmrBhYfTD_1w-dSwPJNN0/exec" target="_blank" rel="noopener">▶ Try Live Demo</a><span class="soon-note">🔒 Source drops soon</span></div></div>
-    <div class="demo-card"><div class="dic">🛏️</div><h4>Nursing &amp; Ward Management</h4><div class="one">Wards, beds, observations with early-warning score &amp; drug charts.</div><div class="dbtns"><a class="btn-demo" href="https://script.google.com/macros/s/AKfycbykvp_MSqlG8FVjSSySJvBfF0yoobZ0IZ0Rumk8mkt3qZWEIDA6KEhnVsAgH7Fy2UNOnA/exec" target="_blank" rel="noopener">▶ Try Live Demo</a><span class="soon-note">🔒 Source drops soon</span></div></div>
-    <div class="demo-card"><div class="dic">🧪</div><h4>Diagnostic Laboratory</h4><div class="one">Test catalogue, per-type results, verification &amp; branded reports.</div><div class="dbtns"><a class="btn-demo" href="https://script.google.com/macros/s/AKfycbyDTs464mHViPoYbERKMkeeUIXf48RG1DJWnNX-b_B4wwNbnQf7jPC8HkOYpNx0qJzcEA/exec" target="_blank" rel="noopener">▶ Try Live Demo</a><span class="soon-note">🔒 Source drops soon</span></div></div>
-    <div class="demo-card"><div class="dic">💊</div><h4>Pharmacy &amp; POS</h4><div class="one">Inventory with batches/expiry, dispensing, POS &amp; profit reports.</div><div class="dbtns"><a class="btn-demo" href="https://script.google.com/macros/s/AKfycbx5Tkq0N0A8uaUhTdZrw7kRwVcynL-E2xv3Ki_Xc0AkAv8Nwy_Km9lHx-Q5_klKClvqOg/exec" target="_blank" rel="noopener">▶ Try Live Demo</a><span class="soon-note">🔒 Source drops soon</span></div></div>
+    <div class="demo-card"><div class="dic">🏥</div><h4>Hospital &amp; Clinic Management</h4><div class="one">A complete hospital in one app — patients, appointments, prescriptions, billing, pharmacy/POS, payroll, attendance and reports.</div><div class="dbtns"><a class="btn-demo" href="https://script.google.com/macros/s/AKfycbxcSh58-Scmm2-19FmAZokvHFNdOtF7skYoAxdH4BInUX10ARX-trTARgK0Rr-uXHJp9Q/exec" target="_blank" rel="noopener">▶ Try Live App</a></div></div>
+
+    <div class="demo-card"><div class="dic">📋</div><h4>AI-Powered EHR</h4><div class="one">Electronic Health Record for clinics, labs and pharmacies — clerking, investigations, timeline &amp; AI-assisted notes. Learn to build one from scratch in the Masterclass.</div><div class="dbtns"><a class="btn-demo" href="https://haymedicsacademy.com/hospital/" target="_blank" rel="noopener">▶ Try Live App</a><a class="btn-selar" href="#masterclass">🎓 Learn to Build It</a></div></div>
+
+    <div class="demo-card"><div class="dic">🎥</div><h4>Telemedicine Platform</h4><div class="one">Virtual consults by video/audio/chat, e-prescriptions, follow-up scheduling &amp; secure payment collection.</div><div class="dbtns"><a class="btn-demo" href="https://haymedicsacademy.com/telemedicine/" target="_blank" rel="noopener">▶ Try Live App</a><span class="soon-note">🔒 Source drops soon</span></div></div>
+
+    <div class="demo-card"><div class="dic">💊</div><h4>Pharmacy Management &amp; POS</h4><div class="one">Inventory with batch &amp; expiry tracking, dispensing, barcode POS, receipts, low-stock alerts &amp; profit reports.</div><div class="dbtns"><a class="btn-demo" href="https://haymedicsacademy.com/pharmacy/" target="_blank" rel="noopener">▶ Try Live App</a><span class="soon-note">🔒 Source drops soon</span></div></div>
+
+    <div class="demo-card"><div class="dic">🛏️</div><h4>Nursing &amp; Ward Management</h4><div class="one">Ward &amp; bed board, vitals with early-warning score, drug chart (MAR), handover notes and daily tasks.</div><div class="dbtns"><a class="btn-demo" href="https://haymedicsacademy.com/nursing/" target="_blank" rel="noopener">▶ Try Live App</a><span class="soon-note">🔒 Source drops soon</span></div></div>
+
+    <div class="demo-card"><div class="dic">🔬</div><h4>Lab &amp; Diagnostics Workflow</h4><div class="one">Test catalogue with reference ranges, sample-to-result workflow, auto high/low flags, branded PDF reports &amp; doctor referral rebates.</div><div class="dbtns"><a class="btn-demo" href="https://haymedicsacademy.com/lab_worklow/" target="_blank" rel="noopener">▶ Try Live App</a><span class="soon-note">🔒 Source drops soon</span></div></div>
+
+    <div class="demo-card"><div class="dic">🏫</div><h4>School Management System</h4><div class="one">Run a whole school — students, fees, attendance, exams, results, timetables &amp; parent communication.</div><div class="dbtns"><a class="btn-demo" href="https://haymedicsacademy.com/school/" target="_blank" rel="noopener">▶ Try Live App</a></div></div>
+
+    <div class="demo-card"><div class="dic">📁</div><h4>Project Management System</h4><div class="one">Track clients, projects, payments &amp; deadlines with automatic branded emails at each milestone.</div><div class="dbtns"><a class="btn-demo" href="https://haymedicsacademy.com/project_management/" target="_blank" rel="noopener">▶ Try Live App</a></div></div>
   </div>
 
   <div class="flagship">
     <div>
-      <span class="fl-badge">⭐ Available Now · Flagship</span>
-      <h3>Clinic Management System</h3>
-      <p class="sub">A complete clinic in one app — patients, appointments, prescriptions, billing, pharmacy/POS, payroll, attendance, reports &amp; branded emails. Runs free on Google Sheets + Apps Script.</p>
+      <span class="fl-badge">🎓 Want to Build These Yourself?</span>
+      <h3>Learn to Build Clinical AI Systems in the Masterclass</h3>
+      <p class="sub">The Masterclass takes you all the way from spreadsheets to production-grade clinical tools — including a full AI-powered Electronic Health Record you'll design, code and deploy for a clinic, lab or pharmacy on Google Apps Script.</p>
       <ul class="fl-incl">
-        <li>Full source code (backend + web app)</li>
-        <li>Complete setup &amp; user guide (PDF)</li>
-        <li>Step-by-step walkthrough videos</li>
-        <li>How to build a no-code website for your business + portfolio page</li>
-        <li>1-month follow-up: error checks, troubleshooting &amp; debugging</li>
+        <li>Architect an EHR schema on Google Sheets — patients, encounters, orders, results</li>
+        <li>Wire up the front-end with Apps Script &amp; HTMLService — no server bills</li>
+        <li>Add AI-assisted note-writing and clinical summarisation</li>
+        <li>Deploy for a real practice, lab or pharmacy of your choice</li>
+        <li>3 months of post-cohort mentorship while you ship your own version</li>
       </ul>
       <div class="fl-btns">
-        <a class="btn-selar" href="https://selar.com/haymedics_empowerment" target="_blank" rel="noopener">🛒 Get Instant Access (Selar)</a>
-        <a class="btn btn-ghost" href="https://wa.me/2348107820971?text=Hi%2C%20I%27m%20interested%20in%20HayMedics%20web%20apps%20%2F%20programs.%20Kindly%20send%20me%20details." target="_blank" rel="noopener">💬 Ask a Question</a>
-        <div class="fl-note">✅ Instant access on Selar — download the source code, guide &amp; walkthrough videos right after payment.</div>
+        <a class="btn-selar" href="https://script.google.com/macros/s/AKfycbzGBbTpMj0HAnnTpfFkA7jpM9Fl5dq32uG8NfdBjwVdQHT6ZybFsNGJi_7W9EhUdo6FZA/exec" target="_blank" rel="noopener">🩺 Apply for the Masterclass</a>
+        <a class="btn btn-ghost" href="https://drive.google.com/file/d/1TTdvIw8KVY1X42or_-A8WejNEbpBNmci/view?usp=sharing" target="_blank" rel="noopener">📄 View Curriculum</a>
+        <div class="fl-note">✅ Applications reviewed on a rolling basis. Only 20 seats — early bird ₦80,000 for the first 10.</div>
       </div>
     </div>
     <div class="mock" aria-hidden="true">
@@ -586,358 +643,96 @@ footer b{color:var(--navy)}
       </div>
     </div>
   </div>
-
-  <h3 class="apps-sub-title">Also Available Now</h3>
-  <p class="sec-sub" style="margin-bottom:26px">Two more complete systems you can own today — same no-code ownership, walkthrough videos, setup guide and 1-month support.</p>
-  <div class="avail-grid">
-    <div class="avail-card">
-      <div class="avail-thumb"><span class="abadge">Available Now</span><span class="ic">🏫</span></div>
-      <div class="avail-body">
-        <h4>School Management System</h4>
-        <div class="one">Run your whole school from one free Google account.</div>
-        <ul class="avail-feats">
-          <li>Live dashboard — students, fees collected, attendance %</li>
-          <li>Students &amp; admissions, classes, sections, subjects &amp; teachers</li>
-          <li>Attendance (present/absent/late), exams, results &amp; hall tickets</li>
-          <li>Fees, receipts &amp; daily accounts in Naira ₦</li>
-          <li>Timetable, lesson planning &amp; teaching logbook</li>
-          <li>Notices, calendar, complaints, helpdesk, PTM &amp; documents</li>
-          <li>Assets &amp; inventory; staff, roles &amp; role-based security</li>
-        </ul>
-        <div class="avail-incl">Includes: full source code · setup guide · walkthrough videos · no-code website + portfolio · 1-month support</div>
-        <a class="btn-selar" href="https://selar.com/haymedics_empowerment" target="_blank" rel="noopener">🛒 Get Instant Access (Selar)</a>
-      </div>
-    </div>
-    <div class="avail-card">
-      <div class="avail-thumb"><span class="abadge">Available Now</span><span class="ic">📁</span></div>
-      <div class="avail-body">
-        <h4>Project Management System</h4>
-        <div class="one">Track clients, projects, payments &amp; deadlines — free on Google Sheets.</div>
-        <ul class="avail-feats">
-          <li>Secure multi-user login with roles &amp; access levels</li>
-          <li>Live dashboard — projects, revenue, paid &amp; pending (by currency)</li>
-          <li>Projects: add / view / edit / delete, search &amp; filter</li>
-          <li>Customer address book with optional client login</li>
-          <li>Project queue that orders your active work</li>
-          <li>Automatic branded emails (new project, payments, status, completion)</li>
-          <li>Deadline-extension &amp; delay tracking + timestamped action log</li>
-          <li>Naira default + USD/GBP/EUR; sample data pre-loaded</li>
-        </ul>
-        <div class="avail-incl">Includes: full source code · setup guide · walkthrough videos · no-code website + portfolio · 1-month support</div>
-        <a class="btn-selar" href="https://selar.com/haymedics_empowerment" target="_blank" rel="noopener">🛒 Get Instant Access (Selar)</a>
-      </div>
-    </div>
-  </div>
-
-  <h3 class="apps-sub-title">16 More Systems — Dropping Soon</h3>
-  <p class="sec-sub" style="margin-bottom:30px">Same no-code ownership, walkthrough videos, setup guide and 1-month support. Source code &amp; videos unlock soon — each also teaches you how to build a no-code business website + portfolio page.</p>
-  <div class="apps-grid">
-    <div class="app-card">
-      <div class="app-thumb">
-        <div class="mini"><em></em><em></em><em></em><em></em></div>
-        <div class="lock"><div class="ico">🔒</div><b>Check back soon</b></div>
-      </div>
-      <div class="app-body">
-        <h4>Pharmacy Management & POS</h4>
-        <div class="one">Retail dispensing for a pharmacy.</div>
-        <ul class="app-feats"><li>Inventory with batch &amp; expiry tracking</li><li>Barcode point-of-sale + receipts</li><li>Low-stock &amp; near-expiry alerts</li><li>Supplier orders &amp; profit reports</li></ul>
-        <div class="app-nocode">🌐 Includes: how to build a no-code website for your business + portfolio page</div>
-        <div class="app-locked">🔒 Source code &amp; walkthrough videos — check back later</div>
-      </div>
-    </div>
-    <div class="app-card">
-      <div class="app-thumb">
-        <div class="mini"><em></em><em></em><em></em><em></em></div>
-        <div class="lock"><div class="ico">🔒</div><b>Check back soon</b></div>
-      </div>
-      <div class="app-body">
-        <h4>Diagnostic Lab / Pathology</h4>
-        <div class="one">Tests, results &amp; report delivery.</div>
-        <ul class="app-feats"><li>Test catalogue with reference ranges</li><li>Sample-to-result workflow</li><li>Auto high/low flags + PDF reports</li><li>Per-test revenue analytics</li></ul>
-        <div class="app-nocode">🌐 Includes: how to build a no-code website for your business + portfolio page</div>
-        <div class="app-locked">🔒 Source code &amp; walkthrough videos — check back later</div>
-      </div>
-    </div>
-    <div class="app-card">
-      <div class="app-thumb">
-        <div class="mini"><em></em><em></em><em></em><em></em></div>
-        <div class="lock"><div class="ico">🔒</div><b>Check back soon</b></div>
-      </div>
-      <div class="app-body">
-        <h4>Dental Clinic Management</h4>
-        <div class="one">Teeth, procedures &amp; visit plans.</div>
-        <ul class="app-feats"><li>Interactive tooth chart</li><li>Treatment plans &amp; consent forms</li><li>Recall reminders</li><li>Per-procedure billing &amp; instalments</li></ul>
-        <div class="app-nocode">🌐 Includes: how to build a no-code website for your business + portfolio page</div>
-        <div class="app-locked">🔒 Source code &amp; walkthrough videos — check back later</div>
-      </div>
-    </div>
-    <div class="app-card">
-      <div class="app-thumb">
-        <div class="mini"><em></em><em></em><em></em><em></em></div>
-        <div class="lock"><div class="ico">🔒</div><b>Check back soon</b></div>
-      </div>
-      <div class="app-body">
-        <h4>Telemedicine / Online Consult</h4>
-        <div class="one">Remote doctor visits.</div>
-        <ul class="app-feats"><li>Doctor profiles &amp; paid slots</li><li>Video/chat + file sharing</li><li>E-prescriptions &amp; referrals</li><li>Ratings &amp; follow-up reminders</li></ul>
-        <div class="app-nocode">🌐 Includes: how to build a no-code website for your business + portfolio page</div>
-        <div class="app-locked">🔒 Source code &amp; walkthrough videos — check back later</div>
-      </div>
-    </div>
-    <div class="app-card">
-      <div class="app-thumb">
-        <div class="mini"><em></em><em></em><em></em><em></em></div>
-        <div class="lock"><div class="ico">🔒</div><b>Check back soon</b></div>
-      </div>
-      <div class="app-body">
-        <h4>Hospital OPD & Queue</h4>
-        <div class="one">Front-desk outpatient flow.</div>
-        <ul class="app-feats"><li>Multi-doctor calendars</li><li>Token queue &amp; ‘now serving’</li><li>Walk-in vs booked</li><li>Footfall &amp; wait-time dashboards</li></ul>
-        <div class="app-nocode">🌐 Includes: how to build a no-code website for your business + portfolio page</div>
-        <div class="app-locked">🔒 Source code &amp; walkthrough videos — check back later</div>
-      </div>
-    </div>
-    <div class="app-card">
-      <div class="app-thumb">
-        <div class="mini"><em></em><em></em><em></em><em></em></div>
-        <div class="lock"><div class="ico">🔒</div><b>Check back soon</b></div>
-      </div>
-      <div class="app-body">
-        <h4>Electronic Medical Records (EMR)</h4>
-        <div class="one">The clinical chart at the centre.</div>
-        <ul class="app-feats"><li>Allergies, conditions, medications</li><li>SOAP notes &amp; vitals</li><li>Lab/imaging orders &amp; referrals</li><li>Drug-interaction alerts + audit log</li></ul>
-        <div class="app-nocode">🌐 Includes: how to build a no-code website for your business + portfolio page</div>
-        <div class="app-locked">🔒 Source code &amp; walkthrough videos — check back later</div>
-      </div>
-    </div>
-    <div class="app-card">
-      <div class="app-thumb">
-        <div class="mini"><em></em><em></em><em></em><em></em></div>
-        <div class="lock"><div class="ico">🔒</div><b>Check back soon</b></div>
-      </div>
-      <div class="app-body">
-        <h4>Medical Billing & HMO Claims</h4>
-        <div class="one">Money &amp; insurance claims.</div>
-        <ul class="app-feats"><li>Itemised invoices &amp; statements</li><li>HMO pre-auth &amp; claim status</li><li>Part-payments &amp; debtor ageing</li><li>Payer performance reports</li></ul>
-        <div class="app-nocode">🌐 Includes: how to build a no-code website for your business + portfolio page</div>
-        <div class="app-locked">🔒 Source code &amp; walkthrough videos — check back later</div>
-      </div>
-    </div>
-    <div class="app-card">
-      <div class="app-thumb">
-        <div class="mini"><em></em><em></em><em></em><em></em></div>
-        <div class="lock"><div class="ico">🔒</div><b>Check back soon</b></div>
-      </div>
-      <div class="app-body">
-        <h4>Hospital Inventory & Assets</h4>
-        <div class="one">Supplies &amp; equipment.</div>
-        <ul class="app-feats"><li>Ward stock &amp; requisitions</li><li>Equipment &amp; warranty register</li><li>Maintenance &amp; calibration alerts</li><li>Consumption reports</li></ul>
-        <div class="app-nocode">🌐 Includes: how to build a no-code website for your business + portfolio page</div>
-        <div class="app-locked">🔒 Source code &amp; walkthrough videos — check back later</div>
-      </div>
-    </div>
-    <div class="app-card">
-      <div class="app-thumb">
-        <div class="mini"><em></em><em></em><em></em><em></em></div>
-        <div class="lock"><div class="ico">🔒</div><b>Check back soon</b></div>
-      </div>
-      <div class="app-body">
-        <h4>Patient Portal & Engagement</h4>
-        <div class="one">The patient-facing side.</div>
-        <ul class="app-feats"><li>Self-book &amp; cancel visits</li><li>View results &amp; prescriptions</li><li>Visit, medication &amp; vaccine reminders</li><li>Secure messaging &amp; surveys</li></ul>
-        <div class="app-nocode">🌐 Includes: how to build a no-code website for your business + portfolio page</div>
-        <div class="app-locked">🔒 Source code &amp; walkthrough videos — check back later</div>
-      </div>
-    </div>
-    <div class="app-card">
-      <div class="app-thumb">
-        <div class="mini"><em></em><em></em><em></em><em></em></div>
-        <div class="lock"><div class="ico">🔒</div><b>Check back soon</b></div>
-      </div>
-      <div class="app-body">
-        <h4>Community Health & Immunisation</h4>
-        <div class="one">Outreach &amp; public health.</div>
-        <ul class="app-feats"><li>Household enrolment &amp; unique IDs</li><li>Vaccine schedules &amp; defaulters</li><li>Camp screenings &amp; referrals</li><li>Coverage &amp; surveillance reports</li></ul>
-        <div class="app-nocode">🌐 Includes: how to build a no-code website for your business + portfolio page</div>
-        <div class="app-locked">🔒 Source code &amp; walkthrough videos — check back later</div>
-      </div>
-    </div>
-    <div class="app-card">
-      <div class="app-thumb">
-        <div class="mini"><em></em><em></em><em></em><em></em></div>
-        <div class="lock"><div class="ico">🔒</div><b>Check back soon</b></div>
-      </div>
-      <div class="app-body">
-        <h4>Mental Health / Therapy</h4>
-        <div class="one">Counselling &amp; psychiatry practice.</div>
-        <ul class="app-feats"><li>Confidential case files &amp; risk flags</li><li>Session notes &amp; treatment goals</li><li>Assessment scores &amp; trends</li><li>Sliding-scale billing &amp; telehealth</li></ul>
-        <div class="app-nocode">🌐 Includes: how to build a no-code website for your business + portfolio page</div>
-        <div class="app-locked">🔒 Source code &amp; walkthrough videos — check back later</div>
-      </div>
-    </div>
-    <div class="app-card">
-      <div class="app-thumb">
-        <div class="mini"><em></em><em></em><em></em><em></em></div>
-        <div class="lock"><div class="ico">🔒</div><b>Check back soon</b></div>
-      </div>
-      <div class="app-body">
-        <h4>Physiotherapy & Rehab</h4>
-        <div class="one">Movement &amp; recovery care.</div>
-        <ul class="app-feats"><li>ROM &amp; pain assessment</li><li>Exercise library &amp; home plans</li><li>Session packages &amp; counters</li><li>Progress graphs &amp; discharge notes</li></ul>
-        <div class="app-nocode">🌐 Includes: how to build a no-code website for your business + portfolio page</div>
-        <div class="app-locked">🔒 Source code &amp; walkthrough videos — check back later</div>
-      </div>
-    </div>
-    <div class="app-card">
-      <div class="app-thumb">
-        <div class="mini"><em></em><em></em><em></em><em></em></div>
-        <div class="lock"><div class="ico">🔒</div><b>Check back soon</b></div>
-      </div>
-      <div class="app-body">
-        <h4>Maternal & Child Health</h4>
-        <div class="one">Pregnancy to early childhood.</div>
-        <ul class="app-feats"><li>Antenatal schedule &amp; EDD</li><li>Delivery &amp; newborn records</li><li>Growth &amp; immunisation tracking</li><li>Reminders &amp; defaulter lists</li></ul>
-        <div class="app-nocode">🌐 Includes: how to build a no-code website for your business + portfolio page</div>
-        <div class="app-locked">🔒 Source code &amp; walkthrough videos — check back later</div>
-      </div>
-    </div>
-    <div class="app-card">
-      <div class="app-thumb">
-        <div class="mini"><em></em><em></em><em></em><em></em></div>
-        <div class="lock"><div class="ico">🔒</div><b>Check back soon</b></div>
-      </div>
-      <div class="app-body">
-        <h4>Blood Bank Management</h4>
-        <div class="one">Donor-to-recipient tracking.</div>
-        <ul class="app-feats"><li>Donor screening &amp; call-ups</li><li>Units by group/component</li><li>Expiry &amp; cross-match records</li><li>Urgent-need alerts &amp; wastage reports</li></ul>
-        <div class="app-nocode">🌐 Includes: how to build a no-code website for your business + portfolio page</div>
-        <div class="app-locked">🔒 Source code &amp; walkthrough videos — check back later</div>
-      </div>
-    </div>
-    <div class="app-card">
-      <div class="app-thumb">
-        <div class="mini"><em></em><em></em><em></em><em></em></div>
-        <div class="lock"><div class="ico">🔒</div><b>Check back soon</b></div>
-      </div>
-      <div class="app-body">
-        <h4>Optometry / Eye Clinic</h4>
-        <div class="one">Vision care &amp; optical dispensing.</div>
-        <ul class="app-feats"><li>Refraction &amp; eye-exam records</li><li>Spectacle/contact prescriptions</li><li>Optical POS &amp; lab orders</li><li>Recall &amp; warranty tracking</li></ul>
-        <div class="app-nocode">🌐 Includes: how to build a no-code website for your business + portfolio page</div>
-        <div class="app-locked">🔒 Source code &amp; walkthrough videos — check back later</div>
-      </div>
-    </div>
-    <div class="app-card">
-      <div class="app-thumb">
-        <div class="mini"><em></em><em></em><em></em><em></em></div>
-        <div class="lock"><div class="ico">🔒</div><b>Check back soon</b></div>
-      </div>
-      <div class="app-body">
-        <h4>Nursing & Ward Management</h4>
-        <div class="one">Bedside nursing workflow.</div>
-        <ul class="app-feats"><li>Vitals &amp; early-warning flags</li><li>Drug chart (MAR) with due alerts</li><li>Ward/bed &amp; admissions board</li><li>Nursing notes, handover &amp; tasks</li></ul>
-        <div class="app-nocode">🌐 Includes: how to build a no-code website for your business + portfolio page</div>
-        <div class="app-locked">🔒 Source code &amp; walkthrough videos — check back later</div>
-      </div>
-    </div>
-  </div>
 </section>
 
 <section id="why">
   <span class="eyebrow">What You Get</span>
-  <h2 class="sec-title">More Than a Course, A Complete System</h2>
+  <h2 class="sec-title">A Cohort That Actually Follows You Through</h2>
   <div class="why-grid">
-    <div class="why"><span class="ic">🧑‍🏫</span><h4>Mentorship</h4><p>Guidance and real-time debugging. You never get stuck alone.</p></div>
-    <div class="why"><span class="ic">📆</span><h4>Free Weekly Live Classes</h4><p>Live sessions for troubleshooting, brainstorming and staying on track.</p></div>
-    <div class="why"><span class="ic">🏗️</span><h4>5 Real Projects</h4><p>Build a portfolio across healthcare, business and security data industries.</p></div>
-    <div class="why"><span class="ic">👥</span><h4>Community & Job Alerts</h4><p>Join a fast-growing Data &amp; AI community with regular remote-job and trend updates.</p></div>
+    <div class="why"><span class="ic">🧑‍🏫</span><h4>1:1 Mentorship</h4><p>Live guidance and debugging on your own data — no more staring at an SPSS error alone.</p></div>
+    <div class="why"><span class="ic">📆</span><h4>Weekly Assessments</h4><p>Hands-on practicals every week to convert theory into muscle memory before you leave the cohort.</p></div>
+    <div class="why"><span class="ic">🏗️</span><h4>Real Clinical Projects</h4><p>Build tools on real healthcare datasets — a portfolio you can show a supervisor, an employer or a grant reviewer.</p></div>
+    <div class="why"><span class="ic">🎓</span><h4>3-Month Follow-Up</h4><p>Cohort ends, mentorship continues. Three more months to finish the paper, deploy the app, or land the role.</p></div>
   </div>
 </section>
 
 <section id="reqs" class="reqs">
   <span class="eyebrow">Before You Start</span>
-  <h2 class="sec-title">What You Need</h2>
+  <h2 class="sec-title">What You Need to Join</h2>
   <div class="reqs-grid">
     <div class="req">
-      <h4>💻 Just a Laptop or Phone</h4>
-      <p>That's all to get started. Every software installation is guided step-by-step in the community after enrollment, you won't be left to figure it out alone.</p>
+      <h4>💻 A Laptop and Reliable Internet</h4>
+      <p>SPSS, Python and the clinical web apps run best on a laptop. Every install is walked through step-by-step in your cohort group — you're never left figuring it out alone.</p>
     </div>
     <div class="req">
-      <h4>🙌 No Experience Needed</h4>
-      <p>Complete beginners are welcome. Every technical term is broken down simply, whether you're a business owner, student, healthcare worker or total newcomer.</p>
+      <h4>🩺 Curiosity, Not a Coding Background</h4>
+      <p>Complete beginners are welcome. Every statistical concept and every line of code is explained in clinical language — whether you're a house officer, consultant, nurse, pharmacist, lab scientist or student.</p>
     </div>
   </div>
 </section>
 
 <section id="tracks">
-  <span class="eyebrow">Enrolment</span>
-  <h2 class="sec-title">August 2026 — Batch A &amp; Batch B</h2>
-  <p class="sec-sub">Batch A is running (registration closed). <b>Batch B is now open</b> — everything in Batch A plus our ready-made Web App Systems. Register today and get immediate access.</p>
+  <span class="eyebrow">Enrolment · September 2026</span>
+  <h2 class="sec-title">Secure Your Seat</h2>
+  <p class="sec-sub">A single, focused September cohort — 20 seats only. Live-interactive classes plus 3 months of follow-up mentorship, taught by a Medical Doctor and Clinical AI Architect.</p>
 
-  <div class="tracks" style="max-width:900px;margin:0 auto 0">
-
-    <div class="track" style="opacity:.92">
-      <span class="badge-top" style="background:var(--navy);color:#fff">Batch A · Registration Closed</span>
-      <h3>Batch A — Ongoing</h3>
-      <div class="tk-tag">Currently running · sweet reviews so far 🎉</div>
-      <ul>
-        <li>Full Tech &amp; AI Empowerment curriculum</li>
-        <li>5 end-to-end capstone projects + portfolio</li>
-        <li>Mentorship, free weekly live classes &amp; community</li>
-        <li>Certificate + remote job alerts</li>
-      </ul>
-      <div class="tk-btns">
-        <a class="btn-outline" href="#activities" style="opacity:.75">Registration Closed — See Batch B</a>
-      </div>
-    </div>
+  <div class="tracks" style="max-width:680px;margin:0 auto 0;grid-template-columns:1fr">
 
     <div class="track feature">
-      <span class="badge-top">Batch B · Now Open · 95% off</span>
-      <h3>Batch B — Now Open</h3>
-      <div class="tk-tag">Everything in Batch A + Web App Systems</div>
-      <div class="price"><span class="now">₦15,000</span><span class="old">₦300,000</span></div>
-      <span class="save">Save 95% — immediate access</span>
+      <span class="badge-top">🩺 Flagship · Only 20 Seats</span>
+      <h3>Healthcare Data Science, Research &amp; AI Masterclass</h3>
+      <div class="tk-tag">For clinicians, researchers &amp; health-tech builders</div>
+      <div class="price"><span class="now">₦80,000</span><span class="old">₦120,000</span></div>
+      <span class="save">Early Bird — first 10 registrants · Regular ₦120,000 / $90</span>
       <ul>
-        <li>Everything in Batch A — full curriculum, 5 projects, mentorship, live classes, certificate &amp; community</li>
-        <li><b>NEW: Web App Systems</b> — Clinic, School &amp; Project Management (source code, no-code, own &amp; rebrand)</li>
-        <li>Walkthrough videos + 1-month debugging support for the web apps</li>
-        <li>How to build a no-code website for your business + portfolio page</li>
-        <li>Bonus: automated data-collection system (worth ₦500,000)</li>
+        <li>Comprehensive Biostatistics &amp; SPSS (Beginner → Advanced)</li>
+        <li>Research Writing &amp; Research Methods · Ethical use of AI in Research</li>
+        <li>Python for Data Science · Machine Learning &amp; Clinical Prediction Systems</li>
+        <li>MS Excel for Healthcare · AI for Data Analysis</li>
+        <li>Automated data collection with Google Apps Script</li>
+        <li>Build an AI-powered EHR for clinics, labs &amp; pharmacies</li>
+        <li>Build a robust portfolio website on GitHub</li>
+        <li>Live-interactive classes · recordings · weekly assessments</li>
+        <li><b>3-month post-cohort mentorship</b> + daily accountability</li>
+        <li>Final certificate on completion</li>
       </ul>
       <div class="tk-btns">
-        <a class="btn btn-orange btn-apply" href="https://selar.com/haymedics_empowerment" target="_blank" rel="noopener">Register Today — Get Immediate Access</a>
-        <a class="btn btn-wa" href="https://chat.whatsapp.com/FK1PEO8CasK97nj1l6tEd3?s=cl&p=a&ilr=4" target="_blank" rel="noopener">💬 Join Our WhatsApp Community</a>
+        <a class="btn btn-orange btn-apply" href="https://script.google.com/macros/s/AKfycbzGBbTpMj0HAnnTpfFkA7jpM9Fl5dq32uG8NfdBjwVdQHT6ZybFsNGJi_7W9EhUdo6FZA/exec" target="_blank" rel="noopener">🩺 Apply for the Masterclass</a>
+        <a class="btn btn-primary" href="https://drive.google.com/file/d/1TTdvIw8KVY1X42or_-A8WejNEbpBNmci/view?usp=sharing" target="_blank" rel="noopener">📄 Download Full Curriculum</a>
+        <a class="btn-outline" href="https://haymedicsacademy.com/studentportal/" target="_blank" rel="noopener">🎓 Cohort Portal Login</a>
       </div>
     </div>
 
+  </div>
+
   <div class="offer-strip">
-    <h4>🎁 Exclusive Bonus — Worth ₦500,000</h4>
-    <p><b>Get our ready-made Web App Systems FREE</b> as part of Batch B — the Clinic, School &amp; Project Management systems (full source code, no-code, own &amp; rebrand). <b>Plus</b> a customized automated data-collection system: build application &amp; survey forms with instant follow-up emails and built-in validation — <b>no data cleaning needed, just analyse and go.</b></p>
+    <h4>🎁 Included with Your Enrolment</h4>
+    <p>Every enrolment includes our customised <b>automated data-collection system</b> — build application and research survey forms with instant follow-up emails and built-in validation, so you collect analysis-ready data from day one. You'll also get lifetime access to session recordings, weekly assessments and a private cohort community for questions between classes.</p>
   </div>
 
   <div class="pathway">
-    <h4>🚀 Your Journey Doesn't End at the Certificate</h4>
-    <p class="lead">Most courses hand you a certificate and disappear. At HayMedics Academy, finishing is where the real opportunity begins.</p>
+    <h4>🚀 Your Cohort Ends — Your Career Doesn't</h4>
+    <p class="lead">Most courses hand you a certificate and disappear. At HayMedics Academy, finishing is where the real work — and the real support — begins.</p>
     <div class="pw-steps">
       <div class="pw">
         <div class="n">1</div>
         <h5>Learn</h5>
-        <p>Master real Data &amp; AI skills with 5 projects and a portfolio that proves them.</p>
+        <p>Master biostatistics, Python, ML and clinical AI in a small, focused cohort.</p>
       </div>
       <div class="pw">
         <div class="n">2</div>
         <h5>Build</h5>
-        <p>Create your own digital products, dashboards and websites, income you own.</p>
+        <p>Ship real projects on real healthcare data — dashboards, models, EHR modules.</p>
       </div>
       <div class="pw">
         <div class="n">3</div>
-        <h5>Earn</h5>
-        <p>Get hired for remote roles, freelance, or sell your products online.</p>
+        <h5>Apply</h5>
+        <p>Use it in your practice, publish your paper, or deploy a clinical tool in your unit.</p>
       </div>
       <div class="pw last">
         <div class="n">4</div>
         <h5>Grow</h5>
-        <p>Keep growing with mentorship, the community, and new tracks coming soon.</p>
+        <p>3-month follow-up mentorship, community &amp; new tracks in Clinical AI as they open.</p>
       </div>
     </div>
   </div>
@@ -945,16 +740,16 @@ footer b{color:var(--navy)}
 
 <section id="opportunities" class="opps">
   <span class="eyebrow">Where This Takes You</span>
-  <h2 class="sec-title">One Skill Set, Endless Opportunities</h2>
-  <p class="sec-sub">These skills don't just land you a job, they open doors you can walk through on your own terms — including building no-code web apps, a brand-new field with very few experts.</p>
+  <h2 class="sec-title">One Skill Set, Endless Clinical &amp; Career Opportunities</h2>
+  <p class="sec-sub">These skills open doors — in your ward, your research, and your career — that most clinicians never see. Here's a taste of what past participants have done with them.</p>
   <div class="opps-grid">
-    <div class="opp" style="border-top-color:var(--royal);background:#EEF3FF"><span class="ic">🧩</span><h4>Build &amp; Sell No-Code Web Apps <span style="display:inline-block;background:var(--orange);color:var(--navy);font-size:.6rem;font-weight:800;letter-spacing:.05em;text-transform:uppercase;padding:3px 8px;border-radius:999px;vertical-align:middle">New Field</span></h4><p>Set up branded clinic, school &amp; project management systems for businesses and schools — a <b>brand-new field with very few experts</b>, so demand is high and competition is low. Charge premium setup fees or sell them as a service.</p></div>
-    <div class="opp"><span class="ic">🎓</span><h4>Analyse Your Own Research</h4><p>Students and researchers can analyse their own project and thesis data, without paying to hire an analyst.</p></div>
-    <div class="opp"><span class="ic">💼</span><h4>Get Hired</h4><p>Qualify for high-demand remote data and analytics roles worldwide.</p></div>
-    <div class="opp"><span class="ic">🧑‍💻</span><h4>Become Self-Employed</h4><p>Work for yourself, take on clients and projects on your own schedule.</p></div>
-    <div class="opp"><span class="ic">💰</span><h4>Sell Digital Products</h4><p>Build and sell your own digital products online for recurring income.</p></div>
-    <div class="opp"><span class="ic">📣</span><h4>Freelance & Consult</h4><p>Offer analysis, dashboards, websites and research support for premium fees.</p></div>
-    <div class="opp"><span class="ic">🚀</span><h4>And the List Goes On</h4><p>Bootcamps, startups, academic collaborations, the opportunities keep growing.</p></div>
+    <div class="opp" style="border-top-color:var(--royal);background:#EEF3FF"><span class="ic">🧩</span><h4>Deploy Clinical Web Apps <span style="display:inline-block;background:var(--orange);color:var(--navy);font-size:.6rem;font-weight:800;letter-spacing:.05em;text-transform:uppercase;padding:3px 8px;border-radius:999px;vertical-align:middle">In-demand</span></h4><p>Set up branded EHR, lab, pharmacy or telemedicine systems in your clinic — or offer it as a paid service to hospitals in your network. Very few clinicians in Africa can do this today.</p></div>
+    <div class="opp"><span class="ic">🎓</span><h4>Own Your Research</h4><p>Analyse your project, thesis and audit data yourself with confidence — SPSS, Excel and Python — without paying an outside analyst.</p></div>
+    <div class="opp"><span class="ic">🩺</span><h4>Publish &amp; Present</h4><p>Turn clean analyses into papers, conference abstracts and posters that stand up to statistical review.</p></div>
+    <div class="opp"><span class="ic">💼</span><h4>Clinical Data Science Roles</h4><p>Qualify for health-informatics, clinical-analyst and AI-product roles at hospitals, health-tech startups and NGOs — locally and remotely.</p></div>
+    <div class="opp"><span class="ic">🧑‍💻</span><h4>Consulting &amp; Freelance</h4><p>Offer research analysis, dashboards and clinical tool setup for hospitals, private practices and colleagues — premium work, on your own schedule.</p></div>
+    <div class="opp"><span class="ic">🤖</span><h4>Build Clinical AI Tools</h4><p>Prototype and ship prediction models, triage systems, or AI-assisted note-writing for your own department.</p></div>
+    <div class="opp"><span class="ic">🚀</span><h4>Academic &amp; Startup Collaborations</h4><p>Join research groups, health-tech founding teams, or grant applications — the door labelled "we need a clinician who understands data" opens for you.</p></div>
   </div>
 </section>
 
@@ -971,75 +766,80 @@ footer b{color:var(--navy)}
 </section>
 
 <section id="curriculum" class="curric">
-  <span class="eyebrow">Inside the Program</span>
+  <span class="eyebrow">Inside the Programme</span>
   <h2 class="sec-title">The Full Curriculum</h2>
-  <p class="sec-sub">Click any module to expand. Everything is beginner-friendly and built around real, practical data.</p>
+  <p class="sec-sub">Click any module to expand. Prefer a single document you can share or read offline? <a href="https://drive.google.com/file/d/1TTdvIw8KVY1X42or_-A8WejNEbpBNmci/view?usp=sharing" target="_blank" rel="noopener" style="font-weight:700;border-bottom:2px solid var(--orange);padding-bottom:1px">📄 Download the full curriculum PDF</a> — 11 pages, 5 Parts, 15 modules, 43 learning objectives.</p>
 
   <div class="acc">
 
     <div class="acc-item">
-      <div class="acc-head">📊 Microsoft Excel (Beginner → Advanced) <span class="arw">+</span></div>
+      <div class="acc-head"><span>🩺 Comprehensive Biostatistics &amp; SPSS</span><span class="arw">+</span></div>
+      <div class="acc-body"><div class="acc-body-inner">
+        <p>Foundations</p>
+        <ul><li>Study design, data types &amp; variables in clinical research</li><li>Descriptive statistics &amp; summary tables (Table 1)</li><li>Distributions, sampling &amp; the p-value demystified</li></ul>
+        <p>Inferential Statistics in SPSS</p>
+        <ul><li>t-tests, ANOVA, chi-square &amp; non-parametric tests</li><li>Correlation, linear &amp; logistic regression</li><li>Survival analysis &amp; Kaplan–Meier curves</li></ul>
+        <p>Advanced</p>
+        <ul><li>Multivariable models &amp; adjustment for confounders</li><li>Diagnostic accuracy — sensitivity, specificity, ROC/AUC</li><li>Reporting analyses to reviewer-ready standard</li></ul>
+      </div></div>
+    </div>
+
+    <div class="acc-item">
+      <div class="acc-head"><span>🐍 Python for Data Science</span><span class="arw">+</span></div>
+      <div class="acc-body"><div class="acc-body-inner">
+        <ul><li>From zero to comfortable — variables, control flow, functions</li><li>Pandas &amp; NumPy for real health data manipulation</li><li>Data cleaning, joins &amp; feature engineering</li><li>Visualisation with Matplotlib, Seaborn &amp; Plotly</li><li>Notebook workflow &amp; reproducible research</li></ul>
+      </div></div>
+    </div>
+
+    <div class="acc-item">
+      <div class="acc-head"><span>🤖 Machine Learning &amp; Clinical Prediction Systems</span><span class="arw">+</span></div>
+      <div class="acc-body"><div class="acc-body-inner">
+        <ul><li>The ML pipeline for clinicians — train, validate, deploy</li><li>Classification &amp; regression on real clinical outcomes</li><li>Model evaluation — AUC, calibration, decision curves</li><li>Avoiding data leakage &amp; over-fitting</li><li>Ship your first AI-powered clinical prediction model</li></ul>
+      </div></div>
+    </div>
+
+    <div class="acc-item">
+      <div class="acc-head"><span>📋 AI-Powered Electronic Health Record (EHR)</span><span class="arw">+</span></div>
+      <div class="acc-body"><div class="acc-body-inner">
+        <ul><li>Design an EHR for a clinic, lab or pharmacy</li><li>Structured patient charts, clerking &amp; investigations</li><li>AI-assisted note-writing &amp; summary generation</li><li>Deploy on Google Apps Script — free, secure, yours to own</li></ul>
+      </div></div>
+    </div>
+
+    <div class="acc-item">
+      <div class="acc-head"><span>📝 Basics of Research + Ethical AI in Research</span><span class="arw">+</span></div>
+      <div class="acc-body"><div class="acc-body-inner">
+        <ul><li>Research question → hypothesis → study design</li><li>Literature review, referencing &amp; reproducibility</li><li>Ethical use of AI tools in research &amp; publishing</li><li>Data governance, patient consent &amp; anonymisation</li></ul>
+      </div></div>
+    </div>
+
+    <div class="acc-item">
+      <div class="acc-head"><span>⚙️ Automated Data Collection with Google Apps Script</span><span class="arw">+</span></div>
+      <div class="acc-body"><div class="acc-body-inner">
+        <ul><li>Build application &amp; survey forms with built-in validation</li><li>Auto-send follow-up emails and result PDFs</li><li>Analyse-ready datasets from day one — no data cleaning</li></ul>
+      </div></div>
+    </div>
+
+    <div class="acc-item">
+      <div class="acc-head"><span>🌐 Portfolio Website on GitHub</span><span class="arw">+</span></div>
+      <div class="acc-body"><div class="acc-body-inner">
+        <ul><li>Ship a professional portfolio site on GitHub Pages — free hosting, custom domain-ready</li><li>Showcase your papers, analyses, clinical apps &amp; case studies</li><li>Get discovered by recruiters, collaborators &amp; grant reviewers</li></ul>
+      </div></div>
+    </div>
+
+    <div class="acc-item">
+      <div class="acc-head"><span>📊 MS Excel for Healthcare (Beginner → Advanced)</span><span class="arw">+</span></div>
       <div class="acc-body"><div class="acc-body-inner">
         <p>Beginner</p>
-        <ul><li>Getting started with Excel</li><li>Working with real data</li><li>Basic formulas &amp; functions</li><li>Formatting for clarity</li></ul>
+        <ul><li>Getting started with Excel</li><li>Working with real clinical data</li><li>Basic formulas &amp; functions</li><li>Formatting for clarity</li></ul>
         <p>Intermediate</p>
         <ul><li>Data validation &amp; quality control</li><li>Logical &amp; lookup functions</li><li>Sorting, filtering &amp; unique data</li><li>Charts &amp; PivotTables for reporting</li></ul>
         <p>Advanced</p>
-        <ul><li>Dynamic arrays &amp; advanced functions</li><li>Statistical &amp; mathematical analysis</li><li>Macros, automation &amp; Power Query</li><li>Capstone project</li></ul>
+        <ul><li>Dynamic arrays &amp; advanced functions</li><li>Statistical &amp; mathematical analysis</li><li>Macros, automation &amp; Power Query</li><li>Capstone project on real health data</li></ul>
       </div></div>
     </div>
 
     <div class="acc-item">
-      <div class="acc-head">📈 Statistics & Statistical Analysis with Excel <span class="arw">+</span></div>
-      <div class="acc-body"><div class="acc-body-inner">
-        <ul><li>A clear overview of statistics, from the ground up</li><li>Descriptive statistics &amp; data summaries</li><li>Statistical analysis directly in Excel</li><li>Analyse your own research without hiring an analyst</li></ul>
-      </div></div>
-    </div>
-
-    <div class="acc-item">
-      <div class="acc-head">🤖 AI in Data Analysis <span class="arw">+</span></div>
-      <div class="acc-body"><div class="acc-body-inner">
-        <ul><li>Use ChatGPT, Gemini &amp; Claude in your workflow</li><li>Generate dashboards and insights in minutes</li><li>Speed up analysis without losing your thinking skills</li></ul>
-      </div></div>
-    </div>
-
-    <div class="acc-item">
-      <div class="acc-head">📋 Data Collection with Google Forms <span class="arw">+</span></div>
-      <div class="acc-body"><div class="acc-body-inner">
-        <ul><li>Convert bulky questionnaires into clean, analysis-ready survey forms in minutes</li><li>Add validations so you collect clean data from the start, no data cleaning needed</li></ul>
-      </div></div>
-    </div>
-
-    <div class="acc-item">
-      <div class="acc-head">🏗️ 5 End-to-End Capstone Projects <span class="arw">+</span></div>
-      <div class="acc-body"><div class="acc-body-inner">
-        <ul><li>Real projects spanning healthcare, business &amp; security data industries</li><li>Build a portfolio that proves your skills to employers and clients</li></ul>
-      </div></div>
-    </div>
-
-    <div class="acc-item">
-      <div class="acc-head">💼 Build Your Brand & Sell Digital Products <span class="arw">+</span></div>
-      <div class="acc-body"><div class="acc-body-inner">
-        <ul><li>Build your brand and launch an irresistible digital product from scratch</li><li>Learn how to earn from selling digital products online</li><li>Run social media ads that grow your business</li><li>Record &amp; professionally edit videos for online classes</li><li>The secret to a faceless YouTube channel, just your phone or laptop</li></ul>
-      </div></div>
-    </div>
-
-    <div class="acc-item">
-      <div class="acc-head">🌐 Websites, GitHub & Visibility <span class="arw">+</span></div>
-      <div class="acc-body"><div class="acc-body-inner">
-        <ul><li>Build custom websites for businesses and personal portfolios</li><li>GitHub &amp; project visibility, get noticed by employers and clients</li><li>Generate leads on social media</li><li>LinkedIn optimization</li></ul>
-      </div></div>
-    </div>
-
-    <div class="acc-item">
-      <div class="acc-head">🚀 Web App Systems (No-Code) <span class="arw">+</span></div>
-      <div class="acc-body"><div class="acc-body-inner">
-        <ul><li>Own &amp; rebrand ready-made web apps — Clinic, School &amp; Project Management</li><li>Runs free on Google Sheets + Apps Script — no servers, no monthly fees</li><li>Change colours, logo, currency &amp; content — no coding needed</li><li>Deploy your own copy for your business, or sell it as a service</li><li>Walkthrough videos for editing, debugging &amp; troubleshooting</li></ul>
-      </div></div>
-    </div>
-
-    <div class="acc-item">
-      <div class="acc-head">🎁 Bonus, Mentorship & Community <span class="arw">+</span></div>
+      <div class="acc-head"><span>🎁 Bonus, Mentorship &amp; Community</span><span class="arw">+</span></div>
       <div class="acc-body"><div class="acc-body-inner">
         <ul><li>Automated, customized data collection system (worth ₦500,000)</li><li>Mentorship &amp; daily accountability</li><li>Free weekly live classes &amp; live debugging</li><li>Access to our growing Data &amp; AI community</li><li>Regular remote-job alerts &amp; tech trends</li></ul>
       </div></div>
@@ -1061,22 +861,29 @@ footer b{color:var(--navy)}
 
 <section class="final">
   <div class="roof"><svg viewBox="0 0 100 30"><path d="M2 28 Q50 0 50 0 Q50 0 98 28 Q50 18 50 18 Q50 18 2 28 Z" fill="#F9A825"/></svg></div>
-  <h2>Ready to Build Your Future?</h2>
-  <p>This is for committed people ready to turn data into income, business owners, students, healthcare workers and complete beginners alike. <b>Register today for Batch B and get immediate access — just ₦15,000 (95% off). Slots are filling fast!</b></p>
+  <h2>Twenty Seats. September 5th. Are You In?</h2>
+  <p>Whether you're a clinician stepping into data science, a researcher tired of outsourcing your analysis, or a builder ready to ship clinical AI — this cohort was built for you. <b>Apply today.</b></p>
   <div class="btn-row">
-    <a class="btn btn-orange btn-lg btn-apply" href="https://selar.com/haymedics_empowerment" target="_blank" rel="noopener">Register Today — Get Immediate Access</a>
-    <a class="btn btn-wa btn-lg" href="https://chat.whatsapp.com/FK1PEO8CasK97nj1l6tEd3?s=cl&p=a&ilr=4" target="_blank" rel="noopener">💬 Join Our WhatsApp Community</a>
-    <a class="btn btn-ghost btn-lg" href="https://wa.me/2348107820971?text=Hi%2C%20my%20name%20is%20%5BYour%20Name%5D.%20I%27m%20interested%20in%20the%20HayMedics%20Tech%20Empowerment%20Program%20%28%E2%82%A615%2C000%29.%20Kindly%20send%20me%20more%20details.%20Thank%20you." target="_blank" rel="noopener">📩 Ask a Question (DM)</a>
+    <a class="btn btn-orange btn-lg btn-apply" href="https://script.google.com/macros/s/AKfycbzGBbTpMj0HAnnTpfFkA7jpM9Fl5dq32uG8NfdBjwVdQHT6ZybFsNGJi_7W9EhUdo6FZA/exec" target="_blank" rel="noopener">🩺 Apply — Masterclass (₦80k Early Bird)</a>
+    <a class="btn btn-primary btn-lg" href="https://drive.google.com/file/d/1TTdvIw8KVY1X42or_-A8WejNEbpBNmci/view?usp=sharing" target="_blank" rel="noopener">📄 Download Curriculum</a>
+    <a class="btn btn-ghost btn-lg" href="https://haymedicsacademy.com/studentportal/" target="_blank" rel="noopener">🎓 Cohort Portal Login</a>
+    <a class="btn btn-wa btn-lg" href="https://chat.whatsapp.com/FK1PEO8CasK97nj1l6tEd3?s=cl&p=a&ilr=4" target="_blank" rel="noopener">💬 WhatsApp Community</a>
   </div>
 </section>
 
 <footer>
   © 2026 <b>HayMedics Academy</b> · Data | Research | Innovation
   <div class="foot-links">
+    <a href="#masterclass">🩺 Masterclass</a>
+    <a href="https://drive.google.com/file/d/1TTdvIw8KVY1X42or_-A8WejNEbpBNmci/view?usp=sharing" target="_blank" rel="noopener">📄 Curriculum</a>
+    <a href="#webapps">🏥 Clinical Web Apps</a>
+    <a href="https://haymedicsacademy.com/studentportal/" target="_blank" rel="noopener">🎓 Cohort Portal</a>
     <a href="https://chat.whatsapp.com/FK1PEO8CasK97nj1l6tEd3?s=cl&p=a&ilr=4" target="_blank" rel="noopener">👥 WhatsApp Community</a>
-    <a href="https://wa.me/2348107820971?text=Hi%2C%20my%20name%20is%20%5BYour%20Name%5D.%20I%27m%20interested%20in%20the%20HayMedics%20Tech%20Empowerment%20Program%20%28%E2%82%A615%2C000%29.%20Kindly%20send%20me%20more%20details.%20Thank%20you." target="_blank" rel="noopener">💬 WhatsApp (DM)</a>
+    <a href="https://wa.me/2348107820971?text=Hi%2C%20my%20name%20is%20%5BYour%20Name%5D.%20I%27m%20interested%20in%20HayMedics%20Academy.%20Kindly%20send%20me%20more%20details." target="_blank" rel="noopener">💬 WhatsApp (DM)</a>
     <a href="mailto:haymedicsacademy@gmail.com">✉️ Email</a>
-    <a href="portfolio.html">👤 My Portfolio</a>
+    <a href="https://youtube.com/@HayMedicsAcademy" target="_blank" rel="noopener">▶ YouTube</a>
+    <a href="https://x.com/HayMedics01" target="_blank" rel="noopener">✕ @HayMedics01</a>
+    <a href="portfolio.html">👤 Portfolio</a>
   </div>
 </footer>
 
@@ -1097,8 +904,7 @@ document.querySelectorAll('.acc-head').forEach(head=>{
   });
 });
 </script>
-<a class="selar-float" href="https://selar.com/haymedics_empowerment" target="_blank" rel="noopener" title="Register on Selar">🛒 Register</a>
-<a class="wa-float" href="https://wa.me/2348107820971?text=Hi%2C%20my%20name%20is%20%5BYour%20Name%5D.%20I%27m%20interested%20in%20the%20HayMedics%20Tech%20Empowerment%20Program%20%28%E2%82%A615%2C000%29.%20Kindly%20send%20me%20more%20details.%20Thank%20you." target="_blank" rel="noopener" aria-label="Chat on WhatsApp" title="Chat on WhatsApp">💬</a>
+<a class="wa-float" href="https://wa.me/2348107820971?text=Hi%2C%20my%20name%20is%20%5BYour%20Name%5D.%20I%27m%20interested%20in%20the%20September%20Healthcare%20Data%20Science%20%26%20Research%20Masterclass.%20Kindly%20send%20me%20more%20details.%20Thank%20you." target="_blank" rel="noopener" aria-label="Chat on WhatsApp" title="Chat on WhatsApp">💬</a>
 
 <!-- ===== AI Assistant Widget ===== -->
 <button class="hm-ai-launch hm-ai-trigger" aria-label="Chat with my AI assistant" style="display:none">
@@ -1109,7 +915,7 @@ document.querySelectorAll('.acc-head').forEach(head=>{
     <div class="hm-ai-head">
       <span class="bot">🤖</span>
       <div class="tt"><b>Dr. Awwal's AI Assistant</b><span>Ask about my projects, career &amp; HayMedics Academy</span></div>
-      <a href="https://wa.me/2348107820971?text=Hi%2C%20my%20name%20is%20%5BYour%20Name%5D.%20I%27m%20interested%20in%20the%20HayMedics%20Tech%20Empowerment%20Program%20%28%E2%82%A615%2C000%29.%20Kindly%20send%20me%20more%20details.%20Thank%20you." target="_blank" rel="noopener" title="Chat on WhatsApp" aria-label="Chat on WhatsApp">💬</a>
+      <a href="https://wa.me/2348107820971?text=Hi%2C%20my%20name%20is%20%5BYour%20Name%5D.%20I%27m%20interested%20in%20the%20September%20Healthcare%20Data%20Science%20%26%20Research%20Masterclass.%20Kindly%20send%20me%20more%20details.%20Thank%20you." target="_blank" rel="noopener" title="Chat on WhatsApp" aria-label="Chat on WhatsApp">💬</a>
       <a id="hmAiNewTab" href="#" target="_blank" rel="noopener" title="Open full screen" aria-label="Open in new tab">⤢</a>
       <button id="hmAiClose" title="Close" aria-label="Close chat">✕</button>
     </div>
