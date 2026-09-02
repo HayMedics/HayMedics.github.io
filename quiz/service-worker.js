@@ -1,5 +1,5 @@
-/* HayMedics Hospital — service worker (enables install + caches the app shell) */
-const CACHE = 'haymedics-hospital-v1';
+/* HayMedics Quiz — service worker (enables install + caches the app shell) */
+const CACHE = 'haymedics-Quiz-v1';
 const SHELL = [
   './',
   './index.html',
