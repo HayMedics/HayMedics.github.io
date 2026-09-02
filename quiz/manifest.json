@@ -1,7 +1,7 @@
 {
-  "name": "HayMedics Hospital",
-  "short_name": "HayMedics",
-  "description": "Hospital EMR + Laboratory system by HayMedics Academy.",
+  "name": "HayMedics Quiz Platform",
+  "short_name": "HayMedics Quiz",
+  "description": "Test your knowledge across the Healthcare Data Science & Research Masterclass.",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
