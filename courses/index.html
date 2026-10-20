@@ -60,7 +60,6 @@
   .countdown-strip .cd-timer{display:inline-flex;gap:6px;font-family:'Archivo';font-weight:900}
   .cd-box{background:rgba(0,0,0,.28);padding:5px 10px;border-radius:6px;min-width:44px;font-size:1.05rem;letter-spacing:.02em}
   .cd-box sub{display:block;font-size:.55rem;font-weight:700;opacity:.9;margin-top:1px;letter-spacing:.15em;text-transform:uppercase}
-  .cd-expired{background:#333;color:#F4A02B}
 
   /* ========== NAV ========== */
   nav{background:rgba(255,255,255,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);position:sticky;top:46px;z-index:60}
@@ -304,7 +303,7 @@
 <!-- COUNTDOWN STRIP -->
 <div class="countdown-strip" id="countdownStrip">
   <div class="cd-inner">
-    <span class="cd-label">🔥 New flagship course · ₦10,000 phone-first business workflow · offer expires in</span>
+    <span class="cd-label">🔥 Pay <b style="color:#FFE8A6">₦10,000</b> instead of <s style="opacity:.75">₦100,000</s> — offer expires in</span>
     <span class="cd-timer" id="cdTimer">
       <span class="cd-box"><span id="cdM">60</span><sub>min</sub></span>
       <span class="cd-box"><span id="cdS">00</span><sub>sec</sub></span>
@@ -944,37 +943,43 @@ const COURSES = {
 };
 
 // =====================================================
-// COUNTDOWN — 1 hour per visitor, persisted via localStorage
+// COUNTDOWN — 1 hour per visitor, auto-restarts when it hits zero
+// Old visitors whose window already expired get a fresh 60-min on next load.
 // =====================================================
 (function () {
   const KEY = 'hma_countdown_start';
   const DURATION_MS = 60 * 60 * 1000; // 1 hour
   let start;
 
+  function freshStart() {
+    const t = Date.now();
+    try { localStorage.setItem(KEY, String(t)); } catch (e) {}
+    return t;
+  }
+
   try {
-    start = parseInt(localStorage.getItem(KEY), 10);
-    if (!start || isNaN(start)) {
-      start = Date.now();
-      localStorage.setItem(KEY, String(start));
+    const stored = parseInt(localStorage.getItem(KEY), 10);
+    // If never set, invalid, or the previous window has already expired, start fresh.
+    // This is what gives old visitors a brand-new 60-minute window on return.
+    if (!stored || isNaN(stored) || (Date.now() - stored) >= DURATION_MS) {
+      start = freshStart();
+    } else {
+      start = stored;
     }
   } catch (e) {
-    // localStorage blocked — timer resets on each visit, no harm done
+    // localStorage blocked — timer still runs for this session
     start = Date.now();
   }
 
   const mEl = document.getElementById('cdM');
   const sEl = document.getElementById('cdS');
-  const strip = document.getElementById('countdownStrip');
 
   function tick() {
-    const remain = start + DURATION_MS - Date.now();
+    let remain = start + DURATION_MS - Date.now();
+    // When it hits zero, silently restart with a fresh window and keep counting
     if (remain <= 0) {
-      mEl.textContent = '00';
-      sEl.textContent = '00';
-      strip.classList.add('cd-expired');
-      strip.querySelector('.cd-inner').innerHTML =
-        '<span class="cd-label" style="color:#F4A02B">⏰ Your discount window has closed — but reach out on WhatsApp, we\'ll see what we can do.</span>';
-      return;
+      start = freshStart();
+      remain = DURATION_MS;
     }
     const m = Math.floor(remain / 60000);
     const s = Math.floor((remain % 60000) / 1000);
