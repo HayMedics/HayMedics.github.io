@@ -297,6 +297,49 @@
   .success-view .mail-note{background:var(--cream);border:1px dashed var(--gold);padding:14px 16px;border-radius:10px;font-size:.85rem;color:var(--text);text-align:left}
   .success-view .mail-note b{color:var(--navy)}
 </style>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2574617329673139');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2574617329673139&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<!-- Meta Pixel · ViewContent on 50% scroll (fires once per visit) -->
+<script>
+(function(){
+  var fired = false;
+  function onScroll(){
+    if (fired) return;
+    var h = document.documentElement, b = document.body;
+    var scrolled = (h.scrollTop || b.scrollTop) + h.clientHeight;
+    var total = Math.max(h.scrollHeight, b.scrollHeight);
+    if (total > 0 && scrolled / total >= 0.5) {
+      fired = true;
+      if (window.fbq) fbq('track', 'ViewContent', {
+        content_name: 'Phone Business Course — sales page',
+        content_category: 'Courses',
+        currency: 'NGN',
+        value: 10000
+      });
+      window.removeEventListener('scroll', onScroll);
+    }
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+})();
+</script>
+
 </head>
 <body>
 
@@ -1044,6 +1087,18 @@ const modalBg = document.getElementById('modalBg');
 
 function openEnrol(courseId) {
   currentCourse = COURSES[courseId] || COURSES.full;
+
+  // Meta Pixel · InitiateCheckout — a visitor opened the payment modal
+  if (window.fbq) fbq('track', 'InitiateCheckout', {
+    content_ids: [currentCourse.id],
+    content_name: currentCourse.title,
+    content_type: 'product',
+    contents: [{ id: currentCourse.id, quantity: 1, item_price: currentCourse.price }],
+    currency: 'NGN',
+    value: currentCourse.price,
+    num_items: 1
+  });
+
   // Update modal title & price to match the picked tier
   document.getElementById('modalTitle').textContent = 'Enrol · ' + currentCourse.title;
   const priceEl = document.querySelector('#formView .m-price .vl');
@@ -1086,6 +1141,19 @@ function startPayment(e) {
       ],
     },
     callback: function (response) {
+      // Meta Pixel · Purchase — fired the moment Paystack confirms.
+      // eventID lets Meta deduplicate if we ever add server-side Conversions API later.
+      if (window.fbq) fbq('track', 'Purchase', {
+        content_ids: [currentCourse.id],
+        content_name: currentCourse.title,
+        content_type: 'product',
+        contents: [{ id: currentCourse.id, quantity: 1, item_price: currentCourse.price }],
+        currency: 'NGN',
+        value: currentCourse.price,
+        num_items: 1,
+        order_id: response && response.reference ? response.reference : ''
+      }, { eventID: response && response.reference ? response.reference : '' });
+
       // Backend (Apps Script) will verify the payment with Paystack and email
       // the buyer their access link. This page just confirms success.
       document.getElementById('mailTo').textContent = email;
