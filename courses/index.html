@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HayMedics Academy — Turn Your Phone Into a Business-Building Tool · ₦10,000</title>
-<meta name="description" content="A phone-first digital business course from HayMedics Academy. Build product ideas, flyers, sales websites, Paystack payments and AI-powered adverts using only your smartphone. ₦10,000, one-time. Lifetime Telegram access.">
+<title>HayMedics Academy — Online Courses: Phone Business · MS Excel · SPSS · No-code Web Development</title>
+<meta name="description" content="On-demand courses from HayMedics Academy: Turn Your Phone Into a Business-Building Tool, MS Excel for Healthcare, SPSS &amp; Biostatistics, and No-code Web Development. Pay securely with Paystack and get instant access.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,8 +13,8 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M5 42 Q50 8 50 8 Q50 8 95 42 Q50 28 50 28 Q50 28 5 42 Z' fill='%23F4A02B'/%3E%3Crect x='18' y='48' width='14' height='44' fill='%232A5FCC'/%3E%3Crect x='43' y='48' width='14' height='44' fill='%232A5FCC'/%3E%3Crect x='68' y='48' width='14' height='44' fill='%232A5FCC'/%3E%3Crect x='18' y='48' width='64' height='12' fill='%232A5FCC'/%3E%3C/svg%3E">
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="Turn Your Phone Into a Business-Building Tool — HayMedics Academy">
-<meta property="og:description" content="A practical, phone-first course on turning an idea into an online offer: product flyers, a sales website, Paystack payments, AI video adverts and marketing — all from a smartphone. ₦10,000.  Lifetime access.">
+<meta property="og:title" content="HayMedics Academy — Practical Online Courses">
+<meta property="og:description" content="Four practical, self-paced courses: Phone Business, MS Excel for Healthcare, SPSS &amp; Biostatistics, and No-code Web Development. Instant access after payment.">
 
 <script src="https://js.paystack.co/v1/inline.js"></script>
 
@@ -340,13 +340,149 @@ src="https://www.facebook.com/tr?id=2574617329673139&ev=PageView&noscript=1"
 })();
 </script>
 
+<style id="academy-layout">
+  /* ===== Multi-course academy layout ===== */
+  .eyebrow{display:block}
+  #modalTitle{padding-right:40px}
+  .ac-bonus-h{margin-top:22px;padding-top:14px;border-top:2px dashed #F2D9A6}
+  .ac-bonus{background:#FFF8EA;border-color:#F2D9A6}
+  .ac-bnum{background:var(--gold)!important;color:var(--navy);white-space:nowrap}
+  .ac-free{display:inline-block;margin-top:6px;font-size:.72rem;font-weight:900;letter-spacing:.06em;text-transform:uppercase;color:#7A4B0F;background:#FCE7BF;padding:3px 9px;border-radius:999px}
+  .cd-short{display:none}
+  @media(max-width:600px){
+    .countdown-strip{padding:7px 10px}
+    .countdown-strip .cd-inner{gap:10px;flex-wrap:nowrap}
+    .cd-long{display:none}.cd-short{display:inline}
+    .countdown-strip .cd-label{font-size:.72rem;letter-spacing:.03em}
+    .cd-box{min-width:34px;padding:3px 7px;font-size:.92rem}
+    .cd-box sub{font-size:.48rem}
+    .hero-badges .h-badge:nth-child(3){display:none}
+    nav{top:56px}
+  }
+  [id]{scroll-margin-top:120px}
+  .ac-hero{padding:56px 22px 60px}
+  .ac-hero h1{font-size:clamp(2rem,4.6vw,3.2rem)}
+  .ac-trust{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:20px;color:#C9D4F2;font-size:.86rem;font-weight:600}
+  .ac-menu{background:#fff;border-radius:20px;padding:20px;box-shadow:0 24px 60px -18px rgba(0,0,0,.45)}
+  .ac-menu-h{font-family:'Archivo';font-weight:900;color:var(--navy);font-size:1.05rem;margin:2px 4px 12px}
+  .ac-menu-row{display:flex;align-items:center;gap:12px;padding:12px;border-radius:12px;border:1px solid var(--line);margin-bottom:8px;color:var(--ink);transition:border-color .15s,background .15s,transform .15s}
+  .ac-menu-row:hover{border-color:var(--ac);background:#FAFBFF;transform:translateX(3px)}
+  .ac-menu-ic{width:40px;height:40px;border-radius:10px;display:grid;place-items:center;font-size:1.25rem;background:color-mix(in srgb,var(--ac) 14%,#fff);flex-shrink:0}
+  .ac-menu-t{flex:1;min-width:0;line-height:1.25}
+  .ac-menu-t b{display:block;font-family:'Archivo';font-weight:800;color:var(--navy);font-size:.92rem}
+  .ac-menu-t small{color:var(--muted);font-size:.74rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em}
+  .ac-menu-p{font-family:'Archivo';font-weight:900;color:var(--navy);font-size:.98rem;white-space:nowrap}
+  .ac-menu-f{text-align:center;color:var(--muted);font-size:.78rem;margin-top:10px}
+
+  .ac-courses{background:#F5F7FC}
+  .ac-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+  @media(max-width:860px){.ac-grid{grid-template-columns:1fr}}
+  .ac-card{background:#fff;border:1px solid var(--line);border-top:5px solid var(--ac);border-radius:18px;padding:26px 26px 22px;display:flex;flex-direction:column;box-shadow:0 14px 34px -24px rgba(10,23,72,.35);transition:transform .15s,box-shadow .15s}
+  .ac-card:hover{transform:translateY(-3px);box-shadow:0 22px 40px -22px rgba(10,23,72,.4)}
+  .ac-card-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+  .ac-card-ic{width:48px;height:48px;border-radius:12px;display:grid;place-items:center;font-size:1.5rem;background:color-mix(in srgb,var(--ac) 14%,#fff)}
+  .ac-cat{font-size:.68rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase;color:var(--ac);background:color-mix(in srgb,var(--ac) 10%,#fff);padding:5px 10px;border-radius:999px}
+  .ac-card h3{font-size:1.32rem;margin-bottom:4px}
+  .ac-card-sub{color:var(--ac);font-weight:800;font-size:.84rem;margin-bottom:4px}
+  .ac-card-desc{color:var(--text);font-size:.94rem;margin:6px 0 14px}
+  .ac-card-lab{font-size:.7rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+  .ac-learn{list-style:none;margin-bottom:14px}
+  .ac-learn li{position:relative;padding:4px 0 4px 24px;font-size:.92rem;color:var(--ink)}
+  .ac-learn li::before{content:"✓";position:absolute;left:0;top:4px;color:var(--ac);font-weight:900}
+  .ac-card-meta{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+  .ac-card-meta span{font-size:.76rem;font-weight:700;color:var(--navy);background:var(--ice);padding:5px 10px;border-radius:8px}
+  .ac-card-foot{margin-top:auto;border-top:1px dashed var(--line);padding-top:16px;display:flex;align-items:flex-end;justify-content:space-between;gap:14px;flex-wrap:wrap}
+  .ac-card-price b{font-family:'Archivo';font-weight:900;font-size:1.9rem;color:var(--navy);letter-spacing:-.5px;line-height:1}
+  .ac-card-price small{display:block;color:var(--muted);font-size:.74rem;font-weight:700;margin-top:3px}
+  .ac-old{text-decoration:line-through;color:var(--muted);font-weight:700;font-size:.95rem;margin-left:8px;font-family:'Inter'}
+  .ac-card-actions{display:flex;flex-direction:column;align-items:stretch;gap:8px;min-width:200px}
+  .ac-card-btn{justify-content:center;padding:12px 18px}
+  .ac-btn-alt{background:#fff;color:var(--navy);border:2px solid var(--line)}
+  .ac-btn-alt:hover{border-color:var(--navy)}
+  .ac-cur-link{text-align:center;font-size:.84rem;font-weight:800;color:var(--blue)}
+  @media(max-width:520px){.ac-card{padding:22px 18px 18px}.ac-card-actions{min-width:100%}}
+
+  .ac-cur{background:#fff}
+  .ac-tabs{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:26px}
+  .ac-tab{display:inline-flex;align-items:center;gap:8px;background:var(--ice);color:var(--navy);border:2px solid transparent;padding:11px 18px;border-radius:999px;font-family:inherit;font-weight:800;font-size:.9rem;cursor:pointer;transition:all .15s}
+  .ac-tab:hover{border-color:var(--ac)}
+  .ac-tab.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+  @media(max-width:640px){.ac-tabs{flex-wrap:nowrap;overflow-x:auto;justify-content:flex-start;padding-bottom:6px;margin-left:-22px;margin-right:-22px;padding-left:22px;padding-right:22px}.ac-tab{flex-shrink:0}}
+  .ac-pane{display:none}
+  .ac-pane.active{display:block;animation:acFade .25s ease}
+  @keyframes acFade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  .ac-pane-head{display:flex;gap:14px;align-items:flex-start;margin-bottom:20px}
+  .ac-pane-ic{font-size:2rem;line-height:1}
+  .ac-pane-head h3{font-size:1.45rem;margin-bottom:4px}
+  .ac-pane-head p{color:var(--muted);font-size:.96rem;max-width:720px}
+  .ac-pane-grid{display:grid;grid-template-columns:1.6fr 1fr;gap:26px;align-items:start}
+  @media(max-width:900px){.ac-pane-grid{grid-template-columns:1fr}}
+  .ac-group{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin:18px 0 10px}
+  .ac-group:first-child{margin-top:0}
+  .ac-group span{font-family:'Archivo';font-weight:900;color:var(--navy);font-size:1rem}
+  .ac-group small{color:var(--muted);font-size:.82rem}
+  .ac-mod{border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin-bottom:10px;background:#fff}
+  .ac-mod-top{display:flex;gap:14px;align-items:flex-start}
+  .ac-num{flex-shrink:0;min-width:42px;text-align:center;background:color-mix(in srgb,var(--ac) 14%,#fff);color:var(--navy);font-family:'Archivo';font-weight:900;font-size:.78rem;padding:6px 8px;border-radius:8px}
+  .ac-mod-t{font-family:'Archivo';font-weight:800;color:var(--navy);font-size:.98rem;line-height:1.3}
+  .ac-mod-d{color:var(--text);font-size:.88rem;margin-top:2px}
+  .ac-more{margin:8px 0 0 56px;background:none;border:none;color:var(--blue);font-weight:800;font-size:.8rem;cursor:pointer;font-family:inherit;padding:0}
+  .ac-more span{display:inline-block;transition:transform .2s}
+  .ac-mod.open .ac-more span{transform:rotate(45deg)}
+  .ac-detail{max-height:0;overflow:hidden;transition:max-height .3s ease}
+  .ac-detail-in{padding:6px 0 2px 56px;font-size:.87rem;color:var(--text)}
+  .ac-detail-in .h{font-size:.7rem;font-weight:900;color:var(--blue);letter-spacing:.1em;text-transform:uppercase;margin:10px 0 4px}
+  .ac-detail-in ul{list-style:none}
+  .ac-detail-in li{position:relative;padding:2px 0 2px 16px}
+  .ac-detail-in li::before{content:"▸";position:absolute;left:0;color:var(--gold);font-weight:800}
+  .ac-foot{color:var(--muted);font-size:.88rem;margin-top:6px;font-style:italic}
+  @media(max-width:520px){.ac-more,.ac-detail-in{margin-left:0;padding-left:0}}
+  .ac-side{position:sticky;top:130px;background:linear-gradient(160deg,var(--navy),var(--navy-2));color:#fff;border-radius:18px;padding:24px;border-top:5px solid var(--ac)}
+  .ac-side-lab{font-size:.7rem;font-weight:900;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-2)}
+  .ac-side-price{font-family:'Archivo';font-weight:900;font-size:2.4rem;letter-spacing:-1px;line-height:1.1;margin-top:4px}
+  .ac-side .ac-old{color:#9FB0DD}
+  .ac-side-one{color:#B5C4EC;font-size:.82rem;margin-bottom:14px}
+  .ac-inc{list-style:none;margin-bottom:16px}
+  .ac-inc li{position:relative;padding:5px 0 5px 24px;font-size:.88rem;color:#E4EAFB;border-bottom:1px solid rgba(255,255,255,.08)}
+  .ac-inc li::before{content:"✓";position:absolute;left:0;top:5px;color:var(--gold);font-weight:900}
+  .ac-side-btn{width:100%;justify-content:center;margin-top:8px}
+  .ac-side .ac-btn-alt{background:transparent;color:#fff;border-color:rgba(255,255,255,.35)}
+  .ac-note{color:#9FB0DD;font-size:.74rem;margin-top:12px;line-height:1.45}
+  .ac-tier{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:12px 14px;margin-bottom:8px;font-size:.82rem}
+  .ac-tier b{display:block;color:var(--gold-2);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:6px}
+  .ac-tier div{display:flex;justify-content:space-between;font-weight:800;margin-top:6px}
+  .ac-tier em{font-style:normal;color:var(--gold-2)}
+  .ac-tier small{display:block;color:#B5C4EC;font-size:.76rem;line-height:1.45}
+
+  .ac-how{background:#F5F7FC}
+  .ac-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:10px}
+  @media(max-width:820px){.ac-steps{grid-template-columns:1fr}}
+  .ac-step{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px}
+  .ac-step span{display:inline-grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--navy);color:var(--gold);font-family:'Archivo';font-weight:900;margin-bottom:12px}
+  .ac-step h4{font-size:1.05rem;margin-bottom:6px}
+  .ac-step p{color:var(--text);font-size:.92rem}
+  .ac-how-help{text-align:center;margin-top:22px;color:var(--muted)}
+  .ac-how-help a{font-weight:800}
+
+  .ac-faq-g{max-width:820px;margin:26px auto 10px;font-family:'Archivo';font-weight:900;color:var(--navy);font-size:1.05rem;padding-left:4px;border-left:4px solid var(--gold);padding-left:10px}
+  .ac-faq-g:first-of-type{margin-top:0}
+
+  .ac-final-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;max-width:980px;margin:0 auto}
+  @media(max-width:860px){.ac-final-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:420px){.ac-final-grid{grid-template-columns:1fr}}
+  .ac-final-btn{background:#fff;border:none;border-top:4px solid var(--ac);border-radius:14px;padding:16px 12px;cursor:pointer;font-family:inherit;display:flex;flex-direction:column;align-items:center;gap:4px;transition:transform .15s}
+  .ac-final-btn:hover{transform:translateY(-3px)}
+  .ac-final-btn span{font-size:1.5rem}
+  .ac-final-btn b{font-family:'Archivo';color:var(--navy);font-size:.95rem}
+  .ac-final-btn em{font-style:normal;font-weight:900;color:var(--blue)}
+</style>
 </head>
 <body>
 
 <!-- COUNTDOWN STRIP -->
 <div class="countdown-strip" id="countdownStrip">
   <div class="cd-inner">
-    <span class="cd-label">🔥 Pay <b style="color:#FFE8A6">₦10,000</b> instead of <s style="opacity:.75">₦100,000</s> — offer expires in</span>
+    <span class="cd-label"><span class="cd-long">🔥 Special prices on all HayMedics courses — offer ends in</span><span class="cd-short">🔥 Special prices end in</span></span>
     <span class="cd-timer" id="cdTimer">
       <span class="cd-box"><span id="cdM">60</span><sub>min</sub></span>
       <span class="cd-box"><span id="cdS">00</span><sub>sec</sub></span>
@@ -369,220 +505,127 @@ src="https://www.facebook.com/tr?id=2574617329673139&ev=PageView&noscript=1"
     </a>
     <button class="burger" aria-label="Menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
     <div class="nav-links">
-      <a href="#top" style="color:var(--red);font-weight:900">🔥 New · Phone Course</a>
+      <a href="#courses">Courses</a>
+      <a href="#curriculum">Curriculum</a>
+      <a href="#how">How it works</a>
+      <a href="#faq">FAQ</a>
       <a href="https://haymedicsacademy.com" target="_blank" rel="noopener">Home</a>
       <a href="https://haymedicsacademy.com/portfolio.html" target="_blank" rel="noopener">Portfolio</a>
-      <a href="#learn">Curriculum</a>
-      <a href="#other">Other Courses</a>
-      <a href="#faq">FAQ</a>
-      <a class="nav-cta" href="#top" onclick="openEnrol('phone');return false;">Enrol · ₦10,000</a>
+      <a class="nav-cta" href="#courses">Browse courses</a>
     </div>
   </div>
 </nav>
 
 <!-- HERO -->
-<header class="hero" id="top">
+<header class="hero ac-hero" id="top">
   <div class="hero-inner">
     <div>
       <div class="hero-badges">
-        <span class="h-badge gold">✦ Live · New Flagship Course</span>
-        <span class="h-badge">Phone-first workflow</span>
-        <span class="h-badge">One-time · ₦10,000</span>
+        <span class="h-badge gold">✦ 4 courses · enrolling now</span>
+        <span class="h-badge">Instant access</span>
+        <span class="h-badge">Learn at your own pace</span>
       </div>
-      <div style="font-family:'Archivo';font-weight:800;font-size:.78rem;color:var(--gold-2);letter-spacing:.22em;text-transform:uppercase;margin-bottom:12px">HayMedics Academy presents</div>
-      <h1>Turn your phone into a <em>business-building tool</em>.</h1>
-      <p class="lead">Learn to develop product ideas, create professional flyers, build a sales website, set up online payments, make AI-powered adverts, and reach customers — <b>using your smartphone</b>. No laptop required.</p>
-      <div class="hero-price-row">
-        <span class="now">₦10,000</span>
-        <span style="color:#B5C4EC;font-size:1.15rem;font-weight:700">one-time · lifetime access</span>
-      </div>
+      <h1>Practical courses in <em>data</em>, <em>research</em> and <em>digital business</em>.</h1>
+      <p class="lead">Self-paced, plain-English courses from HayMedics Academy. Analyse health data in Excel and SPSS, build websites that take payments, or turn your phone into a business tool. Pay once and start immediately.</p>
       <div class="hero-ctas">
-        <button class="btn btn-gold btn-xl" onclick="openEnrol('phone')">🚀 Get Started for ₦10,000 →</button>
-        <a class="btn btn-ghost btn-lg" href="#learn">Explore what you'll learn</a>
+        <a class="btn btn-gold btn-lg" href="#courses">Browse courses ↓</a>
+        <a class="btn btn-ghost btn-lg" href="#curriculum">See the curricula</a>
       </div>
-      <p style="color:#B5C4EC;font-size:.88rem;margin-top:16px;max-width:560px">📱 No laptop required for the course workflow. A smartphone, internet access, and willingness to practise are essential. Some third-party tools may have separate fees or limitations.</p>
+      <div class="ac-trust"><span>🔒 Secure Paystack checkout</span><span>📧 Access sent to your email</span><span>♾️ Lifetime access</span></div>
     </div>
-
-    <!-- Phone-mockup toolkit card -->
-    <div class="offer-card" style="padding:22px 20px">
-      <div style="background:#F4F6FC;border-radius:28px;padding:18px 14px 20px;position:relative;box-shadow:inset 0 0 0 6px #fff, 0 0 0 7px #0A1748">
-        <div style="width:46px;height:5px;background:#D1D8E8;border-radius:999px;margin:2px auto 14px"></div>
-        <div style="background:#FFF6DF;border:1px solid #F4A02B;color:#7A4B0F;font-family:'Archivo';font-weight:900;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;padding:5px 10px;border-radius:999px;display:inline-block">Your Business Toolkit</div>
-        <div style="font-family:'Archivo';font-weight:900;font-size:1.35rem;color:var(--navy);margin-top:10px;line-height:1.15">From idea to online offer.</div>
-        <div style="color:var(--text);font-size:.86rem;margin-top:6px;line-height:1.45">Learn practical, phone-first workflows with AI and digital tools.</div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px">
-          <div style="background:#fff;border:1px solid #E4EAF2;border-radius:12px;padding:12px 10px"><div style="color:var(--blue);font-size:1rem;font-weight:900">✦</div><div style="font-family:'Archivo';font-weight:800;color:var(--navy);font-size:.82rem;margin-top:2px">Product flyer</div></div>
-          <div style="background:#fff;border:1px solid #E4EAF2;border-radius:12px;padding:12px 10px"><div style="color:var(--blue);font-size:1rem;font-weight:900">⌘</div><div style="font-family:'Archivo';font-weight:800;color:var(--navy);font-size:.82rem;margin-top:2px">Sales website</div></div>
-          <div style="background:#fff;border:1px solid #E4EAF2;border-radius:12px;padding:12px 10px"><div style="color:var(--blue);font-size:1rem;font-weight:900">↗</div><div style="font-family:'Archivo';font-weight:800;color:var(--navy);font-size:.82rem;margin-top:2px">AI video ads</div></div>
-          <div style="background:#fff;border:1px solid #E4EAF2;border-radius:12px;padding:12px 10px"><div style="color:var(--blue);font-size:1rem;font-weight:900">₦</div><div style="font-family:'Archivo';font-weight:800;color:var(--navy);font-size:.82rem;margin-top:2px">Online payments</div></div>
-        </div>
-        <div style="background:var(--blue);color:#fff;font-family:'Archivo';font-weight:900;letter-spacing:.04em;text-align:center;padding:12px;border-radius:10px;margin-top:12px;font-size:.95rem">Create · Publish · Promote</div>
-      </div>
-      <button class="btn btn-gold offer-cta btn-lg" style="margin-top:16px" onclick="openEnrol('phone')">🚀 Enrol for ₦10,000 →</button>
+    <div class="ac-menu">
+      <div class="ac-menu-h">Choose a course</div>
+      <a class="ac-menu-row" href="#phone" style="--ac:#F4A02B"><span class="ac-menu-ic">📱</span><span class="ac-menu-t"><b>Turn Your Phone Into a Business-Building Tool</b><small>Digital Business</small></span><span class="ac-menu-p">₦10,000</span></a><a class="ac-menu-row" href="#excel" style="--ac:#1F7A3E"><span class="ac-menu-ic">📊</span><span class="ac-menu-t"><b>MS Excel for Healthcare</b><small>Data Analytics</small></span><span class="ac-menu-p">₦14,500</span></a><a class="ac-menu-row" href="#spss" style="--ac:#2A5FCC"><span class="ac-menu-ic">🔬</span><span class="ac-menu-t"><b>SPSS &amp; Biostatistics</b><small>Research &amp; Statistics</small></span><span class="ac-menu-p">₦14,500</span></a><a class="ac-menu-row" href="#nocode" style="--ac:#6A4FC9"><span class="ac-menu-ic">🌐</span><span class="ac-menu-t"><b>No-code Web Development</b><small>Web Development</small></span><span class="ac-menu-p">₦14,500</span></a>
+      <div class="ac-menu-f">Card · bank transfer · USSD — all via Paystack</div>
     </div>
   </div>
 </header>
 
-<!-- =========================================================
-     TRUST STRIP — Phone-first + free apps + no subscription
-     ========================================================= -->
-<section style="background:#F9FAFC;padding:34px 22px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
-  <div class="wrap" style="max-width:1100px">
-    <div style="display:flex;align-items:center;gap:22px;background:#fff;border:2px solid var(--gold);border-radius:18px;padding:22px 26px;box-shadow:0 14px 34px -22px rgba(10,23,72,.25)" class="trust-row">
-      <!-- Phone icon -->
-      <div style="flex:0 0 auto;width:60px;height:60px;background:linear-gradient(135deg,#0A1748,#12245F);border-radius:14px;display:grid;place-items:center;box-shadow:0 10px 20px -8px rgba(10,23,72,.5)">
-        <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="#F4A02B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <rect x="6" y="2" width="12" height="20" rx="3"/>
-          <line x1="11" y1="18" x2="13" y2="18"/>
-        </svg>
-      </div>
-      <div style="flex:1 1 auto">
-        <div style="font-family:'Archivo';font-weight:900;color:var(--navy);font-size:1.15rem;letter-spacing:-.3px;line-height:1.2">📱 Phone-first — and the apps are free.</div>
-        <div style="color:var(--text);font-size:.95rem;line-height:1.55;margin-top:6px">Every app we teach has a <b style="color:var(--navy)">free tier that covers the basics</b> we'll do in this course — <b>no paid subscription required to start</b>. Only upgrade when the revenue justifies it. (The course fee doesn't cover ad spend or payment-provider fees.)</div>
-      </div>
-    </div>
-  </div>
-  <style>@media(max-width:640px){.trust-row{flex-direction:column!important;text-align:left!important;align-items:flex-start!important;gap:14px!important}}</style>
-</section>
-
-<!-- =========================================================
-     FOR BEGINNERS AND BUSINESS OWNERS
-     ========================================================= -->
-<section style="background:#fff;padding:72px 22px">
-  <div class="wrap who-grid" style="max-width:1140px;display:grid;grid-template-columns:1.1fr .9fr;gap:46px;align-items:center">
-    <div>
-      <span class="eyebrow">For beginners and business owners</span>
-      <h2 class="sec-title" style="text-align:left">You don't need to have everything figured out before you start.</h2>
-      <p class="sec-sub" style="text-align:left;margin-left:0">Already selling a physical product, digital product, or service? Learn to present it online. Still looking for an idea? Learn how to spot problems people need solved and explore turning a useful solution into an offer.</p>
-    </div>
-    <div style="background:linear-gradient(155deg,#0A1748 0%,#12245F 100%);color:#fff;border-radius:20px;padding:28px 26px;box-shadow:0 24px 50px -22px rgba(10,23,72,.55)">
-      <h4 style="font-family:'Archivo';font-weight:900;color:#fff;font-size:1.18rem;margin-bottom:16px;letter-spacing:-.3px">Built for people who want to start practically</h4>
-      <ul style="list-style:none;padding:0;margin:0;font-size:.98rem;line-height:1.7">
-        <li style="padding-left:28px;position:relative;color:#DDE4F7"><span style="position:absolute;left:0;color:var(--gold);font-weight:900">✓</span> Small and medium business owners</li>
-        <li style="padding-left:28px;position:relative;color:#DDE4F7"><span style="position:absolute;left:0;color:var(--gold);font-weight:900">✓</span> Freelancers building marketable skills</li>
-        <li style="padding-left:28px;position:relative;color:#DDE4F7"><span style="position:absolute;left:0;color:var(--gold);font-weight:900">✓</span> Creators selling digital products or courses</li>
-        <li style="padding-left:28px;position:relative;color:#DDE4F7"><span style="position:absolute;left:0;color:var(--gold);font-weight:900">✓</span> People exploring their first business idea</li>
-        <li style="padding-left:28px;position:relative;color:#DDE4F7"><span style="position:absolute;left:0;color:var(--gold);font-weight:900">✓</span> Product sellers who want a clearer online sales process</li>
-      </ul>
-    </div>
-  </div>
-  <style>@media(max-width:900px){.who-grid{grid-template-columns:1fr!important;gap:28px!important}}</style>
-</section>
-
-<!-- =========================================================
-     WHAT YOU'LL LEARN — 9-card curriculum
-     ========================================================= -->
-<section id="learn" style="background:linear-gradient(180deg,#0A1748 0%,#12245F 100%);color:#fff;padding:76px 22px">
-  <div class="wrap" style="max-width:1180px">
-    <span class="eyebrow" style="color:var(--gold-2)">What you'll learn</span>
-    <h2 class="sec-title" style="color:#fff">One course. A practical digital business workflow.</h2>
-    <p class="sec-sub" style="color:#B5C4EC">Follow a step-by-step process that helps you move from an idea or existing offer to a simple online presence and promotional content.</p>
-
-    <div class="learn-grid" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-top:28px">
-      <div class="lc"><div class="lc-ic">💡</div><h4>Find and shape an idea</h4><p>Use AI to brainstorm, explore community needs, and assess whether an idea could solve a real problem.</p></div>
-      <div class="lc"><div class="lc-ic">🎨</div><h4>Create product flyers</h4><p>Design clear, attractive promotional graphics for products, services, and digital courses from your phone.</p></div>
-      <div class="lc"><div class="lc-ic">🌐</div><h4>Build a sales website</h4><p>Turn your offer into a simple website with key details, a clear call to action, and a path to purchase.</p></div>
-      <div class="lc"><div class="lc-ic">💳</div><h4>Set up online payments</h4><p>Learn the basics of integrating a payment option such as Paystack, subject to provider requirements and approval.</p></div>
-      <div class="lc"><div class="lc-ic">🎬</div><h4>Create AI talking-head ads</h4><p>Explore AI video workflows, including an avatar based on your own likeness where supported and with appropriate consent.</p></div>
-      <div class="lc"><div class="lc-ic">✨</div><h4>Animate your product</h4><p>Create product-focused animations and showcase videos for people who prefer not to appear on camera.</p></div>
-      <div class="lc"><div class="lc-ic">📣</div><h4>Learn to run online ads</h4><p>Understand audience targeting, creative testing, budgets, and campaign basics on platforms such as Meta.</p></div>
-      <div class="lc"><div class="lc-ic">📰</div><h4>Promote across channels</h4><p>Learn how to connect your website and offers with Facebook, Instagram, and WhatsApp marketing workflows.</p></div>
-      <div class="lc"><div class="lc-ic">⚙️</div><h4>Build a repeatable process</h4><p>Bring your assets together into a workflow you can practise, improve, and adapt as your business grows.</p></div>
-    </div>
-
-    <div style="margin-top:30px;background:rgba(244,160,43,.08);border:1px dashed var(--gold);border-radius:14px;padding:18px 22px;text-align:center;color:#F9E8C7;font-size:.95rem">
-      ✨ <b style="color:var(--gold-2)">Everything you see on this page</b> — the hero, the course cards, the Paystack button, the follow-up email — is the kind of thing you'll build in this course. <b style="color:#fff">This page is the prototype.</b>
-    </div>
-  </div>
-  <style>
-    #learn .lc{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:20px 20px 18px;transition:transform .18s,background .18s}
-    #learn .lc:hover{transform:translateY(-3px);background:rgba(255,255,255,.09)}
-    #learn .lc-ic{width:40px;height:40px;background:rgba(244,160,43,.14);border-radius:10px;display:grid;place-items:center;font-size:1.3rem;margin-bottom:12px}
-    #learn .lc h4{font-family:'Archivo';font-weight:900;color:#fff;font-size:1.05rem;letter-spacing:-.3px;margin-bottom:6px}
-    #learn .lc p{color:#C6D1EE;font-size:.9rem;line-height:1.55}
-    @media(max-width:900px){#learn .learn-grid{grid-template-columns:1fr 1fr!important}}
-    @media(max-width:620px){#learn .learn-grid{grid-template-columns:1fr!important}}
-  </style>
-</section>
-
-<!-- =========================================================
-     WHY LEARN + COURSE INVESTMENT
-     ========================================================= -->
-<section style="background:#fff;padding:76px 22px">
-  <div class="wrap why-grid-2" style="max-width:1140px;display:grid;grid-template-columns:1.05fr .95fr;gap:46px;align-items:center">
-    <div>
-      <span class="eyebrow">Why learn these skills?</span>
-      <h2 class="sec-title" style="text-align:left">Spend less time waiting for someone else to get you started.</h2>
-      <p class="sec-sub" style="text-align:left;margin-left:0">Hiring designers, developers, or ad specialists can add costs. Learning the basics yourself can help you create first drafts, test your ideas, and make more informed decisions about when outside help is worth it.</p>
-      <ul style="list-style:none;padding:0;margin:22px 0 0;font-size:1rem;line-height:1.8;color:var(--navy)">
-        <li style="padding-left:28px;position:relative"><span style="position:absolute;left:0;color:var(--gold);font-weight:900">✓</span> Work from a smartphone instead of depending on a laptop</li>
-        <li style="padding-left:28px;position:relative"><span style="position:absolute;left:0;color:var(--gold);font-weight:900">✓</span> Create and update your own marketing assets</li>
-        <li style="padding-left:28px;position:relative"><span style="position:absolute;left:0;color:var(--gold);font-weight:900">✓</span> Present your offer more professionally online</li>
-        <li style="padding-left:28px;position:relative"><span style="position:absolute;left:0;color:var(--gold);font-weight:900">✓</span> Learn how to measure and improve your campaigns</li>
-      </ul>
-    </div>
-
-    <div style="background:linear-gradient(155deg,#0A1748 0%,#12245F 100%);color:#fff;border:2px solid var(--gold);border-radius:20px;padding:32px 28px;text-align:center;box-shadow:0 24px 50px -18px rgba(10,23,72,.6)">
-      <div style="color:var(--gold-2);font-family:'Archivo';font-weight:900;font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;margin-bottom:12px">Course Investment</div>
-      <h3 style="font-family:'Archivo';font-weight:900;color:#fff;font-size:1.7rem;line-height:1.15;letter-spacing:-.5px;margin-bottom:14px">Start building with what you have.</h3>
-      <div style="font-family:'Archivo';font-weight:900;font-size:2.8rem;color:var(--gold);line-height:1;margin:14px 0 2px">₦10,000</div>
-      <div style="color:#B5C4EC;font-size:.95rem;font-weight:700;margin-bottom:18px">one-time course price</div>
-      <p style="color:#DDE4F7;font-size:.95rem;line-height:1.55;margin-bottom:22px">Learn a phone-first workflow for creating, presenting, and promoting your offer.</p>
-      <button class="btn btn-gold btn-xl" style="width:100%;justify-content:center" onclick="openEnrol('phone')">🚀 Enrol Now →</button>
-      <p style="color:#8CA0DE;font-size:.78rem;line-height:1.5;margin-top:18px">Course fee does not necessarily include third-party subscriptions, platform charges, advertising spend, or payment-provider fees. Sales are not guaranteed.</p>
-    </div>
-  </div>
-  <style>@media(max-width:900px){.why-grid-2{grid-template-columns:1fr!important;gap:28px!important}}</style>
-</section>
-
-<!-- =========================================================
-     FEATURED PAIRING — SPSS + MS Excel brought up above reviews
-     ========================================================= -->
-<section style="background:linear-gradient(180deg,#F9FAFC 0%,#FFFFFF 100%);padding:72px 22px;border-top:1px solid var(--line)">
-  <div class="wrap" style="max-width:1180px">
-    <div style="text-align:center">
-      <span class="eyebrow">Also at HayMedics Academy</span>
-      <h2 class="sec-title" style="margin-bottom:8px">Two companion courses to deepen your workflow</h2>
-      <p class="sec-sub">Once your phone-first business is running, these two sharpen the data and research skills that compound it — and both are live right now.</p>
-    </div>
-
-    <div class="pair-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:34px">
-
-      <!-- MS EXCEL -->
-      <div style="background:#fff;border:2px solid #E4EAF2;border-radius:20px;padding:28px 26px;box-shadow:0 18px 40px -22px rgba(10,23,72,.22);position:relative;transition:transform .18s,box-shadow .18s" class="pair-card">
-        <span style="position:absolute;top:-13px;left:24px;background:var(--green);color:#fff;font-family:'Archivo';font-weight:900;font-size:.72rem;letter-spacing:.14em;padding:5px 12px;border-radius:999px;text-transform:uppercase">Live · Popular</span>
-        <div style="font-size:2.4rem;line-height:1">📊</div>
-        <div style="font-family:'Archivo';font-weight:900;color:var(--blue);letter-spacing:.14em;text-transform:uppercase;font-size:.74rem;margin-top:14px">Healthcare Data Analytics</div>
-        <h3 style="font-family:'Archivo';font-weight:900;font-size:1.5rem;line-height:1.15;letter-spacing:-.5px;color:var(--navy);margin-top:6px">MS Excel for Healthcare</h3>
-        <p style="color:var(--text);font-size:.98rem;line-height:1.6;margin-top:10px"><b style="color:var(--navy)">3-in-1:</b> Data Analytics + Data Science + Biostatistics — all taught in Excel. Open a workbook on day one, run t-tests and survival analysis by the end. Healthcare examples throughout.</p>
-        <div style="display:flex;align-items:baseline;gap:10px;margin-top:14px">
-          <span style="font-family:'Archivo';font-weight:900;font-size:1.6rem;color:var(--navy)">₦14,500</span>
-          <span style="color:var(--muted);font-weight:700;font-size:.88rem">full · lifetime</span>
+<!-- COURSES -->
+<section class="ac-courses" id="courses">
+  <div class="wrap">
+    <span class="eyebrow">Our courses</span>
+    <h2 class="sec-title">Pick the skill you need right now</h2>
+    <p class="sec-sub">Every course is on-demand: pay once, get your access link by email, and learn at your own pace.</p>
+    <div class="ac-grid">
+      <article class="ac-card" id="phone" style="--ac:#F4A02B">
+        <div class="ac-card-top"><span class="ac-card-ic">📱</span><span class="ac-cat">Digital Business</span></div>
+        <h3>Turn Your Phone Into a Business-Building Tool</h3>
+        <p class="ac-card-desc">A phone-first workflow for turning an idea or an existing offer into an online business — no laptop required.</p>
+        <div class="ac-card-lab">What you’ll learn</div>
+        <ul class="ac-learn"><li>Find and shape a product idea with AI</li><li>Design flyers and build a sales website</li><li>Set up Paystack payments on your site</li><li>Create AI video ads and product animations</li><li>Run Meta ads and promote on Facebook, Instagram &amp; WhatsApp</li></ul>
+        <div class="ac-card-meta"><span>📱 No laptop needed</span><span>9 modules</span></div>
+        <div class="ac-card-foot">
+          <div class="ac-card-price"><b>₦10,000</b><span class="ac-old">₦100,000</span><small>one-time</small></div>
+          <div class="ac-card-actions"><button class="btn btn-gold ac-card-btn" type="button" onclick="openEnrol('phone')">Enrol · ₦10,000</button><a class="ac-cur-link" href="#curriculum" data-show-curriculum="phone">View full curriculum →</a></div>
         </div>
-        <button class="btn btn-gold btn-lg" style="width:100%;justify-content:center;margin-top:14px" onclick="openEnrol('full')">🚀 Enrol Full · ₦14,500 →</button>
-        <button class="btn" style="width:100%;justify-content:center;margin-top:8px;background:#F4F6FC;color:var(--navy);border:1px solid var(--line)" onclick="openEnrol('mat')">📥 Or materials only · ₦4,900</button>
-      </div>
-
-      <!-- SPSS -->
-      <div style="background:#fff;border:2px solid #E4EAF2;border-radius:20px;padding:28px 26px;box-shadow:0 18px 40px -22px rgba(10,23,72,.22);position:relative;transition:transform .18s,box-shadow .18s" class="pair-card">
-        <span style="position:absolute;top:-13px;left:24px;background:var(--green);color:#fff;font-family:'Archivo';font-weight:900;font-size:.72rem;letter-spacing:.14em;padding:5px 12px;border-radius:999px;text-transform:uppercase">Live</span>
-        <div style="font-size:2.4rem;line-height:1">🔬</div>
-        <div style="font-family:'Archivo';font-weight:900;color:var(--blue);letter-spacing:.14em;text-transform:uppercase;font-size:.74rem;margin-top:14px">Research &amp; Statistics</div>
-        <h3 style="font-family:'Archivo';font-weight:900;font-size:1.5rem;line-height:1.15;letter-spacing:-.5px;color:var(--navy);margin-top:6px">SPSS &amp; Biostatistics</h3>
-        <p style="color:var(--text);font-size:.98rem;line-height:1.6;margin-top:10px">From opening SPSS for the first time to <b style="color:var(--navy)">defending a Cox regression in a viva</b>. Descriptives → t-tests → ANOVA → chi-square → regression → survival analysis. Every test in plain English with a clinical example.</p>
-        <div style="display:flex;align-items:baseline;gap:10px;margin-top:14px">
-          <span style="font-family:'Archivo';font-weight:900;font-size:1.6rem;color:var(--navy)">₦14,500</span>
-          <span style="color:var(--muted);font-weight:700;font-size:.88rem">full · lifetime</span>
+      </article>
+      <article class="ac-card" id="excel" style="--ac:#1F7A3E">
+        <div class="ac-card-top"><span class="ac-card-ic">📊</span><span class="ac-cat">Data Analytics</span></div>
+        <h3>MS Excel for Healthcare</h3><div class="ac-card-sub">3-in-1: Data Analytics + Data Science + Biostatistics</div>
+        <p class="ac-card-desc">From opening Excel for the first time to t-tests, regression and survival analysis — every module built around real clinical and research data.</p>
+        <div class="ac-card-lab">What you’ll learn</div>
+        <ul class="ac-learn"><li>Formulas, lookups, PivotTables and dashboards</li><li>Power Query and dynamic arrays</li><li>Cleaning messy medical records</li><li>Biostatistics in Excel: t-tests, ANOVA, chi-square, regression, survival</li></ul>
+        <div class="ac-card-meta"><span>💻 Laptop needed</span><span>13 modules + data science track</span><span>🎁 3 bonus courses (Full)</span></div>
+        <div class="ac-card-foot">
+          <div class="ac-card-price"><b>₦14,500</b><small>one-time</small></div>
+          <div class="ac-card-actions"><button class="btn btn-gold ac-card-btn" type="button" onclick="openEnrol('full')">Enrol · ₦14,500</button><button class="btn ac-btn-alt ac-card-btn" type="button" onclick="openEnrol('mat')">Materials only · ₦4,900</button><a class="ac-cur-link" href="#curriculum" data-show-curriculum="excel">View full curriculum →</a></div>
         </div>
-        <button class="btn btn-gold btn-lg" style="width:100%;justify-content:center;margin-top:14px" onclick="openEnrol('spss')">🔬 Enrol · ₦14,500 →</button>
-        <div style="margin-top:10px;font-size:.82rem;color:var(--muted);text-align:center">Perfect for <b>researchers, students, clinicians</b> who want to run their own analyses.</div>
-      </div>
+      </article>
+      <article class="ac-card" id="spss" style="--ac:#2A5FCC">
+        <div class="ac-card-top"><span class="ac-card-ic">🔬</span><span class="ac-cat">Research &amp; Statistics</span></div>
+        <h3>SPSS &amp; Biostatistics</h3>
+        <p class="ac-card-desc">From opening SPSS for the first time to defending a Cox regression in a viva — every test explained in plain English with a clinical example.</p>
+        <div class="ac-card-lab">What you’ll learn</div>
+        <ul class="ac-learn"><li>Data entry, coding and cleaning in SPSS</li><li>Descriptive statistics and exploring distributions</li><li>t-tests, ANOVA, correlation and non-parametric tests</li><li>Chi-square, linear and logistic regression</li><li>Survival analysis: Kaplan-Meier and Cox regression</li></ul>
+        <div class="ac-card-meta"><span>💻 Laptop needed</span><span>For researchers, students &amp; clinicians</span><span>🎁 3 bonus courses</span></div>
+        <div class="ac-card-foot">
+          <div class="ac-card-price"><b>₦14,500</b><small>one-time</small></div>
+          <div class="ac-card-actions"><button class="btn btn-gold ac-card-btn" type="button" onclick="openEnrol('spss')">Enrol · ₦14,500</button><a class="ac-cur-link" href="#curriculum" data-show-curriculum="spss">View full curriculum →</a></div>
+        </div>
+      </article>
+      <article class="ac-card" id="nocode" style="--ac:#6A4FC9">
+        <div class="ac-card-top"><span class="ac-card-ic">🌐</span><span class="ac-cat">Web Development</span></div>
+        <h3>No-code Web Development</h3>
+        <p class="ac-card-desc">Build professional websites and working sales pages with live Paystack payments — without writing code.</p>
+        <div class="ac-card-lab">What you’ll learn</div>
+        <ul class="ac-learn"><li>Professional websites and portfolios</li><li>Business landing pages</li><li>Sales pages with a clear path to purchase</li><li>Live Paystack payment integration</li></ul>
+        <div class="ac-card-meta"><span>💻 Laptop recommended</span><span>Build-along lessons</span></div>
+        <div class="ac-card-foot">
+          <div class="ac-card-price"><b>₦14,500</b><small>one-time</small></div>
+          <div class="ac-card-actions"><button class="btn btn-gold ac-card-btn" type="button" onclick="openEnrol('nocode')">Enrol · ₦14,500</button><a class="ac-cur-link" href="#curriculum" data-show-curriculum="nocode">View full curriculum →</a></div>
+        </div>
+      </article>
     </div>
   </div>
-  <style>
-    .pair-card:hover{transform:translateY(-3px);box-shadow:0 26px 48px -20px rgba(10,23,72,.28)}
-    @media(max-width:820px){.pair-grid{grid-template-columns:1fr!important}}
-  </style>
+</section>
+
+<!-- CURRICULUM -->
+<section class="ac-cur" id="curriculum">
+  <div class="wrap">
+    <span class="eyebrow">Full curriculum</span>
+    <h2 class="sec-title">See exactly what each course covers</h2>
+    <p class="sec-sub">Choose a course to see every module.</p>
+    <div class="ac-tabs" role="tablist"><button class="ac-tab active" type="button" role="tab" data-course="phone" aria-selected="true" aria-controls="pane-phone" style="--ac:#F4A02B"><span>📱</span>Phone Business</button><button class="ac-tab" type="button" role="tab" data-course="excel" aria-selected="false" aria-controls="pane-excel" style="--ac:#1F7A3E"><span>📊</span>MS Excel</button><button class="ac-tab" type="button" role="tab" data-course="spss" aria-selected="false" aria-controls="pane-spss" style="--ac:#2A5FCC"><span>🔬</span>SPSS &amp; Biostats</button><button class="ac-tab" type="button" role="tab" data-course="nocode" aria-selected="false" aria-controls="pane-nocode" style="--ac:#6A4FC9"><span>🌐</span>No-code Web Dev</button></div>
+    <div class="ac-pane active" data-course="phone" role="tabpanel" id="pane-phone"><div class="ac-pane-head"><span class="ac-pane-ic">📱</span><div><h3>Turn Your Phone Into a Business-Building Tool</h3><p>A practical digital business workflow — from an idea or existing offer to a simple online presence, payments and promotion, all from your smartphone.</p></div></div><div class="ac-pane-grid"><div class="ac-mods"><div class="ac-mod"><div class="ac-mod-top"><span class="ac-num" style="--ac:#F4A02B">01</span><div class="ac-mod-txt"><div class="ac-mod-t">Find and shape an idea</div><div class="ac-mod-d">Use AI to brainstorm, explore community needs, and assess whether an idea could solve a real problem.</div></div></div></div><div class="ac-mod"><div class="ac-mod-top"><span class="ac-num" style="--ac:#F4A02B">02</span><div class="ac-mod-txt"><div class="ac-mod-t">Create product flyers</div><div class="ac-mod-d">Design clear, attractive promotional graphics for products, services, and digital courses from your phone.</div></div></div></div><div class="ac-mod"><div class="ac-mod-top"><span class="ac-num" style="--ac:#F4A02B">03</span><div class="ac-mod-txt"><div class="ac-mod-t">Build a sales website</div><div class="ac-mod-d">Turn your offer into a simple website with key details, a clear call to action, and a path to purchase.</div></div></div></div><div class="ac-mod"><div class="ac-mod-top"><span class="ac-num" style="--ac:#F4A02B">04</span><div class="ac-mod-txt"><div class="ac-mod-t">Set up online payments</div><div class="ac-mod-d">Learn the basics of integrating a payment option such as Paystack, subject to provider requirements and approval.</div></div></div></div><div class="ac-mod"><div class="ac-mod-top"><span class="ac-num" style="--ac:#F4A02B">05</span><div class="ac-mod-txt"><div class="ac-mod-t">Create AI talking-head ads</div><div class="ac-mod-d">Explore AI video workflows, including an avatar based on your own likeness where supported and with appropriate consent.</div></div></div></div><div class="ac-mod"><div class="ac-mod-top"><span class="ac-num" style="--ac:#F4A02B">06</span><div class="ac-mod-txt"><div class="ac-mod-t">Animate your product</div><div class="ac-mod-d">Create product-focused animations and showcase videos for people who prefer not to appear on camera.</div></div></div></div><div class="ac-mod"><div class="ac-mod-top"><span class="ac-num" style="--ac:#F4A02B">07</span><div class="ac-mod-txt"><div class="ac-mod-t">Learn to run online ads</div><div class="ac-mod-d">Understand audience targeting, creative testing, budgets, and campaign basics on platforms such as Meta.</div></div></div></div><div class="ac-mod"><div class="ac-mod-top"><span class="ac-num" style="--ac:#F4A02B">08</span><div class="ac-mod-txt"><div class="ac-mod-t">Promote across channels</div><div class="ac-mod-d">Learn how to connect your website and offers with Facebook, Instagram, and WhatsApp marketing workflows.</div></div></div></div><div class="ac-mod"><div class="ac-mod-top"><span class="ac-num" style="--ac:#F4A02B">09</span><div class="ac-mod-txt"><div class="ac-mod-t">Build a repeatable process</div><div class="ac-mod-d">Bring your assets together into a workflow you can practise, improve, and adapt as your business grows.</div></div></div></div></div><aside class="ac-side" style="--ac:#F4A02B"><div class="ac-side-lab">Course fee</div><div class="ac-side-price">₦10,000<span class="ac-old">₦100,000</span></div><div class="ac-side-one">one-time payment</div><ul class="ac-inc"><li>Step-by-step build-along video lessons</li><li>Templates you can reuse</li><li>Private Telegram channel · lifetime access</li><li>Direct WhatsApp line to the instructor</li><li>The apps used have free tiers — no paid subscription needed to start</li></ul><button class="btn btn-gold ac-side-btn" type="button" onclick="openEnrol('phone')">Enrol · ₦10,000 →</button><p class="ac-note">Course fee does not include third-party subscriptions, platform charges, advertising spend or payment-provider fees. Sales are not guaranteed.</p></aside></div></div>
+    <div class="ac-pane" data-course="excel" role="tabpanel" id="pane-excel"><div class="ac-pane-head"><span class="ac-pane-ic">📊</span><div><h3>MS Excel for Healthcare</h3><p>One Excel course, three integrated tracks: Data Analytics, Data Science and Biostatistics — plus three bonus courses with the Full option. Tap “Details” on any module to see its objectives and topics.</p></div></div><div class="ac-pane-grid"><div class="ac-mods"><div class="ac-group"><span>Beginner</span><small>Modules 1–4 · From opening Excel to protecting patient data</small></div><div class="ac-mod"><div class="ac-mod-top"><span class="ac-num" style="--ac:#1F7A3E">M1</span><div class="ac-mod-txt"><div class="ac-mod-t">Getting Started with Excel</div><div class="ac-mod-d">Introduction to Excel for healthcare professionals · Interface navigation and ribbons</div></div></div><button class="ac-more" type="button" aria-expanded="false">Details <span>+</span></button><div class="ac-detail"><div class="ac-detail-in"><div class="h">Learning objectives</div><p>Explain Excel's value in healthcare; navigate the interface and Quick Access Toolbar; use keyboard shortcuts and templates (Patient Logs); access help resources.</p><div class="h">Topics covered</div><ul><li>Introduction to Excel for healthcare professionals</li><li>Interface navigation and ribbons</li><li>Useful keyboard shortcuts</li><li>Getting help</li><li>Working with patient log templates</li></ul></div></div></div><div class="ac-mod"><div class="ac-mod-top"><span class="ac-num" style="--ac:#1F7A3E">M2</span><div class="ac-mod-txt"><div class="ac-mod-t">Working with Healthcare Data</div><div class="ac-mod-d">Creating and saving workbooks · Managing worksheets per department</div></div></div><button class="ac-more" type="button" aria-expanded="false">Details <span>+</span></button><div class="ac-detail"><div class="ac-detail-in"><div class="h">Learning objectives</div><p>Create, save, and organise department/ward workbooks; manage individual worksheets; add, edit, and navigate patient data; use Flash Fill for auto-formatting.</p><div class="h">Topics covered</div><ul><li>Creating and saving workbooks (Ward Admission Register)</li><li>Managing worksheets per department</li><li>Entering and editing patient data</li><li>Navigating cells, rows, and columns</li><li>Flash Fill for names and IDs</li></ul></div></div></div><div class="ac-mod"><div class="ac-mod-top"><span class="ac-num" style="--ac:#1F7A3E">M3</span><div class="ac-mod-txt"><div class="ac-mod-t">Basic Formulas and Functions</div><div class="ac-mod-d">How formulas and functions work · SUM · COUNT · AVERAGE · MIN and MAX</div></div></div><button class="ac-more" type="button" aria-expanded="false">Details <span>+</span></button><div class="ac-detail"><div class="ac-detail-in"><div class="h">Learning objectives</div><p>Write simple formulas; use SUM, COUNT, AVERAGE, MIN, and MAX in clinical contexts; differentiate absolute and relative referencing; use Autosum, Autofill, and error-handling.</p><div class="h">Topics covered</div><ul><li>How formulas and functions work</li><li>SUM (admissions, drug quantities)</li><li>COUNT (patient counts)</li><li>AVERAGE (age, wait time)</li><li>MIN and MAX (hospital stay lengths)</li><li>Absolute vs. relative referencing</li><li>Autosum, Autofill, and error handling</li></ul></div></div></div><div class="ac-mod"><div class="ac-mod-top"><span class="ac-num" style="--ac:#1F7A3E">M4</span><div class="ac-mod-txt"><div class="ac-mod-t">Formatting for Clarity</div><div class="ac-mod-d">Cell, row, and column formatting · Number, date, and time formats · Format Painter</div></div></div><button class="ac-more" type="button" aria-expanded="false">Details <span>+</span></button><div class="ac-detail"><div class="ac-detail-in"><div class="h">Learning objectives</div><p>Format cells, rows, and columns for readability; apply date and time formats; use Format Painter, cell styles, and colour-coding; protect worksheets and lock patient data.</p><div class="h">Topics covered</div><ul><li>Cell, row, and column formatting (critical lab values)</li><li>Number, date, and time formats (DOB, admission date)</li><li>Format Painter</li><li>Cell styles and ward colour-coding</li><li>Sheet and workbook protection</li></ul></div></div></div><div class="ac-group"><span>Intermediate</span><small>Modules 5–10 · From validation rules to PivotTables</small></div><div class="ac-mod"><div class="ac-mod-top"><span class="ac-num" style="--ac:#1F7A3E">M5</span><div class="ac-mod-txt"><div class="ac-mod-t">Data Validation and Quality Control</div><div class="ac-mod-d">Data validation · Error handling and alerts · Conditional formatting</div></div></div><button class="ac-more" type="button" aria-expanded="false">Details <span>+</span></button><div class="ac-detail"><div class="ac-detail-in"><div class="h">Learning objectives</div><p>Set up data validation rules and error alerts; apply conditional formatting for data visualisation; use basic and advanced sorting and filtering techniques.</p><div class="h">Topics covered</div><ul><li>Data validation (preventing invalid age/dates)</li><li>Error handling and alerts</li><li>Conditional formatting (flagging abnormal results)</li><li>Sorting data by date or ward</li><li>Filtering, AutoFilter, and advanced filter techniques</li></ul></div></div></div><div class="ac-mod"><div class="ac-mod-top"><span class="ac-num" style="--ac:#1F7A3E">M6</span><div class="ac-mod-txt"><div class="ac-mod-t">Logical and Lookup Functions</div><div class="ac-mod-d">IF statements · Nested IFs and IFS · Multiple criteria conditional IFs · VLOOKUP and HLOOKUP</div></div></div><button class="ac-more" type="button" aria-expanded="false">Details <span>+</span></button><div class="ac-detail"><div class="ac-detail-in"><div class="h">Learning objectives</div><p>Use IF statements, nested IFs, and IFS for clinical decision flags; apply VLOOKUP, HLOOKUP, INDEX, MATCH, XLOOKUP, XMATCH, OFFSET, and INDIRECT; handle lookup errors.</p><div class="h">Topics covered</div><ul><li>IF statements (overdue patient reviews)</li><li>Nested IFs and IFS</li><li>Multiple criteria conditional IFs</li><li>VLOOKUP and HLOOKUP</li><li>INDEX and MATCH</li><li>XLOOKUP and XMATCH</li><li>OFFSET and INDIRECT functions</li></ul></div></div></div><div class="ac-mod"><div class="ac-mod-top"><span class="ac-num" style="--ac:#1F7A3E">M7</span><div class="ac-mod-txt"><div class="ac-mod-t">Date and Time Functions</div><div class="ac-mod-d">How Excel stores dates and times · Date and time calculations · WORKDAY and WORKDAY.INTL</div></div></div><button class="ac-more" type="button" aria-expanded="false">Details <span>+</span></button><div class="ac-detail"><div class="ac-detail-in"><div class="h">Learning objectives</div><p>Calculate patient age and length of stay; use WORKDAY, NETWORKDAYS, DATEDIF, EDATE, and EOMONTH for scheduling and monthly reporting.</p><div class="h">Topics covered</div><ul><li>How Excel stores dates and times</li><li>Date and time calculations (age, length of stay)</li><li>WORKDAY and WORKDAY.INTL (appointments)</li><li>NETWORKDAYS (working days between admission and discharge)</li><li>DATEDIF, EDATE and EOMONTH</li></ul></div></div></div><div class="ac-mod"><div class="ac-mod-top"><span class="ac-num" style="--ac:#1F7A3E">M8</span><div class="ac-mod-txt"><div class="ac-mod-t">Sorting, Filtering, and Unique Data</div><div class="ac-mod-d">Multi-column sorting · Custom sort lists · SORT and SORTBY functions · UNIQUE function</div></div></div><button class="ac-more" type="button" aria-expanded="false">Details <span>+</span></button><div class="ac-detail"><div class="ac-detail-in"><div class="h">Learning objectives</div><p>Sort data across multiple columns and custom lists; use dynamic SORT, SORTBY, UNIQUE, and FILTER functions to build dynamic patient lists.</p><div class="h">Topics covered</div><ul><li>Multi-column sorting (ward then name)</li><li>Custom sort lists (priority levels)</li><li>SORT and SORTBY functions</li><li>UNIQUE function (diagnoses/medications)</li><li>FILTER function for dynamic patient lists</li></ul></div></div></div><div class="ac-mod"><div class="ac-mod-top"><span class="ac-num" style="--ac:#1F7A3E">M9</span><div class="ac-mod-txt"><div class="ac-mod-t">Charts and Data Visualisation</div><div class="ac-mod-d">Creating and customising charts · Sparklines and conditional charts · Advanced charting tips</div></div></div><button class="ac-more" type="button" aria-expanded="false">Details <span>+</span></button><div class="ac-detail"><div class="ac-detail-in"><div class="h">Learning objectives</div><p>Create and customise healthcare charts; choose appropriate chart types; apply data visualisation best practices; use sparklines and conditional charts for trend indicators.</p><div class="h">Topics covered</div><ul><li>Creating and customising charts (monthly admission trends)</li><li>Sparklines and conditional charts</li><li>Advanced charting tips (disease outbreak graphs)</li><li>Healthcare data visualisation best practices</li></ul></div></div></div><div class="ac-mod"><div class="ac-mod-top"><span class="ac-num" style="--ac:#1F7A3E">M10</span><div class="ac-mod-txt"><div class="ac-mod-t">PivotTables for Healthcare Reporting</div><div class="ac-mod-d">Introduction to PivotTables · PivotCharts · What-If scenario analysis</div></div></div><button class="ac-more" type="button" aria-expanded="false">Details <span>+</span></button><div class="ac-detail"><div class="ac-detail-in"><div class="h">Learning objectives</div><p>Build PivotTables to summarise patient data; create PivotCharts; use What-If analysis for capacity planning; consolidate data using Power Query.</p><div class="h">Topics covered</div><ul><li>Introduction to PivotTables (summarising admissions by department)</li><li>PivotCharts</li><li>What-If scenario analysis (bed capacity planning)</li><li>Data consolidation with Power Query</li></ul></div></div></div><div class="ac-group"><span>Advanced</span><small>Modules 11–13 · Dynamic arrays, Power Query and analysis tools</small></div><div class="ac-mod"><div class="ac-mod-top"><span class="ac-num" style="--ac:#1F7A3E">M11</span><div class="ac-mod-txt"><div class="ac-mod-t">Dynamic Arrays and Advanced Functions</div><div class="ac-mod-d">Dynamic arrays and spill ranges · Unique entry extraction and counting</div></div></div><button class="ac-more" type="button" aria-expanded="false">Details <span>+</span></button><div class="ac-detail"><div class="ac-detail-in"><div class="h">Learning objectives</div><p>Use dynamic arrays and spill ranges; extract and count unique entries; apply FILTER with logic operators; use SEQUENCE and RANDARRAY for numbering and audits.</p><div class="h">Topics covered</div><ul><li>Dynamic arrays and spill ranges</li><li>Unique entry extraction and counting (diagnoses)</li><li>Horizontal and vertical sorting</li><li>SEQUENCE (patient numbering)</li><li>FILTER with logic operators (AND, OR)</li><li>RANDARRAY (clinical audit sampling)</li></ul></div></div></div><div class="ac-mod"><div class="ac-mod-top"><span class="ac-num" style="--ac:#1F7A3E">M12</span><div class="ac-mod-txt"><div class="ac-mod-t">Power Query and Data Connections</div><div class="ac-mod-d">Importing data from external sources · Connecting to data sources with Power Query</div></div></div><button class="ac-more" type="button" aria-expanded="false">Details <span>+</span></button><div class="ac-detail"><div class="ac-detail-in"><div class="h">Learning objectives</div><p>Import data from external healthcare systems (HMIS, labs); connect to multiple sources via Power Query; clean and transform clinical data; set up automatic data refreshes.</p><div class="h">Topics covered</div><ul><li>Importing data from external sources (HMIS, lab systems)</li><li>Connecting to data sources with Power Query</li><li>Cleaning and transforming healthcare data</li><li>Refreshing data connections automatically</li></ul></div></div></div><div class="ac-mod"><div class="ac-mod-top"><span class="ac-num" style="--ac:#1F7A3E">M13</span><div class="ac-mod-txt"><div class="ac-mod-t">Data Analysis Tools</div><div class="ac-mod-d">Data tables for sensitivity analysis · Goal Seek · Solver for optimisation</div></div></div><button class="ac-more" type="button" aria-expanded="false">Details <span>+</span></button><div class="ac-detail"><div class="ac-detail-in"><div class="h">Learning objectives</div><p>Use data tables for sensitivity analysis; apply Goal Seek for KPI targets; use Solver for optimisation; manage planning scenarios; perform formula auditing and error handling.</p><div class="h">Topics covered</div><ul><li>Data tables for sensitivity analysis (budget vs. volume)</li><li>Goal Seek (KPI targets)</li><li>Solver for optimisation (staff scheduling)</li><li>Scenario Manager (patient surge planning)</li><li>Advanced formula auditing and error handling</li></ul></div></div></div><div class="ac-group"><span>Data Science &amp; Biostatistics</span><small>The second and third tracks, taught inside the same course</small></div><div class="ac-mod"><div class="ac-mod-top"><span class="ac-num" style="--ac:#1F7A3E">DS1</span><div class="ac-mod-txt"><div class="ac-mod-t">Data Roles &amp; Fundamentals</div><div class="ac-mod-d">Plain-English definitions of data roles · The data pipeline · Role analogies</div></div></div><button class="ac-more" type="button" aria-expanded="false">Details <span>+</span></button><div class="ac-detail"><div class="ac-detail-in"><div class="h">Learning objectives</div><p>Explain data roles (Analyst, Scientist, Business Analyst, Data Engineer, AI Engineer); place roles in the data pipeline; use role analogies; compare roles side-by-side; identify beginner entry paths.</p><div class="h">Topics covered</div><ul><li>Plain-English definitions of data roles</li><li>The data pipeline (collect → analyse → predict → deploy)</li><li>Role analogies (plumber, meter-reader, forecaster, translator, robot-builder)</li><li>Purpose, tools, and healthcare use comparison</li><li>Beginner entry paths (Excel → Power BI → SQL)</li></ul></div></div></div><div class="ac-mod"><div class="ac-mod-top"><span class="ac-num" style="--ac:#1F7A3E">DS2</span><div class="ac-mod-txt"><div class="ac-mod-t">Introduction to Healthcare Data Science</div><div class="ac-mod-d">Defining health and clinical data analysis · Quantitative vs. qualitative medical variables</div></div></div><button class="ac-more" type="button" aria-expanded="false">Details <span>+</span></button><div class="ac-detail"><div class="ac-detail-in"><div class="h">Learning objectives</div><p>Define health data analysis; classify medical variables; distinguish primary from secondary health data; describe the 7-step health data workflow; clean medical records; calculate descriptive statistics; choose honest clinical charts.</p><div class="h">Topics covered</div><ul><li>Defining health and clinical data analysis</li><li>Quantitative vs. qualitative medical variables</li><li>Primary vs. secondary health data</li><li>The 7-step health data workflow</li><li>Cleaning messy medical records</li><li>Descriptive statistics (frequency, central tendency, dispersion)</li><li>Clinical data visualisation best practices</li></ul></div></div></div><div class="ac-mod"><div class="ac-mod-top"><span class="ac-num" style="--ac:#1F7A3E">DS3</span><div class="ac-mod-txt"><div class="ac-mod-t">Comprehensive Biostatistics</div><div class="ac-mod-d">Descriptive statistics and ToolPak Descriptives</div></div></div><button class="ac-more" type="button" aria-expanded="false">Details <span>+</span></button><div class="ac-detail"><div class="ac-detail-in"><div class="h">Learning objectives</div><p>Perform descriptive statistics, normality assessments, hypothesis testing, association measures, linear regression, logistic regression, survival analysis, reliability analysis, and meta-analyses; report results in APA style.</p><div class="h">Topics covered</div><ul><li>Descriptive statistics and ToolPak Descriptives</li><li>Normality assessments (SKEW, KURT, histograms) and parametric/non-parametric rules</li><li>Hypothesis testing (t-tests, ANOVA, chi-square)</li><li>Association measures (Pearson, Spearman)</li><li>Linear and logistic regression</li><li>Survival analysis</li><li>Reliability and agreement analysis</li><li>Meta-analysis toolkits</li><li>APA-styled results reporting</li></ul></div></div></div><div class="ac-group ac-bonus-h"><span>🎁 Bonuses</span><small>Included free with the Full course (₦14,500) · not part of the ₦4,900 Materials pack</small></div><div class="ac-mod ac-bonus"><div class="ac-mod-top"><span class="ac-num ac-bnum">Bonus 1</span><div class="ac-mod-txt"><div class="ac-mod-t">📥 Automated Data Collection System</div><div class="ac-mod-d">Good analysis starts from good data collection. Learn to build automated data-collection forms and pipelines that feed straight into your Excel and dashboards — the way real hospitals and research teams do it.</div><span class="ac-free">Free with the Full course</span></div></div></div><div class="ac-mod ac-bonus"><div class="ac-mod-top"><span class="ac-num ac-bnum">Bonus 2</span><div class="ac-mod-txt"><div class="ac-mod-t">🌐 Website + Sales Page (No-code) + Paystack</div><div class="ac-mod-d">Build your own portfolio website, business landing page and a working sales page with live Paystack integration — no code. It’s the same approach that powers this page. Also sold on its own as our No-code Web Development course.</div><span class="ac-free">Free with the Full course</span></div></div></div><div class="ac-mod ac-bonus"><div class="ac-mod-top"><span class="ac-num ac-bnum">Bonus 3</span><div class="ac-mod-txt"><div class="ac-mod-t">💰 Monetise Your Skill</div><div class="ac-mod-d">Make and sell your own video courses — positioning, pricing, sales-page copy and delivery playbooks — plus regular remote job alerts (local + international) so you also see when a paying role opens up.</div><span class="ac-free">Free with the Full course</span></div></div></div></div><aside class="ac-side" style="--ac:#1F7A3E"><div class="ac-side-lab">Course fee</div><div class="ac-side-price">₦14,500</div><div class="ac-side-one">one-time payment</div><ul class="ac-inc"><li>Healthcare examples in every module</li><li>13 Excel modules + 3 data science &amp; biostatistics modules</li><li>Teaching and exercise datasets</li></ul><div class="ac-tier"><b>Two ways to enrol</b><div><span>Full course</span><em>₦14,500</em></div><small>Video lessons for every module, course PDFs, workbook, datasets, bonuses (Automated Data Collection · No-code Website + Sales Page + Paystack · Monetise Your Skill), remote job alerts, WhatsApp community, certificate, lifetime access via Telegram.</small><div><span>Materials only</span><em>₦4,900</em></div><small>Course PDFs, exercise workbook, teaching and exercise datasets — instant Google Drive access. No videos.</small></div><button class="btn btn-gold ac-side-btn" type="button" onclick="openEnrol('full')">Enrol · ₦14,500 →</button><button class="btn ac-btn-alt ac-side-btn" type="button" onclick="openEnrol('mat')">Materials only · ₦4,900 →</button></aside></div></div>
+    <div class="ac-pane" data-course="spss" role="tabpanel" id="pane-spss"><div class="ac-pane-head"><span class="ac-pane-ic">🔬</span><div><h3>SPSS &amp; Biostatistics</h3><p>Run and interpret the statistics your research needs — and explain the results with confidence. Comes with three bonus courses.</p></div></div><div class="ac-pane-grid"><div class="ac-mods"><div class="ac-mod"><div class="ac-mod-top"><span class="ac-num" style="--ac:#2A5FCC">01</span><div class="ac-mod-txt"><div class="ac-mod-t">Getting started in SPSS</div><div class="ac-mod-d">Data entry and importing data, setting up and coding variables.</div></div></div></div><div class="ac-mod"><div class="ac-mod-top"><span class="ac-num" style="--ac:#2A5FCC">02</span><div class="ac-mod-txt"><div class="ac-mod-t">Cleaning and recoding data</div><div class="ac-mod-d">Cleaning your dataset and recoding variables so it is ready for analysis.</div></div></div></div><div class="ac-mod"><div class="ac-mod-top"><span class="ac-num" style="--ac:#2A5FCC">03</span><div class="ac-mod-txt"><div class="ac-mod-t">Descriptive statistics</div><div class="ac-mod-d">Summarising your data and exploring distributions before choosing a test.</div></div></div></div><div class="ac-mod"><div class="ac-mod-top"><span class="ac-num" style="--ac:#2A5FCC">04</span><div class="ac-mod-txt"><div class="ac-mod-t">Parametric tests</div><div class="ac-mod-d">Independent and paired t-tests, one-way and repeated-measures ANOVA, and correlation.</div></div></div></div><div class="ac-mod"><div class="ac-mod-top"><span class="ac-num" style="--ac:#2A5FCC">05</span><div class="ac-mod-txt"><div class="ac-mod-t">Non-parametric tests</div><div class="ac-mod-d">Mann-Whitney, Wilcoxon, Kruskal-Wallis and Friedman tests.</div></div></div></div><div class="ac-mod"><div class="ac-mod-top"><span class="ac-num" style="--ac:#2A5FCC">06</span><div class="ac-mod-txt"><div class="ac-mod-t">Categorical data</div><div class="ac-mod-d">Chi-square and Fisher’s exact test.</div></div></div></div><div class="ac-mod"><div class="ac-mod-top"><span class="ac-num" style="--ac:#2A5FCC">07</span><div class="ac-mod-txt"><div class="ac-mod-t">Regression</div><div class="ac-mod-d">Linear and logistic regression.</div></div></div></div><div class="ac-mod"><div class="ac-mod-top"><span class="ac-num" style="--ac:#2A5FCC">08</span><div class="ac-mod-txt"><div class="ac-mod-t">Survival analysis</div><div class="ac-mod-d">Kaplan-Meier curves and Cox regression.</div></div></div></div><p class="ac-foot">Every test is taught with a clinical or research example and a plain-English write-up of the result.</p><div class="ac-group ac-bonus-h"><span>🎁 Bonuses</span><small>Included free with the SPSS &amp; Biostatistics course (₦14,500)</small></div><div class="ac-mod ac-bonus"><div class="ac-mod-top"><span class="ac-num ac-bnum">Bonus 1</span><div class="ac-mod-txt"><div class="ac-mod-t">📥 Automated Data Collection System</div><div class="ac-mod-d">Good analysis starts from good data collection. Learn to build automated data-collection forms and pipelines that feed straight into your Excel and dashboards — the way real hospitals and research teams do it.</div><span class="ac-free">Free with this course</span></div></div></div><div class="ac-mod ac-bonus"><div class="ac-mod-top"><span class="ac-num ac-bnum">Bonus 2</span><div class="ac-mod-txt"><div class="ac-mod-t">🌐 Website + Sales Page (No-code) + Paystack</div><div class="ac-mod-d">Build your own portfolio website, business landing page and a working sales page with live Paystack integration — no code. It’s the same approach that powers this page. Also sold on its own as our No-code Web Development course.</div><span class="ac-free">Free with this course</span></div></div></div><div class="ac-mod ac-bonus"><div class="ac-mod-top"><span class="ac-num ac-bnum">Bonus 3</span><div class="ac-mod-txt"><div class="ac-mod-t">💰 Monetise Your Skill</div><div class="ac-mod-d">Make and sell your own video courses — positioning, pricing, sales-page copy and delivery playbooks — plus regular remote job alerts (local + international) so you also see when a paying role opens up.</div><span class="ac-free">Free with this course</span></div></div></div></div><aside class="ac-side" style="--ac:#2A5FCC"><div class="ac-side-lab">Course fee</div><div class="ac-side-price">₦14,500</div><div class="ac-side-one">one-time payment</div><ul class="ac-inc"><li>Video lessons</li><li>Course PDFs</li><li>Teaching and exercise datasets</li><li>3 bonus courses: Automated Data Collection · No-code Website + Sales Page + Paystack · Monetise Your Skill</li><li>Private Telegram channel · lifetime access</li></ul><button class="btn btn-gold ac-side-btn" type="button" onclick="openEnrol('spss')">Enrol · ₦14,500 →</button></aside></div></div>
+    <div class="ac-pane" data-course="nocode" role="tabpanel" id="pane-nocode"><div class="ac-pane-head"><span class="ac-pane-ic">🌐</span><div><h3>No-code Web Development</h3><p>Get a professional online presence that can take payments — for your business, your services or your own courses.</p></div></div><div class="ac-pane-grid"><div class="ac-mods"><div class="ac-mod"><div class="ac-mod-top"><span class="ac-num" style="--ac:#6A4FC9">01</span><div class="ac-mod-txt"><div class="ac-mod-t">Professional websites &amp; portfolios</div><div class="ac-mod-d">Build a professional website or portfolio that presents you or your business online.</div></div></div></div><div class="ac-mod"><div class="ac-mod-top"><span class="ac-num" style="--ac:#6A4FC9">02</span><div class="ac-mod-txt"><div class="ac-mod-t">Business landing pages</div><div class="ac-mod-d">Create a focused landing page for a product, service or business.</div></div></div></div><div class="ac-mod"><div class="ac-mod-top"><span class="ac-num" style="--ac:#6A4FC9">03</span><div class="ac-mod-txt"><div class="ac-mod-t">Sales pages</div><div class="ac-mod-d">Build a sales page with a clear call to action and a path to purchase.</div></div></div></div><div class="ac-mod"><div class="ac-mod-top"><span class="ac-num" style="--ac:#6A4FC9">04</span><div class="ac-mod-txt"><div class="ac-mod-t">Live Paystack integration</div><div class="ac-mod-d">Connect Paystack so customers can pay directly on your page.</div></div></div></div><p class="ac-foot">No coding required. This page — course cards, Paystack checkout and automatic access email — is the kind of thing you’ll learn to build.</p></div><aside class="ac-side" style="--ac:#6A4FC9"><div class="ac-side-lab">Course fee</div><div class="ac-side-price">₦14,500</div><div class="ac-side-one">one-time payment</div><ul class="ac-inc"><li>Build-along video lessons</li><li>Templates</li><li>Paystack integration walkthroughs</li><li>Private Telegram channel · lifetime access</li></ul><button class="btn btn-gold ac-side-btn" type="button" onclick="openEnrol('nocode')">Enrol · ₦14,500 →</button></aside></div></div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="ac-how" id="how">
+  <div class="wrap">
+    <span class="eyebrow">How it works</span>
+    <h2 class="sec-title">From payment to your first lesson in minutes</h2>
+    <div class="ac-steps">
+      <div class="ac-step"><span>1</span><h4>Choose your course</h4><p>Pick a course above and tap <b>Enrol</b>. Enter your name, email and WhatsApp number.</p></div>
+      <div class="ac-step"><span>2</span><h4>Pay securely with Paystack</h4><p>Pay with a Nigerian or international card, bank transfer or USSD.</p></div>
+      <div class="ac-step"><span>3</span><h4>Get instant access</h4><p>Once Paystack confirms your payment, an email arrives with a button that opens your course.</p></div>
+    </div>
+    <p class="ac-how-help">Questions before you pay? <a href="https://chat.whatsapp.com/FK1PEO8CasK97nj1l6tEd3?s=cl&p=a&mlu=4&ilr=4" target="_blank" rel="noopener">Chat with us on WhatsApp</a> — we reply the same day.</p>
+  </div>
 </section>
 
 <!-- REVIEWS -->
@@ -666,138 +709,89 @@ src="https://www.facebook.com/tr?id=2574617329673139&ev=PageView&noscript=1"
   </div>
 </section>
 
-<!-- EXPLORE OUR OTHER COURSES -->
-<section class="other" id="other">
-  <div class="wrap">
-    <span class="eyebrow" style="color:var(--gold-2)">Also at HayMedics Academy</span>
-    <h2 class="sec-title">Explore our other on-demand courses</h2>
-    <p class="sec-sub">Once you've got your phone-first business workflow running, these three courses sharpen the skills that compound it — turning data into decisions, research into publications, and ideas into working web products.</p>
-
-    <div class="other-grid">
-      <div class="oc">
-        <span class="oc-tag" style="background:var(--green);color:#fff">Live</span>
-        <span class="oc-ic">📊</span>
-        <h4>MS Excel for Healthcare</h4>
-        <p>3-in-1: Data Analytics + Data Science + Biostatistics — all in Excel. Beginner to advanced, healthcare-focused.</p>
-        <div class="oc-price">₦14,500 <span style="color:#B5C4EC;font-weight:700;font-size:.85rem">· or ₦4,900 materials</span></div>
-        <button class="btn btn-gold btn-lg" style="width:100%;justify-content:center;margin-top:14px" onclick="openEnrol('full')">Enrol · ₦14,500 →</button>
-        <button class="btn btn-navy" style="width:100%;justify-content:center;margin-top:8px;background:rgba(255,255,255,.08);color:#fff;border:1px solid rgba(255,255,255,.24)" onclick="openEnrol('mat')">Or grab materials · ₦4,900</button>
-      </div>
-      <div class="oc">
-        <span class="oc-tag" style="background:var(--green);color:#fff">Live</span>
-        <span class="oc-ic">🔬</span>
-        <h4>SPSS &amp; Biostatistics</h4>
-        <p>From opening SPSS for the first time to defending a Cox regression in a viva. Descriptives → parametric &amp; non-parametric tests → regression → survival — plain-English biostats.</p>
-        <div class="oc-price">₦14,500 <span style="color:#B5C4EC;font-weight:700;font-size:.85rem">· lifetime</span></div>
-        <button class="btn btn-gold btn-lg" style="width:100%;justify-content:center;margin-top:14px" onclick="openEnrol('spss')">Enrol · ₦14,500 →</button>
-      </div>
-      <div class="oc">
-        <span class="oc-tag" style="background:var(--green);color:#fff">Live</span>
-        <span class="oc-ic">🌐</span>
-        <h4>No-code Web Development</h4>
-        <p>Build professional websites, portfolios, business landing pages and <b style="color:var(--gold-2)">working sales pages with live Paystack integration</b> — no code.</p>
-        <div class="oc-price">₦14,500 <span style="color:#B5C4EC;font-weight:700;font-size:.85rem">· lifetime</span></div>
-        <button class="btn btn-gold btn-lg" style="width:100%;justify-content:center;margin-top:14px" onclick="openEnrol('nocode')">Enrol · ₦14,500 →</button>
-      </div>
-    </div>
-
-    <div class="waitlist-box">
-      <h4>💡 What every course includes</h4>
-      <p>Video lessons · course PDFs · workbook · teaching &amp; exercise datasets · lifetime Telegram access · WhatsApp community · professional certificate on completion.</p>
-      <div class="btn-row">
-        <a class="btn btn-wa btn-lg" href="https://chat.whatsapp.com/FK1PEO8CasK97nj1l6tEd3?s=cl&p=a&mlu=4&ilr=4" target="_blank" rel="noopener">💬 Join Community</a>
-        <a class="btn btn-gold btn-lg" href="https://whatsapp.com/channel/0029VbDOzp07DAX5Fauena3t" target="_blank" rel="noopener">📢 News &amp; Jobs Channel</a>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- FAQ -->
 <section class="faq" id="faq">
   <div class="wrap">
-    <span class="eyebrow">Common Questions</span>
+    <span class="eyebrow">Common questions</span>
     <h2 class="sec-title">Before you enrol</h2>
-    <p class="sec-sub">Everything you'd want to know before paying. Anything not covered — reach us on WhatsApp; we reply the same day.</p>
+    <p class="sec-sub">Anything not covered here? Reach us on WhatsApp — we reply the same day.</p>
+    <div class="ac-faq-g">Payment &amp; access</div>
     <div class="faq-wrap">
       <div class="faq-item">
-        <div class="faq-q">Do I really need a laptop? <span class="arw">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner"><b>No. The entire course is designed around what you can do on a smartphone.</b><br><br>Everything — brainstorming ideas with AI, designing flyers, building a sales website, setting up Paystack, generating AI video ads, animating product shots, running Meta ads — is taught using phone-first tools. A laptop is useful if you already have one, but it's not required. A smartphone, stable internet and willingness to practise are what you actually need.</div></div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">What if I don't have a product yet? <span class="arw">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner">That's fine — the first module is <b>"Find and shape an idea"</b>. You'll use AI prompts and simple research methods to spot a real problem people need solved, then test whether your idea could be a valid offer before you build anything. Many people start the course without a product and leave with a validated one.</div></div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">Will I make sales immediately? <span class="arw">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner"><b>Honest answer: no — and we won't pretend otherwise.</b> Sales depend on your offer, your audience, your pricing, your consistency and factors outside anyone's control. What this course gives you is the <b>complete, repeatable workflow</b> — idea → flyer → website → payments → ads → promotion → improvement — so you can start, test, learn and improve. The course fee does not cover third-party subscriptions, platform charges, advertising spend or payment-provider fees.</div></div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">Are all the tools free? <span class="arw">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner">Many of the tools taught have free tiers that are enough to get started and launch a real offer. Some advanced features — AI avatar video generation, higher ad spend, premium templates — have paid tiers or usage costs. The course shows you the cheapest viable path first; upgrade only when the revenue justifies it.</div></div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">How do I get the course after payment? <span class="arw">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner">The moment Paystack confirms your payment (server-verified, no browser tricks) an email lands in your inbox with a single "Open My Course" button. That button opens the private Telegram channel with all the videos, PDFs, templates and community. Access is per paid enrolment — no link is shared publicly on this page. Lifetime access.</div></div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">What's inside the SPSS &amp; Biostatistics course? <span class="arw">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner"><b>Everything from opening SPSS for the first time to defending a Cox regression in a viva.</b><br><br>You'll cover: data entry &amp; import, coding variables, cleaning &amp; recoding, descriptive statistics, exploring distributions, parametric tests (independent &amp; paired t-tests, one-way &amp; repeated-measures ANOVA, correlation), non-parametric equivalents (Mann-Whitney, Wilcoxon, Kruskal-Wallis, Friedman), chi-square and Fisher's exact, linear &amp; logistic regression, and survival analysis (Kaplan-Meier &amp; Cox regression). Every test is taught with a clinical or research example and a plain-English write-up of the result.<br><br>Delivery: video lessons, PDFs, teaching datasets, exercise datasets and lifetime access via a private Telegram channel. ₦14,500.</div></div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">Do I need to code for the No-code Web Development course? <span class="arw">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner"><b>No. Zero code.</b><br><br>You'll build professional websites, portfolios, business landing pages and — the highlight — <b>working sales pages with live Paystack integration</b> that actually collect payments. The page you're looking at right now is the kind of thing you'll be able to build.<br><br>Ideal for: anyone selling a course, service, ebook, product or programme; healthcare professionals building an online presence; researchers building portfolio sites; anyone who wants to add a real online-income skill without becoming a developer. ₦14,500. Lifetime access.</div></div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">Can I take all three courses? Is there a bundle discount? <span class="arw">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner">Yes — enrol in any one, any two, or all three. Each is ₦14,500 on its own. A discounted three-course bundle is coming soon; if you buy them individually and later a bundle drops, message us on WhatsApp and we'll credit the difference. Most learners start with the track that solves their most urgent problem (research → SPSS; income → No-code; broad data skill → Excel) and add the others later.</div></div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">What's the difference between ₦4,900 and ₦14,500? <span class="arw">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner"><b>Same 3-in-1 Excel curriculum. Different level of hand-holding.</b><br><br>The <b>₦4,900 Materials Pack</b> gives you the raw study material: course PDFs, exercise workbook, teaching datasets and exercise datasets — delivered instantly via a Google Drive folder. Perfect if you're a self-taught learner or want a quick reference/revision copy.<br><br>The <b>₦14,500 Full 5-in-1</b> adds: full video lessons for every module, the three bonuses worth ₦60,000 (Automated Data Collection, No-code Website + Sales Page + Paystack, Monetise Your Skill including how to create your own video courses), regular remote job alerts (local + international), WhatsApp community, professional certificate and lifetime access via Telegram.<br><br>Start with ₦4,900 if you're not sure — you can upgrade any time.</div></div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">Is this the same as the ₦120,000 masterclass? Honest answer. <span class="arw">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner"><b>No — and we won't pretend it is.</b> The ₦120,000 masterclass is a live-interactive cohort covering 5 parts and 15 modules: <b>SPSS &amp; Biostatistics · Research Methods &amp; AI Integration · MS Excel for Healthcare · Python for Data Science · Machine Learning &amp; Clinical AI</b>, with 2 months of live classes and a 3-month follow-up mentorship period.<br><br>This offer is specifically <b>the MS Excel portion</b>, standalone and on-demand, including its Data Science &amp; Biostatistics track. No live classes. No mentorship. No SPSS, Python or ML.<br><br>It's the most affordable, honest way to start.</div></div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">How do I get the course after payment? <span class="arw">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner">The moment Paystack confirms your payment (server-side, no browser tricks) an email lands in your inbox with a single "Access My Course" button.<br><br>For the <b>₦4,900 Materials</b> that button opens the Google Drive folder with everything to download.<br><br>For the <b>₦14,500 Full Course</b> that button opens the private Telegram channel with all the videos, PDFs, workbooks, datasets and community. Access is per paid enrolment — no link is shared publicly on this page.</div></div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">Is the access really lifetime? <span class="arw">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner">Yes for the ₦14,500 Full 5-in-1 tier — once you're inside the Telegram channel, you stay in for life. Rewatch and re-download as many times as you need. Future course updates are included at no extra charge.<br><br>The ₦4,900 Materials Pack is a Google Drive folder — download everything once, keep it forever on your device. No expiry.</div></div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">I bought a bunch of courses that led nowhere. Why should I trust this one? <span class="arw">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner">Fair. Every "learn X and change your life" course promised the same thing. Two things about this offer we can't fake and don't ask you to take on faith:<br><br><b>1.</b> Healthcare data really is one of the hottest niches in analytics right now — see the LinkedIn Job Alerts inbox in the section above. Those are real daily emails to a real healthcare data analyst.<br><br><b>2.</b> Excel really is the fastest data skill to master and monetise. It's on almost every data-role JD. A committed month of the work in this course is enough to start applying.<br><br>The ₦4,900 entry price exists so you don't have to bet big to find out for yourself.</div></div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">Offline streaming? What about network glitches? <span class="arw">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner">Every video can be downloaded to your device from Telegram, so you can watch offline anytime. Network glitches don't stop you.</div></div>
+        <div class="faq-q">How do I get my course after payment? <span class="arw">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">The moment Paystack confirms your payment (verified on our server), an email lands in your inbox with a single button that opens your course.<br><br>For the <b>MS Excel Materials pack (₦4,900)</b> the button opens a Google Drive folder with everything to download. For every other course it opens a private Telegram channel with the lessons and resources. Access is per paid enrolment — no course link is shared publicly on this page.</div></div>
       </div>
       <div class="faq-item">
         <div class="faq-q">Can I pay with a Nigerian card, transfer or USSD? <span class="arw">+</span></div>
         <div class="faq-a"><div class="faq-a-inner">Yes. Paystack accepts Visa, Mastercard, Verve, bank transfer and USSD. International cards work too.</div></div>
       </div>
       <div class="faq-item">
-        <div class="faq-q">I am not in healthcare. Can I still take this? <span class="arw">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner">Absolutely. The examples lean clinical but the skills are universal. Non-healthcare participants in past cohorts have said things like "you dissected the stuffs like a lot of us don't have the basics" — see the Reviews section above.</div></div>
+        <div class="faq-q">Is the access really lifetime? <span class="arw">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">Yes. Once you are inside a course’s Telegram channel, you stay in for life — rewatch and re-download as often as you need. The ₦4,900 Materials pack is a Google Drive folder: download everything once and keep it on your device.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can I watch offline? <span class="arw">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">Videos can be downloaded to your device from Telegram, so network glitches don’t stop you.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can I take more than one course? <span class="arw">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">Yes. Enrol in as many courses as you like — each one is paid for separately. Not sure which to start with? Message us on WhatsApp and we’ll help you choose.</div></div>
       </div>
       <div class="faq-item">
         <div class="faq-q">Do I need a laptop? <span class="arw">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner">Yes for the Excel and Biostatistics work. A working laptop and reliable internet is enough. The bonus content (website + monetisation) can be started on a phone but a laptop is strongly recommended.</div></div>
+        <div class="faq-a"><div class="faq-a-inner"><b>Phone Business course:</b> no — it is designed around your smartphone.<br><b>MS Excel and SPSS:</b> yes, a working laptop and reliable internet.<br><b>No-code Web Development:</b> you can start on a phone, but a laptop is strongly recommended.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">I am not in healthcare. Can I still take these courses? <span class="arw">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">Yes. The Phone Business and No-code Web Development courses are for anyone. The Excel and SPSS courses use clinical and research examples, but the skills are universal and the teaching starts from the basics.</div></div>
+      </div>
+    </div>
+    <div class="ac-faq-g">Turn Your Phone Into a Business-Building Tool</div>
+    <div class="faq-wrap">
+      <div class="faq-item">
+        <div class="faq-q">What if I don’t have a product yet? <span class="arw">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">The first module is <b>“Find and shape an idea”</b>. You’ll use AI prompts and simple research to spot a real problem people need solved and test whether your idea could become an offer before you build anything.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Will I make sales immediately? <span class="arw">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner"><b>Honest answer: no — and we won’t pretend otherwise.</b> Sales depend on your offer, audience, pricing and consistency. The course gives you a complete, repeatable workflow — idea → flyer → website → payments → ads → promotion — so you can start, test and improve. The fee does not cover ad spend, third-party subscriptions or payment-provider fees.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Are the apps free? <span class="arw">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">The apps taught have free tiers that cover the basics in the course — no paid subscription is needed to start. Some advanced features have paid tiers; upgrade only when it makes sense for you.</div></div>
+      </div>
+    </div>
+    <div class="ac-faq-g">MS Excel for Healthcare</div>
+    <div class="faq-wrap">
+      <div class="faq-item">
+        <div class="faq-q">What’s the difference between ₦4,900 and ₦14,500? <span class="arw">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner"><b>Same 3-in-1 Excel curriculum, different level of support.</b><br><br>The <b>₦4,900 Materials pack</b> gives you the course PDFs, exercise workbook, teaching datasets and exercise datasets through a Google Drive folder — ideal for self-study or revision.<br><br>The <b>₦14,500 Full course</b> adds video lessons for every module, three bonuses (Automated Data Collection; No-code Website + Sales Page + Paystack; Monetise Your Skill), remote job alerts, the WhatsApp community, a certificate and lifetime access via Telegram. You can start with the materials and upgrade later.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Is this the same as the ₦120,000 masterclass? <span class="arw">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner"><b>No — and we won’t pretend it is.</b> The ₦120,000 masterclass is a live cohort covering SPSS &amp; Biostatistics, Research Methods &amp; AI, MS Excel for Healthcare, Python for Data Science and Machine Learning &amp; Clinical AI, with live classes and mentorship. This course is the <b>MS Excel part</b>, on-demand, including its Data Science &amp; Biostatistics track. No live classes or mentorship.</div></div>
       </div>
       <div class="faq-item">
         <div class="faq-q">Is there a certificate? <span class="arw">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner">Yes. A professional certificate on completion — great for your portfolio, LinkedIn and remote job applications.</div></div>
+        <div class="faq-a"><div class="faq-a-inner">Yes — the Full course (₦14,500) includes a professional certificate on completion.</div></div>
       </div>
       <div class="faq-item">
-        <div class="faq-q">Why is this so much cheaper than the ₦120,000 cohort? <span class="arw">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner">Two reasons. First, this offer is <b>one part of the five-part masterclass</b> (the MS Excel track), not the whole thing — so you're paying for less scope. Second, the live cohort has live sessions, live Q&amp;A, weekly assessments and a 3-month mentorship period; this is fully self-paced, recorded content. Learn Excel deeply now, add SPSS / Python / ML from the other courses (or the next cohort) later.</div></div>
+        <div class="faq-q">How do the remote job alerts work? <span class="arw">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">Full-course students are added to a private alerts channel where we post curated remote data-analyst, data-scientist and research roles — not a job-board dump, a filtered feed.</div></div>
       </div>
+    </div>
+    <div class="ac-faq-g">SPSS &amp; Biostatistics</div>
+    <div class="faq-wrap">
       <div class="faq-item">
-        <div class="faq-q">What about remote job alerts? How does that work? <span class="arw">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner">Full 5-in-1 buyers get added to a private alerts channel where we post curated remote data-analyst / data-scientist / research-coordinator roles — Nigeria-friendly employers and international companies open to hiring globally. Not a job board dump; a filtered feed.</div></div>
+        <div class="faq-q">What exactly does the SPSS course cover? <span class="arw">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">Data entry and import, coding variables, cleaning and recoding, descriptive statistics, exploring distributions, parametric tests (independent and paired t-tests, one-way and repeated-measures ANOVA, correlation), non-parametric tests (Mann-Whitney, Wilcoxon, Kruskal-Wallis, Friedman), chi-square and Fisher’s exact, linear and logistic regression, and survival analysis (Kaplan-Meier and Cox regression). Every test comes with a clinical example and a plain-English write-up.<br><br>It also comes with three bonus courses: Automated Data Collection System, No-code Website + Sales Page + Paystack, and Monetise Your Skill.</div></div>
+      </div>
+    </div>
+    <div class="ac-faq-g">No-code Web Development</div>
+    <div class="faq-wrap">
+      <div class="faq-item">
+        <div class="faq-q">Do I need to know how to code? <span class="arw">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner"><b>No.</b> You’ll build websites, portfolios, landing pages and sales pages with live Paystack payments — without writing code. It suits anyone selling a course, service, product or programme, and professionals who want a real online presence.</div></div>
       </div>
     </div>
   </div>
@@ -805,14 +799,14 @@ src="https://www.facebook.com/tr?id=2574617329673139&ev=PageView&noscript=1"
 
 <!-- FINAL CTA -->
 <section class="final">
-  <span class="eyebrow" style="color:var(--gold-2)">Your idea deserves a first step</span>
-  <h2>Start with your phone. Learn the skills. Build from there.</h2>
-  <p class="lead">Join the HayMedics Academy training and begin learning how to create and promote your offer online — one practical module at a time.</p>
-  <div class="btn-row" style="margin-top:26px">
-    <button class="btn btn-gold btn-xl" onclick="openEnrol('phone')">🚀 Get Started for ₦10,000 →</button>
+  <span class="eyebrow" style="color:var(--gold-2)">Ready when you are</span>
+  <h2>Start learning today</h2>
+  <p class="lead">Choose your course, pay securely with Paystack, and get your access link by email.</p>
+  <div class="ac-final-grid"><button class="ac-final-btn" type="button" onclick="openEnrol('phone')" style="--ac:#F4A02B"><span>📱</span><b>Phone Business</b><em>₦10,000</em></button><button class="ac-final-btn" type="button" onclick="openEnrol('full')" style="--ac:#1F7A3E"><span>📊</span><b>MS Excel</b><em>₦14,500</em></button><button class="ac-final-btn" type="button" onclick="openEnrol('spss')" style="--ac:#2A5FCC"><span>🔬</span><b>SPSS &amp; Biostats</b><em>₦14,500</em></button><button class="ac-final-btn" type="button" onclick="openEnrol('nocode')" style="--ac:#6A4FC9"><span>🌐</span><b>No-code Web Dev</b><em>₦14,500</em></button></div>
+  <div class="btn-row" style="margin-top:22px">
     <a class="btn btn-wa btn-lg" href="https://chat.whatsapp.com/FK1PEO8CasK97nj1l6tEd3?s=cl&p=a&mlu=4&ilr=4" target="_blank" rel="noopener">💬 Ask on WhatsApp</a>
   </div>
-  <div class="guar">🔒 Secured by Paystack · Server-verified access · Lifetime Telegram channel</div>
+  <div class="guar">🔒 Secured by Paystack · Server-verified access · Access sent to your email</div>
 </section>
 
 <!-- FOOTER -->
@@ -836,7 +830,7 @@ src="https://www.facebook.com/tr?id=2574617329673139&ev=PageView&noscript=1"
     <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:10px 22px;font-size:.92rem;margin-bottom:24px">
       <a href="https://haymedicsacademy.com" target="_blank" rel="noopener" style="color:#B5C6F0;font-weight:800">🏠 haymedicsacademy.com</a>
       <a href="https://haymedicsacademy.com/portfolio.html" target="_blank" rel="noopener" style="color:#B5C6F0;font-weight:800">📁 Portfolio</a>
-      <a href="#tracks" style="color:#B5C6F0;font-weight:800">🎓 Courses</a>
+      <a href="#courses" style="color:#B5C6F0;font-weight:800">🎓 Courses</a>
       <a href="mailto:haymedicsacademy@gmail.com" style="color:#B5C6F0;font-weight:800">✉️ Email</a>
     </div>
 
@@ -922,7 +916,7 @@ src="https://www.facebook.com/tr?id=2574617329673139&ev=PageView&noscript=1"
           <input type="tel" id="fPhone" name="fPhone" required placeholder="0810 000 0000"/>
         </div>
         <button type="submit" class="btn btn-gold pay-btn btn-lg">🔒 Pay Securely with Paystack</button>
-        <div class="note">You'll get an <b>instant access button</b> on this page after payment, and a <b>follow-up email</b> with the same access button. Access is lifetime.</div>
+        <div class="note">After payment, your <b>access button arrives by email</b> within a couple of minutes. Access is lifetime.</div>
       </form>
     </div>
 
@@ -933,7 +927,7 @@ src="https://www.facebook.com/tr?id=2574617329673139&ev=PageView&noscript=1"
       <div class="access-box">
         <div class="al">📧 Check your inbox</div>
         <h4>Your access button just landed at <span id="mailTo" style="color:var(--gold-2)">your inbox</span></h4>
-        <p style="color:#DDE4F7;margin:10px 0 0;font-size:.92rem">Give it up to a couple of minutes. If you don't see it, check spam. Materials open a Google Drive folder; Full course opens the private Telegram channel.</p>
+        <p style="color:#DDE4F7;margin:10px 0 0;font-size:.92rem">Give it up to a couple of minutes. If you don't see it, check spam. The MS Excel Materials pack opens a Google Drive folder; every other course opens its private Telegram channel.</p>
       </div>
       <div class="mail-note">
         <b>🔒 Why the wait?</b> We verify every payment with Paystack directly before releasing your access, so no one can jump the queue. It takes seconds — you'll see the email shortly.
@@ -1105,9 +1099,14 @@ function openEnrol(courseId) {
   if (priceEl) priceEl.textContent = currentCourse.priceLabel;
   const incEl = document.querySelector('#formView .m-price .inc');
   if (incEl) {
-    incEl.innerHTML = currentCourse.id === 'mat'
-      ? '<b>Includes:</b> Course PDFs, exercise workbook, teaching + exercise datasets. Instant Google Drive access. Self-study.'
-      : '<b>Includes:</b> Everything in the ₦4,900 materials PLUS videos, 3 bonuses worth ₦60,000, remote job alerts, community, certificate. Lifetime.';
+    const INCLUDES = {
+      phone: 'Step-by-step build-along video lessons, templates, private Telegram channel and a direct WhatsApp line to the instructor. Lifetime access.',
+      mat: 'Course PDFs, exercise workbook, teaching + exercise datasets. Instant Google Drive access. Self-study.',
+      full: 'Everything in the ₦4,900 materials PLUS videos, 3 bonuses worth ₦60,000, remote job alerts, community, certificate. Lifetime.',
+      spss: 'Video lessons, course PDFs, teaching and exercise datasets, 3 bonus courses (Automated Data Collection · No-code Website + Sales Page + Paystack · Monetise Your Skill), private Telegram channel. Lifetime access.',
+      nocode: 'Build-along video lessons, templates, Paystack integration walkthroughs, private Telegram channel. Lifetime access.',
+    };
+    incEl.innerHTML = '<b>Includes:</b> ' + (INCLUDES[currentCourse.id] || INCLUDES.full);
   }
   document.getElementById('formView').style.display = 'block';
   document.getElementById('successView').style.display = 'none';
@@ -1169,6 +1168,43 @@ function startPayment(e) {
   handler.openIframe();
   return false;
 }
+</script>
+<script>
+// ===== Course tabs, module details and deep links (layout only — no payment logic) =====
+(function () {
+  var tabs = document.querySelectorAll('.ac-tab');
+  var panes = document.querySelectorAll('.ac-pane');
+  function show(key, scroll) {
+    var found = false;
+    tabs.forEach(function (t) {
+      var on = t.getAttribute('data-course') === key;
+      t.classList.toggle('active', on);
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+      if (on) found = true;
+    });
+    if (!found) return;
+    panes.forEach(function (p) { p.classList.toggle('active', p.getAttribute('data-course') === key); });
+    if (scroll) { var c = document.getElementById('curriculum'); if (c) c.scrollIntoView({ behavior: 'smooth' }); }
+  }
+  tabs.forEach(function (t) { t.addEventListener('click', function () { show(t.getAttribute('data-course'), false); }); });
+  document.querySelectorAll('[data-show-curriculum]').forEach(function (a) {
+    a.addEventListener('click', function (e) { e.preventDefault(); show(a.getAttribute('data-show-curriculum'), true); });
+  });
+  document.querySelectorAll('.ac-more').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var m = b.closest('.ac-mod'), d = m.querySelector('.ac-detail');
+      var open = m.classList.toggle('open');
+      d.style.maxHeight = open ? (d.scrollHeight + 20) + 'px' : null;
+      b.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  });
+  // Links like /courses#phone, #excel, #spss, #nocode open that course's curriculum tab too
+  var h = (location.hash || '').replace('#', '');
+  if (h) show(h, false);
+  document.querySelectorAll('.ac-menu-row').forEach(function (a) {
+    a.addEventListener('click', function () { show(a.getAttribute('href').slice(1), false); });
+  });
+})();
 </script>
 </body>
 </html>
