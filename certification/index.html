@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>HayMedics Final Exam</title>
+<meta name="description" content="HayMedics Data Science &amp; Research Masterclass — Final Exam &amp; Certificate Platform.">
+<meta name="theme-color" content="#1E3E7B">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Final Exam">
+<meta name="mobile-web-app-capable" content="yes">
+
+<link rel="manifest" href="manifest.json">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+<style>
+  html, body { margin: 0; padding: 0; height: 100%; background: #1E3E7B; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, system-ui, sans-serif; color: #fff; -webkit-tap-highlight-color: transparent; }
+  body { overflow: hidden; }
+  .splash { position: fixed; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 24px; background: linear-gradient(135deg, #1E3E7B 0%, #122652 100%); z-index: 10; transition: opacity .35s ease; }
+  .splash.hide { opacity: 0; pointer-events: none; }
+  .splash img { width: 110px; height: 110px; border-radius: 22px; box-shadow: 0 14px 40px rgba(0,0,0,.35); animation: pulse 1.8s ease-in-out infinite; }
+  .splash h1 { margin: 22px 0 6px; font-weight: 700; font-size: 22px; letter-spacing: .3px; }
+  .splash p  { margin: 0; opacity: .78; font-size: 14px; }
+  .dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: #F4A522; margin: 0 3px; animation: blink 1.2s infinite; }
+  .dot:nth-child(2) { animation-delay: .2s; }
+  .dot:nth-child(3) { animation-delay: .4s; }
+  .dots { margin-top: 20px; }
+  @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.04); } }
+  @keyframes blink { 0%, 80%, 100% { opacity: .25; } 40% { opacity: 1; } }
+
+  iframe#app { position: fixed; inset: 0; width: 100%; height: 100%; border: 0; background: #F6F8FC; }
+
+  .retry { position: fixed; inset: 0; background: #1E3E7B; z-index: 20; display: none; flex-direction: column; align-items: center; justify-content: center; padding: 24px; text-align: center; }
+  .retry.show { display: flex; }
+  .retry h2 { margin-bottom: 8px; }
+  .retry p { opacity: .85; max-width: 320px; margin: 0 0 20px; font-size: 14px; line-height: 1.55; }
+  .btn { background: #F4A522; color: #1E3E7B; font-weight: 700; padding: 11px 22px; border: 0; border-radius: 10px; font-size: 15px; cursor: pointer; }
+  .btn.ghost { background: transparent; color: #fff; border: 1.5px solid rgba(255,255,255,.4); margin-top: 10px; }
+</style>
+</head>
+<body>
+
+<!-- Splash screen shown while the Apps Script page loads -->
+<div class="splash" id="splash">
+  <img src="icon-192.png" alt="HayMedics Final Exam">
+  <h1>HayMedics Final Exam</h1>
+  <p>Opening the exam portal…</p>
+  <div class="dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+</div>
+
+<!-- Fallback card if the Apps Script URL cannot load (offline, blocked network) -->
+<div class="retry" id="retry">
+  <img src="icon-192.png" alt="" style="width:88px;height:88px;border-radius:18px;margin-bottom:14px">
+  <h2>Can't reach the exam server</h2>
+  <p>You're offline, or your network is blocking <code style="background:rgba(0,0,0,.2);padding:2px 6px;border-radius:4px">script.google.com</code>. Reconnect and try again.</p>
+  <button class="btn" onclick="tryOpen()">Try again</button>
+  <a class="btn ghost" id="openLink" href="" target="_blank" rel="noopener">Open in browser instead</a>
+</div>
+
+<!-- The Apps Script web app loaded into a full-screen iframe -->
+<iframe id="app" title="HayMedics Final Exam" allow="clipboard-write *; fullscreen *" loading="eager" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+<script>
+  // === The one line you edit when you redeploy: the Apps Script URL ===
+  var APP_URL = "https://script.google.com/macros/s/AKfycbxIx9JGEe8ozK8wYNMagwIGHv3I-lV96sIt428sDbm-qZuao0PVFBA52ph5h4IPzxQkvA/exec";
+
+  var splash = document.getElementById('splash');
+  var iframe = document.getElementById('app');
+  var retry  = document.getElementById('retry');
+  var openLink = document.getElementById('openLink');
+  openLink.href = APP_URL;
+
+  var loaded = false;
+
+  function tryOpen() {
+    retry.classList.remove('show');
+    splash.classList.remove('hide');
+    loaded = false;
+    iframe.src = APP_URL + (APP_URL.indexOf('?') > -1 ? '&' : '?') + '_=' + Date.now();
+    // If the iframe doesn't load within 18 seconds, show the retry card.
+    setTimeout(function () {
+      if (!loaded) {
+        splash.classList.add('hide');
+        retry.classList.add('show');
+      }
+    }, 18000);
+  }
+
+  iframe.addEventListener('load', function () {
+    loaded = true;
+    setTimeout(function () { splash.classList.add('hide'); }, 250);
+  });
+
+  // Start loading immediately
+  tryOpen();
+
+  // Register the service worker for offline install
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function () {
+      navigator.serviceWorker.register('service-worker.js').catch(function () {});
+    });
+  }
+</script>
+
+</body>
+</html>
